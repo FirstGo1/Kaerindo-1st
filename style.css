@@ -991,14 +991,15 @@ p.phone {
   div.swiper-slider-content .slider-title {
     font-size: 40px;
   }
-  div.swiper-slider-content .kaerindo-judul {
-    font-size: 30px;
+  div.swiper-slider-content .span{
+    font-size: 40px;
   }
-  /* div.swiper-slider-content .kaerindo-judul span {
-    font-size: 30px;
-  } */
+ 
+  div.swiper-slider-content .kaerindo-judul span {
+    font-size: 40px;
+  }
   div.swiper-slider-content .span-class {
-    font-size: 30px;
+    font-size: 40px;
   }
   div.swiper-slider-content .slider-description {
     font-size: 15px;
@@ -1068,7 +1069,21 @@ p.phone {
     right: 2px;
     font-size: 15px;
   }
-}
+  div.swiper-slider-content .slider-title {
+    font-size: 40px;
+  }
+  div.swiper-slider-content .span-class{
+    font-size: 40px;
+  }
+  div.swiper-slider-content .slider-description {
+    font-size: 15px;
+    width: 100%;
+  }
+  div.swiper-slider-content .kaerindo-judul span {
+    font-size: 40px;
+  }
+
+  }
 
 /* ---------------- about us ---------------  */
 
