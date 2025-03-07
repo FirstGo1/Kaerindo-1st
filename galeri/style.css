@@ -48,6 +48,10 @@ nav img:hover {
   padding: 8px 12px;
   position: relative;
 }
+.nav-links ul li.regis-hide {
+  display: none;
+}
+
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
@@ -195,6 +199,9 @@ nav .fa-solid:hover {
   }
   .nav-links ul li::after {
     background: #fff;
+  }
+  .nav-links ul li.regis-hide {
+    display: block;
   }
 
   .lang-menu {

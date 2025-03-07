@@ -576,7 +576,7 @@ section.abuabu {
   width: 100vw;
   z-index: 1000;
   display: none;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 .onclick-img-jpg {
   z-index: 1000;
@@ -613,6 +613,7 @@ section.abuabu {
   cursor: grab;
 }
 .close-button {
+  display: block;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -634,7 +635,8 @@ section.abuabu {
   z-index: 100;
 }
 
-.zoom-in, .zoom-out {
+.zoom-in,
+.zoom-out {
   display: flex;
   font-size: 30px;
   font-weight: bolder;
@@ -645,7 +647,9 @@ section.abuabu {
   transition: 0.3s ease;
   padding: 15px;
 }
-.zoom-in:hover, .zoom-out:hover, .close-button:hover {
+.zoom-in:hover,
+.zoom-out:hover,
+.close-button:hover {
   background: #ff0000;
 }
 
@@ -656,8 +660,6 @@ section.abuabu {
 .zoom-out {
   right: 10px;
 }
-
-
 
 /* QUOTEE SEKSI */
 section.quote {
@@ -1100,7 +1102,7 @@ p.phone {
     background-size: 20px;
   }
   .nav-links ul li.regis-hide {
-    display: inline-block;
+    display: block;
   }
 }
 
