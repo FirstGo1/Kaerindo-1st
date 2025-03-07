@@ -14,9 +14,9 @@ function hideMenu() {
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
   // effect: 'fade',
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -72,6 +72,28 @@ document.querySelector(".popup-image span").onclick = () => {
   document.querySelector(".popup-image").style.display = "none";
 };
 
+const popupImage = document.querySelector('.popup-image');
+const img = document.querySelector('.onclick-img-jpg');
+const zoomIn = document.querySelector('.zoom-in');
+const zoomOut = document.querySelector('.zoom-out');
+
+img.addEventListener('click', () => {
+  popupImage.style.display = 'block';
+});
+
+zoomIn.addEventListener('click', () => {
+  img.style.width = '80%';
+});
+
+zoomOut.addEventListener('click', () => {
+  img.style.width = '50%';
+});
+
+
+
+
+
+
 
 // ----------------- GALERI HTML ---------- 
 const container = document.querySelector(".rows")
@@ -111,4 +133,4 @@ var swiper = new Swiper(".rows .swiper", {
 //   });
 // });
 
-
+// -------------- ZOOOM ONCLICK -------- 

@@ -92,3 +92,20 @@ document.querySelectorAll("#swiper-2 .swiper-slide img").forEach((image) => {
 document.querySelector(".popup-image span").onclick = () => {
   document.querySelector(".popup-image").style.display = "none";
 };
+
+const popupImage = document.querySelector('.popup-image');
+const img = document.querySelector('.onclick-img-jpg');
+const zoomIn = document.querySelector('.zoom-in');
+const zoomOut = document.querySelector('.zoom-out');
+
+img.addEventListener('click', () => {
+  popupImage.style.display = 'block';
+});
+
+zoomIn.addEventListener('click', () => {
+  img.style.width = '80%';
+});
+
+zoomOut.addEventListener('click', () => {
+  img.style.width = '50%';
+});

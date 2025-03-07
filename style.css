@@ -572,17 +572,18 @@ section.abuabu {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.9);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   z-index: 1000;
   display: none;
+  border-radius: 10px;  
 }
 .onclick-img-jpg {
   z-index: 1000;
+  position: fixed;
+  border-radius: 10px;
 }
-.wide .popup-image span {
-  /* border-radius: 15px; */
-  /* background-color: #dedede; */
+/* .wide .popup-image span {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -595,7 +596,7 @@ section.abuabu {
 }
 .wide .popup-image span:hover {
   color: #f00101;
-}
+} */
 
 .wide .popup-image img {
   position: absolute;
@@ -609,8 +610,55 @@ section.abuabu {
   height: auto;
   object-fit: cover;
   aspect-ratio: 16/10;
-  cursor: pointer;
+  cursor: grab;
 }
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  background: #333;
+  padding: 15px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.zoom-controls {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.zoom-in, .zoom-out {
+  display: flex;
+  font-size: 30px;
+  font-weight: bolder;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s ease;
+  padding: 15px;
+}
+.zoom-in:hover, .zoom-out:hover, .close-button:hover {
+  background: #ff0000;
+}
+
+.zoom-in {
+  left: 10px;
+}
+
+.zoom-out {
+  right: 10px;
+}
+
+
+
 /* QUOTEE SEKSI */
 section.quote {
   background: url("img/KR.jpg") no-repeat;
