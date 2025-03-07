@@ -14,9 +14,9 @@ function hideMenu() {
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
   // effect: 'fade',
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 
   navigation: {
     nextEl: ".swiper-button-next",

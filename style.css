@@ -82,6 +82,9 @@ nav img:hover {
   padding: 8px 12px;
   position: relative;
 }
+.nav-links ul li.regis-hide{
+  display: none;
+}
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
@@ -314,7 +317,7 @@ nav .fa-solid:hover {
   align-items: center;
 }
 .swiper-slider-content .slider-title {
-  padding: 20px;
+  padding: 40px;
   font-size: 4rem;
   /* background: linear-gradient(to right, red, white);
   background-clip: text;
@@ -613,7 +616,6 @@ section.abuabu {
   aspect-ratio: 16/10;
   cursor: pointer;
 }
-
 /* QUOTEE SEKSI */
 section.quote {
   background: url("img/KR.jpg") no-repeat;
@@ -989,17 +991,17 @@ p.phone {
     font-size: 2em;
   }
   div.swiper-slider-content .slider-title {
-    font-size: 40px;
+    font-size: 2.5rem ;
   }
   div.swiper-slider-content .span{
-    font-size: 40px;
+    font-size: 2.5rem;
   }
  
   div.swiper-slider-content .kaerindo-judul span {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   div.swiper-slider-content .span-class {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   div.swiper-slider-content .slider-description {
     font-size: 15px;
@@ -1053,16 +1055,19 @@ p.phone {
     padding: 15px;
     background-size: 20px;
   }
+  .nav-links ul li.regis-hide{
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 479.98px) {
   section.quote {
     background-size: 100% 100%;
-    padding: 50px;
+    padding: 100px;
   }
   section.quote .layar-dalam p {
     font-size: 15px;
-    padding: 10px;
+    padding: 15px;
   }
   .containerrr .popup-image span {
     top: 2px;
@@ -1070,17 +1075,23 @@ p.phone {
     font-size: 15px;
   }
   div.swiper-slider-content .slider-title {
-    font-size: 40px;
+    font-size: 2rem;
+  }
+  div.swiper-slider-content .slider-title.kaerindo-judul{
+    font-size: 1.5rem;
+  }
+  div.swiper-slider-content .slider-title.kaerindo-judul span{
+    font-size: 1.5rem;
   }
   div.swiper-slider-content .span-class{
-    font-size: 40px;
+    font-size: 2rem;
   }
   div.swiper-slider-content .slider-description {
     font-size: 15px;
     width: 100%;
   }
-  div.swiper-slider-content .kaerindo-judul span {
-    font-size: 40px;
+  div.swiper-slider-content .slider-title span {
+    font-size: 2rem;
   }
 
   }
@@ -1088,13 +1099,13 @@ p.phone {
 /* ---------------- about us ---------------  */
 
 .sub-header {
-  height: 500px;
+  height: 55vh;
   width: 100%;
   object-fit: cover;
   background-image: linear-gradient(to top, black, transparent), url(img/KR.jpg);
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: 100vw 100vh;
   text-align: center;
   color: #fff;
   position: relative;
@@ -1182,6 +1193,7 @@ p.phone {
   color: #fff;
 }
 
+
 /* .about-us .red-btn {
   border: 1px solid #f44336;
   background: transparent;
@@ -1194,7 +1206,7 @@ p.phone {
 /* --------- visi misi ---------- */
 .visi-misi {
   font-family: 'Poppins', sans-serif;
-  background-color: #f2f2f2;
+  background-color: f5f6f6;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1328,7 +1340,9 @@ p.phone {
   .visi-misi .misi h3 {
     text-align: center;
   }
+  
 }
+
 
 /* --------------------- HUBUNGI KAMI ------------------  */
 
