@@ -82,7 +82,7 @@ nav img:hover {
   padding: 8px 12px;
   position: relative;
 }
-.nav-links ul li.regis-hide{
+.nav-links ul li.regis-hide {
   display: none;
 }
 .nav-links ul li a {
@@ -104,8 +104,6 @@ nav img:hover {
 .nav-links ul li:hover::after {
   width: 100%;
 }
-
-
 
 nav .fa-solid {
   display: none;
@@ -195,7 +193,6 @@ nav .fa-solid:hover {
   background-image: url(https://flagsapi.com/US/flat/32.png);
 }
 
-
 @media (max-width: 700px) {
   .nav-links ul li {
     display: block;
@@ -230,8 +227,6 @@ nav .fa-solid:hover {
   .nav-links ul li:hover::after {
     width: 60%;
   }
-
-
 
   .lang-menu {
     display: none;
@@ -991,12 +986,12 @@ p.phone {
     font-size: 2em;
   }
   div.swiper-slider-content .slider-title {
-    font-size: 2.5rem ;
-  }
-  div.swiper-slider-content .span{
     font-size: 2.5rem;
   }
- 
+  div.swiper-slider-content .span {
+    font-size: 2.5rem;
+  }
+
   div.swiper-slider-content .kaerindo-judul span {
     font-size: 2.5rem;
   }
@@ -1008,7 +1003,8 @@ p.phone {
     width: 50ch;
   }
   div.swiper-slider-content .slider-action {
-    display: none;
+    font-size: 0.8rem;
+    padding: 0.2rem 2rem;
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -1055,7 +1051,7 @@ p.phone {
     padding: 15px;
     background-size: 20px;
   }
-  .nav-links ul li.regis-hide{
+  .nav-links ul li.regis-hide {
     display: inline-block;
   }
 }
@@ -1077,13 +1073,13 @@ p.phone {
   div.swiper-slider-content .slider-title {
     font-size: 2rem;
   }
-  div.swiper-slider-content .slider-title.kaerindo-judul{
+  div.swiper-slider-content .slider-title.kaerindo-judul {
     font-size: 1.5rem;
   }
-  div.swiper-slider-content .slider-title.kaerindo-judul span{
+  div.swiper-slider-content .slider-title.kaerindo-judul span {
     font-size: 1.5rem;
   }
-  div.swiper-slider-content .span-class{
+  div.swiper-slider-content .span-class {
     font-size: 2rem;
   }
   div.swiper-slider-content .slider-description {
@@ -1093,8 +1089,7 @@ p.phone {
   div.swiper-slider-content .slider-title span {
     font-size: 2rem;
   }
-
-  }
+}
 
 /* ---------------- about us ---------------  */
 
@@ -1193,7 +1188,6 @@ p.phone {
   color: #fff;
 }
 
-
 /* .about-us .red-btn {
   border: 1px solid #f44336;
   background: transparent;
@@ -1205,7 +1199,7 @@ p.phone {
 
 /* --------- visi misi ---------- */
 .visi-misi {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: f5f6f6;
   padding: 50px;
   border-radius: 10px;
@@ -1272,7 +1266,6 @@ p.phone {
   /* border-top: 1px solid #ccc; */
 }
 
-
 .visi-misi ul {
   list-style: none;
   padding: 0;
@@ -1297,8 +1290,6 @@ p.phone {
   color: #333;
 }
 
-
-
 @media screen and (max-width: 700px) {
   .container-about {
     width: 80%;
@@ -1306,7 +1297,7 @@ p.phone {
     margin: auto;
     padding-top: 50px;
   }
-  .hero{
+  .hero {
     height: 100vh;
   }
   .article {
@@ -1324,7 +1315,7 @@ p.phone {
     font-size: 28px;
     text-align: center;
   }
-  .article .content p{
+  .article .content p {
     font-size: 15px;
   }
   .article .content .button {
@@ -1340,9 +1331,7 @@ p.phone {
   .visi-misi .misi h3 {
     text-align: center;
   }
-  
 }
-
 
 /* --------------------- HUBUNGI KAMI ------------------  */
 
