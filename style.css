@@ -272,10 +272,14 @@ nav .fa-solid:hover {
   height: 100%;
   object-fit: cover;
 }
+.swiper-tampilan-depan .swiper-slide img.khusus-kr {
+  object-fit: unset;
+}
 @media (max-width: 700px) {
   .swiper-tampilan-depan .swiper-slide img {
     width: 100%;
     height: 100%;
+    /* object-fit:unset */
   }
 }
 
@@ -508,6 +512,10 @@ section.abuabu {
 
 /* SWIPER SLIDER FOR GALERI */
 /* Container */
+#slider-2 {
+  /* background-color: #f5f6f6; */
+  width: 100%;
+}
 .wide {
   max-width: 46rem;
   margin: auto;
@@ -515,7 +523,7 @@ section.abuabu {
 
 .wide {
   max-width: 100%;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
 }
 
 /* Swiper */
@@ -1106,7 +1114,7 @@ p.phone {
   }
 }
 
-@media screen and (max-width: 479.98px) {
+@media screen and (max-width: 400px) {
   section.quote {
     background-size: 100% 100%;
     padding: 100px;

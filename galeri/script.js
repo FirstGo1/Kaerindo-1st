@@ -9,6 +9,10 @@ function hideMenu() {
   navLinks.style.right = "-200px";
 }
 
+
+
+
+
 // ----------------- GALERI HTML ----------
 const container = document.querySelector(".myGallery");
 const likeBtns = document.querySelectorAll(".like-btn");
@@ -108,4 +112,43 @@ zoomIn.addEventListener('click', () => {
 
 zoomOut.addEventListener('click', () => {
   img.style.width = '50%';
+});
+
+
+
+
+
+
+
+
+
+// ----------- test ----------
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex',
+  sidebar.classList.add('show')
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
+
+// --------------- scroll ------------- 
+window.addEventListener('scroll', function() {
+  var navBawah = document.querySelector('.nav-bawah');
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 200) {
+    navBawah.classList.add('show');
+  } else {
+    navBawah.classList.remove('show');
+  }
+});z
+
+//   ------------------- klik diluar element ------------
+const menu = document.querySelector('menu-button');
+
+document.addEventListener('click', function (e) {
+  if (!menu.contains(e.target) && !sidebar.contains(e.target)) {
+    navbarNav.classList.remove('active');
+  }
 });

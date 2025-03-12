@@ -217,7 +217,7 @@ nav .fa-solid:hover {
   background-image: linear-gradient(to top, black, transparent), url(img/KR.jpg);
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: 100vw 100vh;
   text-align: center;
   color: #fff;
   position: relative;
