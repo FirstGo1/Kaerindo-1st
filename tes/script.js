@@ -92,3 +92,14 @@ riwayatKesehatanSelect.addEventListener('change', () => {
 
 
   // ---------- midtrans ----------- 
+
+
+
+
+
+
+
+
+
+  // ----------- translator manual --------
+  
