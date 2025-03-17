@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .formbold-main-wrapper {
   display: flex;
@@ -19,10 +19,15 @@ body {
   margin: 0 auto;
   max-width: 550px;
   width: 100%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* text-align: center; */
+}
+.isi-tengah{
+  text-align: center;
 }
 
 .formbold-event-wrapper span {
@@ -75,11 +80,12 @@ body {
 }
 
 .formbold-event-wrapper h4 {
+  text-align: left;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   color: #07074d;
-  width: 60%;
+  width: 70%;
   margin: 25px 0 15px;
 }
 .formbold-event-wrapper p {
@@ -141,9 +147,10 @@ body {
 .formbold-form-input {
   text-align: center;
   width: 100%;
-  padding: 13px 22px;
-  border-radius: 10px;
-  border: 1px solid #dde3ec;
+  /* padding: 13px 22px; */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   background: #ffffff;
   font-weight: 500;
   font-size: 16px;
@@ -151,43 +158,80 @@ body {
   outline: none;
   resize: none;
   margin-bottom: 20px;
+  transition: 0.3s;
 }
 .formbold-form-input:focus {
-  border-color: #6a64f1;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  border-color: #ff0000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .formbold-form-label {
   color: #333333;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   line-height: 24px;
   display: block;
   margin-bottom: 10px;
 }
-.formbold-form-label.required::after {
-  content: "*";
-  color: red;
-}
 
-.formbold-form-label.filled::after {
-  content: "";
-}
 
 .formbold-policy {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 24px;
   color: #536387;
-  width: 70%;
+  width: 100%;
   margin-top: 22px;
 }
 .formbold-policy a {
   color: #ff0000;
+  font-size: 16px;
+  text-decoration: none;
 }
+
+
+.formbold-policy input[type="checkbox"] {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.formbold-policy label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.syarat-ketentuan-link:hover {
+  color: rgba(255, 0, 0, 0.445);
+}
+input[type="checkbox"] {
+  accent-color: #ff0000;
+}
+input[type="checkbox"]:not(:checked) {
+  accent-color: #ccc;
+}
+
+/* input:invalid {
+  content: 'X';
+  color: red;
+}
+input:valid {
+  content: '✓';
+  color: green;
+} */
+
+
+
+
+
+
+
+
 .formbold-btn {
   text-align: center;
   width: 100%;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 14px 25px;
+  /* padding: 10px 20px; */
   border: none;
   font-weight: 500;
   background-color: #ff5252;
@@ -201,6 +245,69 @@ body {
   background-color: #ff0000;
   color: #ffffff;
 }
+.formbold-btn.disabled{
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.syarat-ketentuan-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffda;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+
+  width: 50%;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.syarat-ketentuan-popup h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.syarat-ketentuan-popup p {
+  line-height: 25px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.syarat-ketentuan-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.syarat-ketentuan-popup-close:hover {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   .formbold-form-wrapper {

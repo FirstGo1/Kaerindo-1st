@@ -127,29 +127,76 @@
       
             <div class="formbold-input-flex">
               <div>
-                <label for="firstname" class="formbold-form-label" required>
-                  Nama depan
+                <label for="nama_lengkap" class="formbold-form-label" required>
+                  Nama Lengkap
                 </label>
                 <input
                   type="text"
-                  name="firstname"
-                  id="firstname"
+                  name="nama_lengkap"
+                  id="nama_lengkap"
                   class="formbold-form-input"
                   required
                 />
               </div>
+
               <div>
-                <label for="lastname" class="formbold-form-label" required> Nama akhir </label>
+                <label for="jenis_kelamin" class="formbold-form-label" required> Jenis Kelamin </label>
+                <select
+                  name="jenis_kelamin"
+                  id="jenis_kelamin"
+                  class="formbold-form-input"
+                  required
+                >
+                <option value=""></option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+
+            </div>
+      
+            <div class="formbold-input-flex">
+              <div>
+                <label for="tanggal_lahir" class="formbold-form-label" required> Tanggal Lahir </label>
+                <input
+                  type="date"
+                  name="tanggal_lahir"
+                  id="tanggal_lahir"
+                  class="formbold-form-input"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="nomor_identitas" class="formbold-form-label" required> Nomor Identitas </label>
                 <input
                   type="text"
-                  name="lastname"
-                  id="lastname"
+                  name="nomor_identitas"
+                  id="nomor_identitas"
+                  class="formbold-form-input"
+                  required
+                />
+              </div>
+
+            </div>
+      
+            <div class="formbold-input-flex">
+              <div>
+                <label for="alamat_domisili" class="formbold-form-label" required> Alamat Domisili </label>
+                <input name="alamat_domisili" id="alamat_domisili" class="formbold-form-input" required/>
+              </div>
+              <div>
+                <label for="nomor_telepon" class="formbold-form-label" required> Nomor Telepon / Whatsapp </label>
+                <input
+                  type="tel"
+                  name="nomor_telepon"
+                  id="nomor_telepon"
                   class="formbold-form-input"
                   required
                 />
               </div>
             </div>
-      
+            
             <div class="formbold-input-flex">
               <div>
                 <label for="email" class="formbold-form-label" required> Email </label>
@@ -162,83 +209,108 @@
                 />
               </div>
               <div>
-                <label for="phone" class="formbold-form-label" required> Nomor telepon </label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  class="formbold-form-input"
-                  required
-                />
+                <label for="kategori_lomba" class="formbold-form-label" required> Kategori Lomba </label>
+                <select name="kategori_lomba" id="kategori_lomba" class="formbold-form-input" required>
+                  <option value=""></option>
+                  <option value="lari">Lari</option>
+                  <option value="jalan">Jalan</option>
+                  <option value="keluar">Keluar</option>
+                </select>
               </div>
             </div>
-      
-            <!-- <div class="formbold-input-flex">
+
+              <div class="formbold-input-flex">
               <div>
-                <label for="jobtitle" class="formbold-form-label"> Job Title* </label>
+                <label for="komunitas_lari" class="formbold-form-label" required> Komunitas Lari </label>
                 <input
                   type="text"
-                  name="jobtitle"
-                  id="jobtitle"
-                  class="formbold-form-input"
-                />
-              </div>
-              <div>
-                <label for="company" class="formbold-form-label"> Company* </label>
-                <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  class="formbold-form-input"
-                />
-              </div>
-            </div> -->
-      
-            <div class="formbold-input-flex">
-              <div>
-                <label for="state" class="formbold-form-label" required> Negara </label>
-                <input
-                  type="text"
-                  name="state"
-                  id="state"
+                  name="komunitas_lari"
+                  id="komunitas_lari"
                   class="formbold-form-input"
                   required
                 />
               </div>
+
               <div>
-                <label for="country" class="formbold-form-label" required> Kota </label>
-                <input
-                  type="text"
-                  name="country"
-                  id="country"
-                  class="formbold-form-input"
-                  required
-                />
+                <label for="ukuran_kaos" class="formbold-form-label" required> Golongan Darah </label>
+                <select name="ukuran_kaos" id="ukuran_kaos" class="formbold-form-input" required>
+                  <option value=""></option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+
+
+            </div>
+              <div class="formbold-input-flex">
+              <div>
+                <label for="riwayat_kesehatan" class="formbold-form-label" required> Riwayat Kesehatan </label>
+                <select name="riwayat_kesehatan" id="riwayat_kesehatan" class="formbold-form-input" required>
+                  <option value=""></option>
+                  <option value="Asma">Asma</option>
+                  <option value="Hipertensi">Hipertensi</option>
+                  <option value="Diabetes">Diabetes</option>
+                  <option value="Alergi">Alergi</option>
+                  <option value="Backpain">Backpain</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+                <input type="text" name="riwayat_kesehatan_lainnya" id="riwayat_kesehatan_lainnya" class="formbold-form-input" placeholder="Tulis alasan lainnya" style="display: none;">
+              </div>
+              <div>
+                <label for="golongan_darah" class="formbold-form-label" required> Golongan Darah </label>
+                <select name="golongan_darah" id="golongan_darah" class="formbold-form-input" required>
+                  <option value="">Pilih</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+                  <option value="O">O</option>
+                </select>
               </div>
             </div>
-      
+
             <div>
-              <label for="postcode" class="formbold-form-label" required> Kode pos </label>
+              <label for="kontak_darurat" class="formbold-form-label  isi-tengah" required> Kontak Darurat (Nama / No Telepon) </label>
               <input
                 type="text"
-                name="postcode"
-                id="postcode"
+                name="kontak_darurat"
+                id="kontak_darurat"
                 class="formbold-form-input"
                 required
               />
             </div>
       
-            <p class="formbold-policy">
-              Dengan mengisi formulir ini dan mengklik kirim, Anda mengakui
-              <a href="#">kebijakan privasi.</a>
-            </p>
-            <button class="formbold-btn">Beli Tiket</button>
+            <div class="formbold-policy">
+              <input type="checkbox" id="syarat-ketentuan" name="syarat-ketentuan" required>
+              <label for="syarat-ketentuan">Saya telah membaca dan menyetujui syarat dan ketentuan</label>
+              <a href="#" class="syarat-ketentuan-link">Lihat syarat dan ketentuan</a>
+            </div>
+
+            <button class="formbold-btn disabled" id="formboldButton">Beli Tiket</button>
+
           </form>
+
+          <div class="syarat-ketentuan-popup" style="display: none;">
+            <h2>Pemesanan/Pembelian Tiket</h2>
+           <p>1. Pemesanan/pembelian tiket dianggap berhasil atau selesai setelah Anda melakukan pelunasan pembayaran dan kaerindojaya.com menerbitkan dan mengirim e-ticket ke Anda. Apabila terjadi perselisihan atau permasalahan, maka data yang terdapat pada kaerindojaya.com akan menjadi acuan utama dan dianggap sah.</p>
+            
+            
+            <p>2. Dengan menyelesaikan pemesanan/pembelian, maka Anda dianggap setuju untuk menerima: email yang memberikan informasi tentang tiket yang Anda beli, dan menyediakan Anda informasi dan penawaran tertentu (termasuk penawaran Pihak Penyelenggara Event) yang terkait dengan pemesanan Anda.</p>
+            
+            <p>3. Masa berlaku e-ticket adalah sebagaimana ditentukan oleh Pihak Penyelenggara Event kami.</p>
+            
+            <p>4. Kecuali ditentukan lain oleh Pihak Penyelenggara Event, e-ticket hanya dapat digunakan oleh yang namanya tercantum pada e-ticket.</p>
+            <button class="syarat-ketentuan-popup-close">X</button>
+          </div>
           
         </div>
       </div>
 
 
-      
+      <!-- <script src="https://app.midtrans.com/snap/snap.js" data-client-key="
+      SB-Mid-client-j5U0g8DhRbapTi0G"></script> -->
+
+      <script src="script.js"></script>
 </body>
 </html>
