@@ -181,6 +181,12 @@ svg:hover {
   color: #000;
 }
 
+@media (max-width: 1200px){
+nav a {
+  padding: 0 10px;
+}
+}
+
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
@@ -200,6 +206,11 @@ svg:hover {
   }
   .language-switcher.hide {
     display: none;
+  }
+  .language-switcher{
+    text-align: left;
+    margin: 0;
+    padding-left: 16px;
   }
 }
 @media (max-width: 400px) {
@@ -228,6 +239,11 @@ svg:hover {
   nav img {
     width: 100%;
     height: 100%;
+  }
+  .language-switcher{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
 
@@ -698,75 +714,17 @@ input:valid {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0;
   background: linear-gradient(to right, #3c0000b9, #4e4e4ed7);
   border-top: solid 1px #000;
   margin-top: 50px;
   position: relative;
   /* border-radius: 90px 0 0 0; */
 }
-.footer h4 {
-  margin-bottom: 25px;
-  margin-top: 20px;
-  font-weight: 600;
-}
-.icons .fa-brands {
-  color: #ffffff;
-  margin: 0 13px;
-  cursor: pointer;
-  padding: 18px 0;
-}
+
 .footer p {
   font-size: 15px;
   color: #fff;
-}
-
-.footer .social-icons {
-  /* margin-top: 20px; */
-  text-align: center;
-  position: relative;
-  top: 30px;
-}
-
-.footer .social-icons i {
-  padding: 8px;
-  font-size: 20px;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  margin: 3px;
-  transition: 0.3s;
-}
-
-.footer .social-icons .fa-facebook:hover {
-  background: #1877f2;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-whatsapp:hover {
-  background: #25d366;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-instagram:hover {
-  background: #fe107c;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-youtube:hover {
-  background: #fff;
-  color: #ff0000;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-google:hover {
-  background: #ea4335;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
 }
 .ending-page {
   position: relative;

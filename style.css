@@ -83,7 +83,7 @@ nav img:hover {
   position: relative;
 }
 .nav-links ul li.regis-hide {
-  display: none;
+  /* display: none; */
 }
 .nav-links ul li a {
   color: #fff;
