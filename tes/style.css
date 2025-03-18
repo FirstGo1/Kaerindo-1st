@@ -255,6 +255,10 @@ a.en:before{
 nav a {
   padding: 0 10px;
 }
+.sidebar .language{
+  margin: 0;
+  padding: 0 0 0 10px;
+}
 }
 
 @media (max-width: 800px) {
@@ -279,6 +283,10 @@ nav a {
   }
   .nav-bawah .language{
     display: none;
+  }
+   .sidebar .language{
+    margin: 0;
+    padding: 0 0 0 10px;
   }
 }
 @media (max-width: 400px) {
@@ -307,6 +315,15 @@ nav a {
   nav img {
     width: 100%;
     height: 100%;
+  }
+  .sidebar .language-selected{
+    position: relative;
+  }
+  .sidebar .language{
+    margin: 0 auto;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -577,9 +594,8 @@ input:valid {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
-
   width: 50%;
-  height: 80vh;
+  height: 50vh;
   overflow-y: auto;
   z-index: 1;
 }
