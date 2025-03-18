@@ -52,17 +52,18 @@
                 /></svg
             ></a>
           </li>
-          <li><a href="/index.html">Beranda</a></li>
-          <li><a href="/about.html">Tentang</a></li>
-          <li><a href="/galeri/index.html">Galeri</a></li>
-          <li><a href="/tes/index.html">Registrasi</a></li>
-          <li><a href="/contact.html">Hubungi</a></li>
-          <li class="language-switcher">
-            <select id="language-switcher-mobile">
-              <option value="id">ID</option>
-              <option value="en">EN</option>
-            </select>
-          </li>
+          <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+          <li><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li><a class="nav-registrasi" href="/tes/index.html">Registrasi</a></li>
+          <li><a class="nav-hubungi" href="/contact.html">Hubungi</a></li>
+          <div class="language">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
         </ul>
 
         <!-- ------- NAV Paling atas --------- -->
@@ -70,17 +71,19 @@
           <li>
             <a href="#"><img src="/tes/1111.png" /></a>
           </li>
-          <li class="hideOnMobile"><a href="/index.html">Beranda</a></li>
-          <li class="hideOnMobile"><a href="/about.html">Tentang</a></li>
-          <li class="hideOnMobile"><a href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a href="/tes/index.html">Registrasi</a></li>
-          <li class="hideOnMobile"><a href="/contact.html">Hubungi</a></li>
-          <li class="language-switcher hide">
-            <select class="language-ganti" id="language-switcher-mobile" data-bahasa="pilih">
-              <option class="id" value="indonesia">ID</option>
-              <option class="en" value="english">EN</option>
-            </select>
-          </li>
+          <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+          <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li class="hideOnMobile"><a class="nav-registrasi" href="/tes/index.html">Registrasi</a></li>
+          <li class="hideOnMobile"><a class="nav-hubungi" href="/contact.html">Hubungi</a></li>
+
+          <div class="language hide">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
           <li class="menu-button" onclick="showSidebar()">
             <a href="#"
               ><svg
@@ -127,17 +130,18 @@
           <li>
             <a href="#"><img src="/tes/111.png" /></a>
           </li>
-          <li class="hideOnMobile"><a href="/index.html">Home</a></li>
-          <li class="hideOnMobile"><a href="/about.html">Tentang</a></li>
-          <li class="hideOnMobile"><a href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a href="/tes/index.html">Registrasi</a></li>
-          <li class="hideOnMobile"><a href="/contact.html">Hubungi</a></li>
-          <li class="language-switcher hide">
-            <select id="language-switcher-mobile">
-              <option class="id" value="id">ID</option>
-              <option class="en" value="en">EN</option>
-            </select>
-          </li>
+          <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
+          <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li class="hideOnMobile"><a class="nav-registrasi" href="/tes/index.html">Registrasi</a></li>
+          <li class="hideOnMobile"><a class="nav-hubungi" href="/contact.html">Hubungi</a></li>
+          <div class="language">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
           <li class="menu-button" onclick="showSidebar()">
             <a href="#"
               ><svg
@@ -241,7 +245,7 @@
                       </clipPath>
                     </defs>
                   </svg>
-                  Jogjakarta, Yogyakarta
+                  Yogjakarta, Yogyakarta
                 </li>
                 <li>
                   <svg
@@ -270,11 +274,11 @@
           </div>
 
           <form action="https://formbold.com/s/FORM_ID" method="POST">
-            <h2 class="formbold-form-title">Registrasi sekarang</h2>
+            <h2 class="formbold-form-title form-title">Registrasi sekarang</h2>
 
             <div class="formbold-input-flex">
               <div>
-                <label for="nama_lengkap" class="formbold-form-label" required>
+                <label for="nama_lengkap" class="formbold-form-label name-label" required>
                   Nama Lengkap
                 </label>
                 <input
@@ -287,7 +291,7 @@
               </div>
 
               <div>
-                <label for="jenis_kelamin" class="formbold-form-label" required>
+                <label for="jenis_kelamin" class="formbold-form-label jenis-kelamin-label" required>
                   Jenis Kelamin
                 </label>
                 <select
@@ -305,7 +309,7 @@
 
             <div class="formbold-input-flex">
               <div>
-                <label for="tanggal_lahir" class="formbold-form-label" required>
+                <label for="tanggal_lahir" class="formbold-form-label tanggal-lahir-label" required>
                   Tanggal Lahir
                 </label>
                 <input
@@ -320,7 +324,7 @@
               <div>
                 <label
                   for="nomor_identitas"
-                  class="formbold-form-label"
+                  class="formbold-form-label nomor-identitas-label"
                   required
                 >
                   Nomor Identitas
@@ -339,7 +343,7 @@
               <div>
                 <label
                   for="alamat_domisili"
-                  class="formbold-form-label"
+                  class="formbold-form-label alamat-domisili-label"
                   required
                 >
                   Alamat Domisili
@@ -352,10 +356,11 @@
                 />
               </div>
               <div>
-                <label for="nomor_telepon" class="formbold-form-label" required>
+                <label for="nomor_telepon" class="formbold-form-label nomor-telepon-label" required>
                   Nomor Whatsapp
                 </label>
-                <input
+                <input 
+                placeholder=""
                   type="tel"
                   name="nomor_telepon"
                   id="nomor_telepon"
@@ -367,7 +372,7 @@
 
             <div class="formbold-input-flex">
               <div>
-                <label for="email" class="formbold-form-label" required>
+                <label for="email" class="formbold-form-label email-label" required>
                   Email
                 </label>
                 <input
@@ -381,7 +386,7 @@
               <div>
                 <label
                   for="kategori_lomba"
-                  class="formbold-form-label"
+                  class="formbold-form-label kategori-lomba-label"
                   required
                 >
                   Kategori Lomba
@@ -403,7 +408,7 @@
               <div>
                 <label
                   for="komunitas_lari"
-                  class="formbold-form-label"
+                  class="formbold-form-label komunitas-lari-label"
                   required
                 >
                   Komunitas Lari
@@ -418,7 +423,7 @@
               </div>
 
               <div>
-                <label for="ukuran_kaos" class="formbold-form-label" required>
+                <label for="ukuran_kaos" class="formbold-form-label ukuran-kaos-label" required>
                   Ukuran Baju
                 </label>
                 <select
@@ -439,7 +444,7 @@
               <div>
                 <label
                   for="riwayat_kesehatan"
-                  class="formbold-form-label"
+                  class="formbold-form-label riwayat-kesehatan-label"
                   required
                 >
                   Riwayat Kesehatan
@@ -470,7 +475,7 @@
               <div>
                 <label
                   for="golongan_darah"
-                  class="formbold-form-label"
+                  class="formbold-form-label golongan-darah-label"
                   required
                 >
                   Golongan Darah
@@ -481,7 +486,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="">Pilih</option>
+                  <option value=""></option>
                   <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="AB">AB</option>
@@ -493,7 +498,7 @@
             <div>
               <label
                 for="kontak_darurat"
-                class="formbold-form-label isi-tengah"
+                class="formbold-form-label isi-tengah kontak-darurat-label"
                 required
               >
                 Kontak Darurat (Nama / No Telepon)
@@ -515,7 +520,7 @@
                 name="syarat-ketentuan"
                 required
               />
-              <label for="syarat-ketentuan"
+              <label class="syarat-ketentuan-label" for="syarat-ketentuan"
                 >Saya telah membaca dan menyetujui syarat dan ketentuan</label
               >
               <a href="#" class="syarat-ketentuan-link"
@@ -523,39 +528,30 @@
               >
             </div>
 
-            <button class="formbold-btn disabled" id="formboldButton">
+            <button class="formbold-btn disabled beli-tiket-button" id="formboldButton">
               Beli Tiket
             </button>
           </form>
 
           <div class="syarat-ketentuan-popup" style="display: none">
             <h2>Pemesanan/Pembelian Tiket</h2>
-            <p>
-              1. Pemesanan/pembelian tiket dianggap berhasil atau selesai
-              setelah Anda melakukan pelunasan pembayaran dan kaerindojaya.com
-              menerbitkan dan mengirim e-ticket ke Anda. Apabila terjadi
-              perselisihan atau permasalahan, maka data yang terdapat pada
-              kaerindojaya.com akan menjadi acuan utama dan dianggap sah.
-            </p>
-
-            <p>
-              2. Dengan menyelesaikan pemesanan/pembelian, maka Anda dianggap
-              setuju untuk menerima: email yang memberikan informasi tentang
-              tiket yang Anda beli, dan menyediakan Anda informasi dan penawaran
-              tertentu (termasuk penawaran Pihak Penyelenggara Event) yang
-              terkait dengan pemesanan Anda.
-            </p>
-
-            <p>
-              3. Masa berlaku e-ticket adalah sebagaimana ditentukan oleh Pihak
-              Penyelenggara Event kami.
-            </p>
-
-            <p>
-              4. Kecuali ditentukan lain oleh Pihak Penyelenggara Event,
-              e-ticket hanya dapat digunakan oleh yang namanya tercantum pada
-              e-ticket.
-            </p>
+            <ul>
+              <li>Pemesanan/pembelian tiket dianggap berhasil atau selesai
+                setelah Anda melakukan pelunasan pembayaran dan kaerindojaya.com
+                menerbitkan dan mengirim e-ticket ke Anda. Apabila terjadi
+                perselisihan atau permasalahan, maka data yang terdapat pada
+                kaerindojaya.com akan menjadi acuan utama dan dianggap sah.</li>
+              <li>Dengan menyelesaikan pemesanan/pembelian, maka Anda dianggap
+                setuju untuk menerima: email yang memberikan informasi tentang
+                tiket yang Anda beli, dan menyediakan Anda informasi dan penawaran
+                tertentu (termasuk penawaran Pihak Penyelenggara Event) yang
+                terkait dengan pemesanan Anda.</li>
+              <li>Masa berlaku e-ticket adalah sebagaimana ditentukan oleh Pihak
+                Penyelenggara Event kami.</li>
+              <li>Kecuali ditentukan lain oleh Pihak Penyelenggara Event,
+                e-ticket hanya dapat digunakan oleh yang namanya tercantum pada
+                e-ticket.</li>
+            </ul>
             <button class="syarat-ketentuan-popup-close">X</button>
           </div>
         </div>
@@ -578,15 +574,11 @@
       feather.replace();
     </script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
     <!-- LINKING swiperJS Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
