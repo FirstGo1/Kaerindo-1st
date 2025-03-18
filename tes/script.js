@@ -20,13 +20,13 @@ window.addEventListener('scroll', function() {
   });
 
 //   ------------------- klik diluar element ------------
-const menu = document.querySelector('menu-button');
+// const menu = document.querySelector('menu-button');
 
-document.addEventListener('click', function (e) {
-    if (!menu.contains(e.target) && !sidebar.contains(e.target)) {
-      navbarNav.classList.remove('active');
-    }
-});
+// document.addEventListener('click', function (e) {
+//     if (!menu.contains(e.target) && !sidebar.contains(e.target)) {
+//       navbarNav.classList.remove('active');
+//     }
+// });
 
 
 
@@ -102,4 +102,34 @@ riwayatKesehatanSelect.addEventListener('change', () => {
 
 
   // ----------- translator manual --------
-  
+  const translation = {
+    id: {
+      element_1 : "Apa yang akan kamu dapatkan?",
+      element_2 : "Bisa mengikuti acara kegiatan didalam kaerindo jaya komunikasi",
+      // element_3 : ,
+      // element_4 : ,
+      // element_5 : ,
+    },
+    en: {
+      element_1 : "What will you get?",
+      element_2 : "Can participate in events and activities within Kaerindo Jaya Komunikasi",
+      // element_3 : ,
+      // element_4 : ,
+      // element_5 : ,
+    }
+  }
+  const languageSelector = document.querySelector("#language-switcher-mobile");
+
+let elements_1 = document.getElementsByClassName("element_1");
+
+  languageSelector.addEventListener("change", (event) => {
+    setLanguage(event.target.value)
+  })
+
+const setLanguage = (language) => {
+  if (language == "en"){
+    console.log(language);
+  }else if(language == "id"){
+    console.log(language)
+  }
+}
