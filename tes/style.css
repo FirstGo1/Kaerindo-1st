@@ -341,7 +341,7 @@ nav a {
 
 .formbold-form-wrapper {
   margin: 0 auto;
-  max-width: 550px;
+  max-width: 650px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: normal;
@@ -519,9 +519,20 @@ nav a {
   margin-top: 22px;
 }
 .formbold-policy a {
-  color: #ffffff;
+  color: #000;
   font-size: 14px;
+  font-weight: bold;
   text-decoration: none;
+  transition: 0.2s ease;
+}
+.syarat-ketentuan-link:hover {
+  color: #ff0000;
+}
+.formbold-policy.custom-checkbox{
+  text-align: left;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: flex;
 }
 
 .formbold-policy input[type="checkbox"] {
@@ -530,20 +541,27 @@ nav a {
   margin-right: 5px;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
+  vertical-align: center;
+  z-index: 999;
 }
 
 .formbold-policy label {
   font-size: 14px;
   font-weight: bold;
+  vertical-align: center;
+  /* text-align: center; */
 }
 
 .syarat-ketentuan-link:hover {
   color: #ff0000;
 }
 input[type="checkbox"] {
+  /* float: left; */
   accent-color: #ff0000;
   cursor: pointer;
+  align-items: center;
+  margin-top: 5px;
 }
 input[type="checkbox"]:not(:checked) {
   accent-color: #ccc;
@@ -567,63 +585,126 @@ input:valid {
   /* padding: 10px 20px; */
   border: none;
   font-weight: 500;
-  background-color: #ff5252;
+  background-color: #ff0000;
   color: white;
   cursor: pointer;
   margin-top: 25px;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s linear;
 }
 .formbold-btn:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  background-color: #ff0000;
-  color: #ffffff;
+  opacity: 0.6;
 }
 .formbold-btn.disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-.syarat-ketentuan-popup {
+/* ---------- popup syarat--------- */
+/*     */
+
+
+/* ------- different term & conditions------- */
+.terms-box {
+  max-width: 460px;
+  background-color: #111;
+  color: #fff;
+  font-family: "Poppins";
+  padding: 60px 30px;
+  border-radius: 10px;
+  align-items: center;
+
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffffda;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
-  width: 50%;
-  height: 50vh;
   overflow-y: auto;
   z-index: 1;
 }
-.syarat-ketentuan-popup.show {
+.terms-box.show {
   display: block;
 }
+.terms-text {
+  padding: 0 20px;
+  height: 400px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f1f1f1;
+  position: relative;
+}
+.terms-text::-webkit-scrollbar {
+  width: 2px;
+  background-color: #282828;
+}
+.terms-text::-webkit-scrollbar-thumb {
+  background-color: #d13639;
+}
+.terms-text h2 {
+  text-transform: uppercase;
+  margin: 17.43px 0;
 
-.syarat-ketentuan-popup h2 {
-  text-align: center;
-  font-size: 24px;
+  /* font-size: 24px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
+}
+.terms-box h4 {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 40px;
+  margin: 17.29px 0;
+}
+.terms-box h4 span {
+  color: #d13639;
 }
 
-.syarat-ketentuan-popup ul li {
-  line-height: 25px;
-  font-size: 16px;
-  margin-bottom: 20px;
+div.box-centang{
+  display: flex;
+  width: 100%;
 }
 
-.syarat-ketentuan-popup-close {
+h4.centang-box, .centang-box span {
+  font-size: 13px;
+  /* margin: 0; */
+  padding: 0;
+  text-align: left;
+}
+.terms-text p{
+  margin: 14px 0;
+}
+
+.terms-box ul {
+  /* list-style: none; */
+  padding: 0 0 0 40px;
+  margin: 14px 0;
+}
+
+.terms-box ul li {
+  /* line-height: 25px; */
+  font-size: 14px;
+  /* margin-bottom: 10px; */
+}
+
+.terms-box ul li::before {
+  content: "";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.terms-box-close {
+  background: transparent;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  top: 0;
+  right: 0;
+  margin: 3px;
+  font-size: 30px;
   cursor: pointer;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   border: none;
   border-radius: 5px;
   width: 30px;
@@ -631,9 +712,72 @@ input:valid {
   cursor: pointer;
   transition: 0.3s;
 }
-.syarat-ketentuan-popup-close:hover {
-  color: red;
+
+.terms-box-close:hover {
+  color: #ff0000;
 }
+
+
+.buttons {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.btn {
+  height: 50px;
+  width: calc(50% - 6px);
+  border: 0;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.red-btn {
+  background-color: #d13639;
+}
+.gray-btn {
+  background-color: #282828;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+#accept-btn:disabled {
+  background-color: #d13639;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#accept-btn:disabled:hover {
+  opacity: 0.6;
+}
+
+#terms-checkbox {
+  accent-color: red;
+  width: 15px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 19px;
+  vertical-align: middle;
+}
+
+#terms-checkbox:checked {
+  background-color: #d13639;
+  border-color: #d13639;
+}
+
+#terms-checkbox:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
 
 @media (max-width: 1366px) {
   .syarat-ketentuan-popup h2 {
