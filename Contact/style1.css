@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background: #000;
-  height: 55vh;
+  /* height: 55vh; */
   width: 100%;
   object-fit: cover;
   background-image: linear-gradient(to top, black, transparent), url(img/KR.jpg);
@@ -45,7 +45,7 @@ nav {
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  transition: top 0.75s ease-out;
+  transition: top .75s ease-out;
 }
 
 .nav-bawah.show {
@@ -345,7 +345,7 @@ a.en:before {
 .container .row100 .inputBox textarea:valid + .text {
   top: -35px;
   left: -10px;
-  color: #ff3131;
+  color: #ff0000;
 }
 .container .row100 .inputBox textarea:focus ~ .line,
 .container .row100 .inputBox textarea:valid ~ .line {

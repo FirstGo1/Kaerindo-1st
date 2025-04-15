@@ -17,16 +17,12 @@
   
           
         // ------ Utama --------
-      $(".formbold-event-wrapper span").text("Kaerindo Jaya Komunikasi");
-      $(".formbold-event-wrapper h3").text("Jelajah Kedaulatan Rakyat");
-      $(".formbold-event-wrapper h4").text("Apa yang akan kamu dapatkan?");
-      $(".formbold-event-wrapper p").text("Bisa mengikuti acara kegiatan didalam kaerindo jaya komunikasi");
   
       // ----- Detail Acara ------
       $(".formbold-event-details h5").text("Detail acara");
-      $(".formbold-event-details ul li:nth-child(1)").text("06 Juli, 2025");
+      $(".formbold-event-details ul li:nth-child(1)").text("06 September, 2025");
       $(".formbold-event-details ul li:nth-child(2)").text("08:30am - 06:00pm");
-      $(".formbold-event-details ul li:nth-child(3)").text("Yogjakarta, Yogyakarta");
+      $(".formbold-event-details ul li:nth-child(3)").text("Yogyakarta, Yogyakarta");
       $(".formbold-event-details ul li:nth-child(4)").text("Informasi tambahan");
   
   
