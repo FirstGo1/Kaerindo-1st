@@ -164,12 +164,12 @@
         <div class="formbold-form-wrapper">
           <div class="formbold-event-wrapper">
             <span>Kaerindo Jaya Komunikasi</span>
-            <h3>KR Run</h3>
-            <img class="img-box" src="bg depan atas.jpg" />
-            <h4>Apa yang akan kamu dapatkan?</h4>
+            <h3>KR RUN</h3>
+            <img class="img-box" src="bg event.jpg" />
+            <!-- <h4>Apa yang akan kamu dapatkan?</h4>
             <p>
-              Bisa mengikuti acara kegiatan didalam kaerindo jaya komunikasi
-            </p>
+             Ikut partisipasi di KR RUN 2025 Yogyakarta
+            </p> -->
 
             <div class="formbold-event-details">
               <h5>Detail acara</h5>
@@ -269,7 +269,7 @@
 
           <!-- <form action="https://formbold.com/s/FORM_ID" method="POST"> --> 
             <form>
-            <h2 class="formbold-form-title form-title">Registrasi sekarang</h2>
+            <h2 class="formbold-form-title form-title">Registrasi sekarang !</h2>
 
             <div class="formbold-input-flex">
               <div>
@@ -280,6 +280,7 @@
                   type="text"
                   name="nama_lengkap"
                   id="nama_lengkap"
+                  placeholder="Name"
                   class="formbold-form-input"
                   required
                 />
@@ -295,7 +296,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value=""></option>
+                  <option value="" disabled selected>Gender</option>
                   <option value="Laki-laki">Laki-laki</option>
                   <option value="Perempuan">Perempuan</option>
                 </select>
@@ -317,45 +318,11 @@
               </div>
 
               <div>
-                <label
-                  for="nomor_identitas"
-                  class="formbold-form-label nomor-identitas-label"
-                  required
-                >
-                  Nomor Identitas
-                </label>
-                <input
-                  type="number"
-                  name="nomor_identitas"
-                  id="nomor_identitas"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="formbold-input-flex">
-              <div>
-                <label
-                  for="alamat_domisili"
-                  class="formbold-form-label alamat-domisili-label"
-                  required
-                >
-                  Alamat Domisili
-                </label>
-                <input
-                  name="alamat_domisili"
-                  id="alamat_domisili"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-              <div>
                 <label for="nomor_telepon" class="formbold-form-label nomor-telepon-label" required>
                   Nomor Whatsapp
                 </label>
                 <input 
-                placeholder=""
+                placeholder="ex : 08xx-xxxx-xxxx"
                   type="tel"
                   name="nomor_telepon"
                   id="nomor_telepon"
@@ -363,7 +330,8 @@
                   required
                 />
               </div>
-            </div>
+              </div>
+            
 
             <div class="formbold-input-flex">
               <div>
@@ -374,6 +342,7 @@
                   type="email"
                   name="email"
                   id="email"
+                  placeholder="ex : example@email.com"
                   class="formbold-form-input"
                   required
                 />
@@ -392,10 +361,10 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value=""></option>
-                  <option value="lari">3K</option>
-                  <option value="jalan">5K</option>
-                  <option value="jalan">8K</option>
+                  <option value="" disabled selected></option>
+                  <option value="lari">5K</option>
+                  <option value="jalan">10K</option>
+                  <option value="jalan">21K</option>
                 </select>
               </div>
             </div>
@@ -428,11 +397,13 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value=""></option>
+                  <option value="" disabled selected>Size</option>
+                  <option value="XS">XS</option>
                   <option value="S">S</option>
                   <option value="M">M</option>
                   <option value="L">L</option>
                   <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
                 </select>
               </div>
             </div>
@@ -451,7 +422,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value=""></option>
+                  <option value="" disabled selected></option>
                   <option value="Asma">Asma</option>
                   <option value="Hipertensi">Hipertensi</option>
                   <option value="Diabetes">Diabetes</option>
@@ -482,31 +453,146 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value=""></option>
-                  <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="AB">AB</option>
-                  <option value="O">O</option>
+                  <option class="firstOption" value="" disabled selected>Blood Type</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
                 </select>
               </div>
-            </div>
+            </div> 
 
-            <div>
+
+
+            <div class="formbold-input-flex">
+              <div>
+                <label
+                  for="riwayat_kesehatan"
+                  class="formbold-form-label riwayat-kesehatan-label"
+                  required
+                >
+                  Tipe Nomor Identitas
+                </label>
+                <select
+                  name="tipe_nomor"
+                  id="tipe_nomor"
+                  class="formbold-form-input"
+                  required
+                >
+                  <option value="" disabled selected></option>
+                  <option value="KTP">KTP/SIM</option>
+                  <option value="PASPORT">PASPORT/KITAS</option>
+                  <option value="KIA">KIA</option>
+                  <option value="STUDENT">STUDENT CARD</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="golongan_darah"
+                  class="formbold-form-label golongan-darah-label"
+                  required
+                >
+                Nomor Identitas
+                </label>
+             <input type="number"
+             name="nomor_identitas"
+              id="nomor_identitas"
+              class="formbold-form-input"
+              required>
+              </div>
+            </div> 
+
+            <div class="formbold-input-flex">
+              <div>
+                <label
+                  for="asuransi"
+                  class="formbold-form-label"
+                  required
+                >
+                  Asuransi
+                </label>
+                <select
+                  name="asuransi"
+                  id="asuransi"
+                  class="formbold-form-input"
+                  required
+                >
+                  <option value="" disabled selected></option>
+                  <option value="Asma">Aliansi</option>
+                  <option value="Hipertensi">BPJS</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="asuransi"
+                  class="formbold-form-label"
+                  required
+                >
+                  Asuransi
+                </label>
+                <select
+                  name="asuransi"
+                  id="asuransi"
+                  class="formbold-form-input"
+                  required
+                >
+                  <option value="" disabled selected></option>
+                  <option value="Asma">Aliansi</option>
+                  <option value="Hipertensi">BPJS</option>
+                </select>
+              </div>
+              </div>
+
+            <div class="form-group">
               <label
                 for="kontak_darurat"
                 class="formbold-form-label isi-tengah kontak-darurat-label"
                 required
               >
-                Kontak Darurat (Nama / No Telepon)
+                Kontak Darurat
               </label>
+              <div class="input-row">
               <input
                 type="text"
+                name="nama_kontak_darurat"
+                id="kontak_darurat"
+                class="formbold-form-input"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="number" min="0" maxlength="14"
                 name="kontak_darurat"
                 id="kontak_darurat"
+                placeholder="ex : 08xxxx"
                 class="formbold-form-input"
                 required
               />
             </div>
+          </div>
+
+
+
+          <div>
+            <label
+              for="alamat_domisili"
+              class="formbold-form-label alamat-domisili-label isi-tengah"
+              required
+            >
+              Alamat Domisili
+            </label>
+            <input
+              name="alamat_domisili"
+              id="alamat_domisili"
+              class="formbold-form-input"
+              placeholder="Sesuai KTP"
+              required
+            />
+          </div>
 
             <div class="formbold-policy custom-checkbox">
               <input
@@ -525,6 +611,7 @@
             </button>
             <a href="/Registration-v2/index.html" class="kananPojok">version 2.</a>
           </form>
+          
 
           <!-- <div class="syarat-ketentuan-popup" style="display: none">
             <h2>Pemesanan/Pembelian Tiket</h2>

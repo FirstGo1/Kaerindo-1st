@@ -98,3 +98,9 @@ riwayatKesehatanSelect.addEventListener("change", () => {
     riwayatKesehatanLainnyaInput.style.display = "none";
   }
 });
+
+
+
+
+
+
