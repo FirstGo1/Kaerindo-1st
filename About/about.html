@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="judul-utama">Kaerindo Jaya Komunikasi</title>
+    <link rel="icon" href="img/logo kjk-2321.png" />
+
+    <!-- ------ midtrans ------- -->
+
+    <!-- Icon W3Schools -->
+    <script
+      src="https://kit.fontawesome.com/52ec4b3348.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Linking swiperJS css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Cloudflare -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="style1.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "McH9NmxG3zdc2KN7L",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <section class="showcase">
+      <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"
+              ><svg
+                class="x-menu"
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                /></svg
+            ></a>
+          </li>
+          <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+          <li><a class="nav-tentang" href="/About/about.html">Tentang</a></li>
+          <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li><a class="nav-registrasi" href="/tes/index.html">Registrasi</a></li>
+          <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+          <div class="language">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
+        </ul>
+
+        <!-- ------- NAV Paling atas --------- -->
+        <ul>
+          <li>
+            <a href="#"><img src="111.png" /></a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-beranda" href="/index.html">Beranda</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-tentang" href="/About/about.html">Tentang</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-galeri" href="/galeri/index.html">Galeri</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-registrasi" href="/tes/index.html">Registrasi</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a>
+          </li>
+
+          <div class="language hide">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#"
+              ><svg
+                class="menu-btn"
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav-bawah">
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"
+              ><svg
+                class="x-menu"
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                /></svg
+            ></a>
+          </li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/About/about.html">Tentang</a></li>
+          <li><a href="/galeri/index.html">Galeri</a></li>
+          <li><a href="/tes/index.html">Registrasi</a></li>
+          <li><a href="/Contact/contact.html">Hubungi</a></li>
+        </ul>
+
+        <!-- -----------Nav scroll bawah -----------  -->
+        <ul>
+          <li>
+            <a href="#"><img src="111.png" /></a>
+          </li>
+          <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
+          <li class="hideOnMobile">
+            <a class="nav-tentang" href="/About/about.html">Tentang</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-galeri" href="/galeri/index.html">Galeri</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-registrasi" href="/tes/index.html">Registrasi</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a>
+          </li>
+          <div class="language">
+            <div class="language-selected">ID</div>
+            <ul>
+              <li><a href="#" class="id">ID</a></li>
+              <li><a href="#" class="en">EN</a></li>
+            </ul>
+          </div>
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <h2>Tentang Kami</h2>
+        <section class="location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.0244816749138!2d110.36655411082366!3d-7.785487991316547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5830060a803f%3A0x74eb6009532809a!2sHarian%20Kedaulatan%20Rakyat!5e0!3m2!1sid!2sid!4v1737226552862!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input id="name_1" type="text" name="Name" required="required" />
+                <span class="text depan">Nama Depan</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input id="name_2" type="text" name="lastName" required="required" />
+                <span class="text belakang">Nama Belakang</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input id="email" type="text" name="Email" required="required" />
+                <span class="text email">Email</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input id="phone" type="number" name="Phone" required="required" />
+                <span class="text no-hp">Nomor Hp</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox textarea">
+                <textarea name="Message" id="message" required="required"></textarea>
+                <span class="text pesan">Tinggalkan Pesanmu disini ...</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col submit">
+              <input class="kirim" type="submit" value="Kirim" name="" id="" onclick="sendMail()" />
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <section class="footer">
+      <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
+    </section>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- LINKING swiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script1.js"></script>
+    <script src="langscript.js"></script>
+  </body>
+</html>

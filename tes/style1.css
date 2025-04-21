@@ -501,6 +501,32 @@ input:valid {
   color: green;
 } */
 
+.kananPojok{
+  margin-top: 10px;
+  display: flex;
+  float: right;
+  list-style: none;
+  text-decoration: none;
+  color: blue;
+  animation: Bounce 1s both 2s infinite;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition:  0.3s ease-in-out;
+}
+.kananPojok:hover{
+  color: #333;
+  background: #fff;
+  transform: scale(1.5);
+}
+@keyframes Bounce{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .formbold-btn {
   text-align: center;
   width: 100%;

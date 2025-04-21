@@ -8,6 +8,8 @@
     <link rel="icon" href="img/logo kjk-2321.png">
 
     <!-- -------- font ----------  -->
+    <link href="https://fonts.cdnfonts.com/css/duvall" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Inter:opsz,wght@14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -29,32 +31,130 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container1">
-      <nav class="apaaja">
-        <a href="index.html"><img src="img/111.png"></a>
-        <div class="nav-links" id="navLinks">
-          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/About/about.html">Tentang</a></li>
+        <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+        <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
           <ul>
-            <li><a href="index.html">BERANDA</a></li>
-            <li><a href="about.html">TENTANG</a></li>
-            <li><a href="galeri/index.html">GALERI</a></li>
-            <li><a href="Team-Page/tim.html">TIM</a></li>
-            <li><a href="Contact/contact.html">HUBUNGI</a></li>
-            <li class="regis-hide"><a href="/tes/index.html" target="_blank">REGISTRASI</a></li>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
           </ul>
         </div>
-              <!-- membuat language -->
-              <div class="lang-menu">
-                <div class="selected-lang">ID</div>
-                <ul>
-                    <li>
-                      <a href="#home" class="en">EN</a>
-                    </li>
-                  </ul>
-              </div>
-        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-      </nav>
-    </div>
+      </ul>
+
+      <!-- ------- NAV Paling atas --------- -->
+      <ul>
+        <li>
+          <a href="#"><img src="/img/1111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/About/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+
+        <div class="language hide">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="nav-bawah">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/About/about.html">Tentang</a></li>
+        <li><a href="/galeri/index.html">Galeri</a></li>
+        <li><a href="index.html">Registrasi</a></li>
+        <li><a href="/Contact/contact.html">Hubungi</a></li>
+      </ul>
+
+      <!-- -----------Nav scroll bawah -----------  -->
+      <ul>
+        <li>
+          <a href="#"><img src="img/111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/About/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
 
 
     <!-- SLIDER TAMPILAN DEPAN -->
@@ -66,12 +166,15 @@
                   <div class="swiper-slide">
                     <img src="/img/img2.jpg" alt="">
                     <div class="swiper-slider-content">
-                      <h2 class="slider-title">Event</h2>
-                      <p class="slider-description">
+                      <h2 class="slider-title eventAtas">KR RUN 2025</h2>
+                      <p class="slider-description angkaEvent">5k 10k 21k
+                      </p>
+                      <p class="satu">Ikuti & Raih Prestasi Bersama dalam Lari Maraton di Yogyakarta!</p>
+                      <!-- <p class="slider-description">
                         Kami telah mensukseskan Individu, Perusahaan, dan Organisasi
                         dalam penyelenggaraan acara perusahaan berskala besar.
-                      </p>
-                      <a target="_blank" href="tes/index.html" class="slider-action">Registrasi KR RUN 2025  </a>
+                      </p> -->
+                      <a target="_blank" href="/KR RUN/event.html" class="slider-action">Daftar Sekarang !</a>
                     </div>
                   </div>
                   
@@ -469,7 +572,7 @@
         </section>
 </main>
         <!-- Footer style 2 -->
-        <footer id="contact">
+        <!-- <footer id="contact">
           <div class="containerf">
               <div class="footer-col">
                   <h2>Kaerindo</h2>
@@ -527,7 +630,12 @@
                 <a href="#"><i class="fa-solid fa-up-long"></i></a>
             </div>
         </div>
-      </footer>
+      </footer> -->
+      <div class="backgroundBack">
+      <section class="footer">
+        <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
+      </section>
+    </div>
 
     <!-- Feather Icons -->
     <script>
@@ -541,5 +649,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="javascript.js"></script>
+    <script src="language.js"></script>
   </body>
 </html>

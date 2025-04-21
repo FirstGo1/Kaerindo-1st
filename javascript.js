@@ -1,19 +1,41 @@
+function showSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  (sidebar.style.display = "flex"), sidebar.classList.add("show");
+}
+function hideSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "none";
+}
+
+// --------------- scroll -------------
+window.addEventListener("scroll", function () {
+  var navBawah = document.querySelector(".nav-bawah");
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 1000) {
+    navBawah.classList.add("show");
+  } else {
+    navBawah.classList.remove("show");
+  }
+});
+
+
+
 
 // -------JavaScript for toggle Menu------
 
-var navLinks = document.getElementById("navLinks");
+// var navLinks = document.getElementById("navLinks");
 
-function showMenu() {
-  navLinks.style.right = "0";
-}
-function hideMenu() {
-  navLinks.style.right = "-200px";
-}
+// function showMenu() {
+//   navLinks.style.right = "0";
+// }
+// function hideMenu() {
+//   navLinks.style.right = "-200px";
+// }
 
 //  Swiper for  tampilan depan
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
-  // effect: 'fade',
+  effect: 'fade',
   autoplay: {
     delay: 5000,
   },
@@ -25,6 +47,7 @@ let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
 
   pagination: {
     el: ".swiper-pagination",
+    type: "bullets",
     dynamicBullets: true,
     clickable: true,
   },
@@ -134,3 +157,4 @@ var swiper = new Swiper(".rows .swiper", {
 // });
 
 // -------------- ZOOOM ONCLICK -------- 
+

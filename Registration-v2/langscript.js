@@ -21,7 +21,7 @@
   
       // ----- Detail Acara ------
       $(".formbold-event-details h5").text("Detail acara");
-      $(".formbold-event-details ul li:nth-child(1)").text("06 September, 2025");
+      $(".formbold-event-details ul li:nth-child(1)").text("27 September, 2025");
       $(".formbold-event-details ul li:nth-child(2)").text("08:30am - 06:00pm");
       $(".formbold-event-details ul li:nth-child(3)").text("Yogyakarta, Yogyakarta");
       $(".formbold-event-details ul li:nth-child(4)").text("Informasi tambahan");
@@ -67,7 +67,7 @@
 
       // ----- Detail Acara ------
       $(".formbold-event-details h5").text("Event details");
-      $(".formbold-event-details ul li:nth-child(1)").text("September 6, 2025");
+      $(".formbold-event-details ul li:nth-child(1)").text("27 September, 2025");
       $(".formbold-event-details ul li:nth-child(2)").text("08:30am - 06:00pm");
       $(".formbold-event-details ul li:nth-child(3)").text("Yogyakarta, Yogyakarta");
       $(".formbold-event-details ul li:nth-child(4)").text("Additional information");
