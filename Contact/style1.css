@@ -91,6 +91,9 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
+.label-merah{
+  color: red;
+}
 .sidebar {
   position: fixed;
   top: 0;
@@ -374,6 +377,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #b42711;
   color: #fcf5e5;
+}
+#honeypot {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
 }
 
 /* --------------- footer -------  */

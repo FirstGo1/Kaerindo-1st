@@ -127,6 +127,9 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
+.label-merah{
+  color: red;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -392,16 +395,16 @@ a.en:before{
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: "Open Sans", sans-serif; */
   font-family: 'Duvall', sans-serif;
-  
-  /* background: linear-gradient(to right, red, white);
-  background-clip: text;
-  color: transparent; */
+
 }
 
 
 
 .swiper-slider-content .slider-title span {
   font-size: 4rem;
+  color: red;
+}
+.swiper-slider-content .slider-title span.run{
   color: red;
 }
 

@@ -20,13 +20,37 @@ window.addEventListener("scroll", function () {
 
 // ------------ contact us to email send --------
 
+
+let lastSubmitTime = 0; // Untuk rate limiting
+
 function sendMail() {
+  // Honeypot anti-bot
+  const honeypot = document.getElementById("honeypot").value;
+  if (honeypot !== "") {
+    console.warn("Bot detected!");
+    return;
+  }
+
+  // Rate limiting: 10 detik jeda antar kirim
+  const now = Date.now();
+  const cooldown = 60000; // 30 detik
+  if (now - lastSubmitTime < cooldown) {
+    Swal.fire({
+      title: "Tunggu sebentar!",
+      icon: "warning",
+      text: "Kamu sudah mengirim, tunggu 1 menit sebelum kirim lagi.",
+    });
+    return;
+  }
+
+  // Ambil nilai input form
   const name = document.getElementById("name_1").value;
   const lastName = document.getElementById("name_2").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const message = document.getElementById("message").value;
 
+  // Validasi input
   if (name && lastName && email && phone && message) {
     const parms = {
       name,
@@ -36,26 +60,28 @@ function sendMail() {
       message,
     };
 
+    // Kirim via EmailJS
     emailjs.send("service_ci3dv2a", "template_6c9rqwq", parms)
       .then((result) => {
         Swal.fire({
-          title: "Success!",
+          title: "Berhasil!",
           icon: "success",
-          draggable: true,
+          text: "Pesan kamu berhasil dikirim!",
         });
+        lastSubmitTime = now; // Update waktu submit terakhir
       })
       .catch((error) => {
         Swal.fire({
-          title: "Error!",
+          title: "Gagal!",
           icon: "error",
           text: error.message,
         });
       });
   } else {
     Swal.fire({
-      title: "Error!",
+      title: "Form belum lengkap!",
       icon: "error",
-      text: "Please fill in all fields",
+      text: "Mohon isi semua field sebelum mengirim.",
     });
   }
-};
+}
