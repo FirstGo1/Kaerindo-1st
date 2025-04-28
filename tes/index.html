@@ -6,8 +6,9 @@
     <title class="judul-utama">KR RUN</title>
     <link rel="icon" href="img/logo kjk-2321.png" />
 
-    <!-- ------ midtrans ------- -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- ------ midtrans ------- -->
     <!-- Icon W3Schools -->
     <script
       src="https://kit.fontawesome.com/52ec4b3348.js"
@@ -28,7 +29,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="style1.css?v=1.0" />
+    <link rel="stylesheet" href="style1.css?v=1.1" />
   </head>
   <body>
     
@@ -54,9 +55,9 @@
             ></a>
           </li>
           <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
-          <li><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li><a class="nav-tentang" href="#">Tentang</a></li>
           <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+          <li><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
           <div class="language">
             <div class="language-selected">ID</div>
@@ -73,9 +74,9 @@
             <a href="#"><img src="1111.png" /></a>
           </li>
           <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-          <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
           <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+          <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
 
           <div class="language hide">
@@ -120,9 +121,9 @@
             ></a>
           </li>
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">Tentang</a></li>
+          <li><a href="#">Tentang</a></li>
           <li><a href="/galeri/index.html">Galeri</a></li>
-          <li><a href="index.html">Registrasi</a></li>
+          <li><a href="/KR RUN/event.html">Registrasi</a></li>
           <li><a href="/Contact/contact.html">Hubungi</a></li>
         </ul>
 
@@ -132,9 +133,9 @@
             <a href="#"><img src="111.png" /></a>
           </li>
           <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
-          <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+          <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
           <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a class="nav-registrasi" href="index.html">Registrasi</a></li>
+          <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
           <div class="language">
             <div class="language-selected">ID</div>
@@ -195,7 +196,7 @@
                       </clipPath>
                     </defs>
                   </svg>
-                  06 September, 2025
+                  27 September, 2025
                 </li>
                 <li>
                   <svg
@@ -296,7 +297,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected>Gender</option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="Laki-laki">Laki-laki</option>
                   <option value="Perempuan">Perempuan</option>
                 </select>
@@ -361,7 +362,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected></option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="lari">5K</option>
                   <option value="jalan">10K</option>
                   <option value="jalan">21K</option>
@@ -397,7 +398,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected>Size</option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="XS">XS</option>
                   <option value="S">S</option>
                   <option value="M">M</option>
@@ -422,7 +423,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected></option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="Asma">Asma</option>
                   <option value="Hipertensi">Hipertensi</option>
                   <option value="Diabetes">Diabetes</option>
@@ -435,7 +436,7 @@
                   name="riwayat_kesehatan_lainnya"
                   id="riwayat_kesehatan_lainnya"
                   class="formbold-form-input"
-                  placeholder="Tulis alasan lainnya"
+                  placeholder="Tulis riwayat lainnya"
                   style="display: none"
                 />
               </div>
@@ -453,7 +454,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option class="firstOption" value="" disabled selected>Blood Type</option>
+                  <option class="firstOption" value="" disabled selected>Pilih</option>
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
                   <option value="B+">B+</option>
@@ -483,7 +484,7 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected></option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="KTP">KTP/SIM</option>
                   <option value="PASPORT">PASPORT/KITAS</option>
                   <option value="KIA">KIA</option>
@@ -521,31 +522,32 @@
                   class="formbold-form-input"
                   required
                 >
-                  <option value="" disabled selected></option>
+                  <option value="" disabled selected>Pilih</option>
                   <option value="Asma">Aliansi</option>
                   <option value="Hipertensi">BPJS</option>
                 </select>
+                
               </div>
               <div>
                 <label
-                  for="asuransi"
-                  class="formbold-form-label"
+                  for="alamat_domisili"
+                  class="formbold-form-label alamat-domisili-label"
                   required
                 >
-                  Asuransi
+                  Alamat Domisili
                 </label>
-                <select
-                  name="asuransi"
-                  id="asuransi"
+                <input
+                  name="alamat_domisili"
+                  id="alamat_domisili"
                   class="formbold-form-input"
+                  placeholder="Sesuai KTP"
                   required
-                >
-                  <option value="" disabled selected></option>
-                  <option value="Asma">Aliansi</option>
-                  <option value="Hipertensi">BPJS</option>
-                </select>
+                />
               </div>
               </div>
+
+
+
 
             <div class="form-group">
               <label
@@ -559,16 +561,16 @@
               <input
                 type="text"
                 name="nama_kontak_darurat"
-                id="kontak_darurat"
+                id="nama_kontak_darurat"
                 class="formbold-form-input"
                 placeholder="Name"
                 required
               />
               <input
                 type="number" min="0" maxlength="14"
-                name="kontak_darurat"
-                id="kontak_darurat"
-                placeholder="ex : 08xxxx"
+                name="number_kontak_darurat"
+                id="number_kontak_darurat"
+                placeholder="Number"
                 class="formbold-form-input"
                 required
               />
@@ -577,22 +579,7 @@
 
 
 
-          <div>
-            <label
-              for="alamat_domisili"
-              class="formbold-form-label alamat-domisili-label isi-tengah"
-              required
-            >
-              Alamat Domisili
-            </label>
-            <input
-              name="alamat_domisili"
-              id="alamat_domisili"
-              class="formbold-form-input"
-              placeholder="Sesuai KTP"
-              required
-            />
-          </div>
+ 
 
             <div class="formbold-policy custom-checkbox">
               <input
@@ -602,39 +589,14 @@
                 required
               />
               <label class="syarat-ketentuan-label" for="syarat-ketentuan"
-                >Saya telah membaca dan menyetujui syarat dan ketentuan dan saya membaca Pemberitahuan Privasi.</label
+                >Saya setuju dengan <span>Persyaratan Layanan</span> dan saya membaca Pemberitahuan Privasi.</label
               >
             </div>
 
             <button class="formbold-btn disabled beli-tiket-button" id="formboldButton">
               Beli Tiket
             </button>
-            <a href="/Registration-v2/index.html" class="kananPojok">version 2.</a>
           </form>
-          
-
-          <!-- <div class="syarat-ketentuan-popup" style="display: none">
-            <h2>Pemesanan/Pembelian Tiket</h2>
-            <ul>
-              <li>Pemesanan/pembelian tiket dianggap berhasil atau selesai
-                setelah Anda melakukan pelunasan pembayaran dan kaerindojaya.com
-                menerbitkan dan mengirim e-ticket ke Anda. Apabila terjadi
-                perselisihan atau permasalahan, maka data yang terdapat pada
-                kaerindojaya.com akan menjadi acuan utama dan dianggap sah.</li>
-              <li>Dengan menyelesaikan pemesanan/pembelian, maka Anda dianggap
-                setuju untuk menerima: email yang memberikan informasi tentang
-                tiket yang Anda beli, dan menyediakan Anda informasi dan penawaran
-                tertentu (termasuk penawaran Pihak Penyelenggara Event) yang
-                terkait dengan pemesanan Anda.</li>
-              <li>Masa berlaku e-ticket adalah sebagaimana ditentukan oleh Pihak
-                Penyelenggara Event kami.</li>
-              <li>Kecuali ditentukan lain oleh Pihak Penyelenggara Event,
-                e-ticket hanya dapat digunakan oleh yang namanya tercantum pada
-                e-ticket.</li>
-            </ul>
-            
-            <button class="syarat-ketentuan-popup-close">X</button>
-          </div> -->
 
 
           <div class="terms-box">

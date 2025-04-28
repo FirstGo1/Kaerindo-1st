@@ -258,7 +258,6 @@ a.en:before{
 .formbold-main-wrapper {
   position: relative;
   z-index: 1;
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,7 +267,7 @@ a.en:before{
 
 .formbold-form-wrapper {
   margin: 0 auto;
-  max-width: 700px;
+  width: 40%;
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: normal;
   opacity: 1;
@@ -298,9 +297,9 @@ a.en:before{
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2px;
-  color: #000;
+  color: #fff;
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 40px;
   text-align: center;
   justify-content: center;
 }
@@ -337,11 +336,11 @@ a.en:before{
 .formbold-event-wrapper h3 {
   text-align: center;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 34px;
-  color: #000;
+  color: #ffffff;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-top: 20px;
   font-family: "Duvall", sans-serif;
 }
@@ -441,10 +440,31 @@ a.en:before{
       appearance: none; /* Untuk tampilan custom */
       -webkit-appearance: none;
       -moz-appearance: none;
+      
+    }
+    input::placeholder,
+    textarea::placeholder,
+    select:invalid {
+      color: #999;
+      transition: color 0.3s ease;
+    }
+    select option {
+      color: #000;
     }
     option {
       text-align: left;
     }
+
+    input[type="date"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: #333;
+      cursor: pointer;
+    }
+
+
+
     .input-row {
       display: flex;
       justify-content: center;
@@ -465,7 +485,7 @@ a.en:before{
 .formbold-policy {
   font-size: 11px;
   line-height: 24px;
-  color: #000;
+  color: #000000;
   width: 100%;
   margin-top: 22px;
 }
@@ -502,6 +522,11 @@ a.en:before{
   font-weight: bold;
   vertical-align: center;
   /* text-align: center; */
+  cursor: pointer;
+}
+.formbold-policy label span{
+  color: rgb(255, 0, 0);
+
 }
 
 .syarat-ketentuan-link:hover {
@@ -518,14 +543,6 @@ input[type="checkbox"]:not(:checked) {
   accent-color: #ccc;
 }
 
-/* input:invalid {
-  content: 'X';
-  color: red;
-}
-input:valid {
-  content: '✓';
-  color: green;
-} */
 
 .kananPojok{
   margin-top: 10px;
@@ -577,8 +594,7 @@ input:valid {
   cursor: not-allowed;
 }
 
-/* ---------- popup syarat--------- */
-/*     */
+
 
 
 /* ------- different term & conditions------- */
@@ -722,6 +738,13 @@ h4.centang-box, .centang-box span {
 .btn:hover {
   opacity: 0.6;
 }
+.error-field {
+  border: 1px solid red;
+}
+.error-checkbox {
+  outline: 1px solid red;
+  box-shadow: 0 0 5px red;
+}
 
 #accept-btn:disabled {
   background-color: #d13639;
@@ -752,6 +775,8 @@ h4.centang-box, .centang-box span {
   box-shadow: none;
 }
 
+
+
 /* --------------- footer -------  */
 
 .footer {
@@ -774,20 +799,6 @@ h4.centang-box, .centang-box span {
   top: 20px;
   font-size: 12px;
 }
-.fa-up-long {
-  position: absolute;
-  bottom: 6px;
-  right: 30px;
-  font-size: 30px;
-  cursor: pointer;
-  color: red;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 100;
-}
-.fa-up-long:hover {
-  color: #fff;
-  transform: scale(1.3);
-}
 
 
 
@@ -805,10 +816,10 @@ h4.centang-box, .centang-box span {
 
 @media (max-width: 768px) {
   .formbold-form-wrapper {
-    max-width: 400px;
+    width: 100%;
   }
   .formbold-event-wrapper img {
-    height: 150px;
+    height: 350px;
   }
   .formbold-event-wrapper h4 {
     width: 100%;
@@ -816,6 +827,7 @@ h4.centang-box, .centang-box span {
   .formbold-event-wrapper h3 {
     width: 100%;
     text-align: center;
+    margin-bottom: 15px;
   }
   .formbold-form-title {
     width: 100%;
@@ -831,6 +843,7 @@ h4.centang-box, .centang-box span {
   .formbold-event-wrapper span {
     letter-spacing: 1px;
     font-size: 12px;
+    margin-bottom: 15px;
     justify-content: center;
     text-align: center;
     /* margin: 0 auto; */
@@ -847,31 +860,37 @@ h4.centang-box, .centang-box span {
   .syarat-ketentuan-popup ul li {
     font-size: 13px;
   }
+  .buttons {
+    padding: 0 10px;
+  }
+  
+  .btn {
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  input::placeholder,
+  textarea::placeholder,
+  select:invalid,
+  input[type="date"] {
+    font-size: 16px;
+  }
 
 }
 
-@media (max-width: 480px) {
-  .formbold-form-wrapper {
-    max-width: 300px;
-  }
-  .formbold-input-flex {
-    flex-direction: column;
-  }
-  .formbold-input-flex > div {
-    width: 100%;
-  }
-
-}
 
 @media (max-width: 480px) {
   .formbold-main-wrapper {
     padding: 12px;
+    width: 100%;
   }
   .formbold-form-wrapper {
-    max-width: 300px;
+    width: 100%;
+    margin: 6px;
+    padding: 10px;
   }
   .formbold-event-wrapper img {
-    height: 150px;
+    height: 170px;
   }
   .formbold-input-flex {
     flex-direction: column;
@@ -882,21 +901,18 @@ h4.centang-box, .centang-box span {
   .formbold-form-label {
     font-size: 12px;
   }
-  .formbold-form-wrapper {
-    margin: 6px;
-  }
-  .formbold-event-wrapper {
+.formbold-event-wrapper {
     margin-bottom: 10px;
   }
   .formbold-event-wrapper img:hover {
     transform: scale(1.25);
   }
-}
-
-@media (max-width: 480px) {
   .formbold-form-title {
     font-size: 18px;
     line-height: 24px;
+    width: 100%;
+    font-size: 20px;
+    margin: 20px 0;
   }
   .formbold-form-label {
     font-size: 14px;
@@ -917,15 +933,17 @@ h4.centang-box, .centang-box span {
   .formbold-event-wrapper h3 {
     width: 100%;
     text-align: center;
-    font-size: 18px;
-  }
-  .formbold-form-title {
-    width: 100%;
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   .formbold-policy {
     width: 100%;
+    
+  }
+  .formbold-policy label{
+    font-size: 11px;
+    line-height: 1.2;
   }
   .formbold-event-details ul li {
     width: 100%;
@@ -936,7 +954,7 @@ h4.centang-box, .centang-box span {
     font-size: 10px;
     justify-content: center;
     text-align: center;
-    /* margin: 0 auto; */
+    margin-bottom: 0;
     display: flex;
   }
   .formbold-event-details h5 {
@@ -946,6 +964,22 @@ h4.centang-box, .centang-box span {
   .formbold-event-details ul {
     padding: 15px;
   }
+  .buttons {
+    padding: 0 10px;
+  }
+  
+  .btn {
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  input::placeholder,
+  textarea::placeholder,
+  select:invalid,
+  input[type="date"] {
+    font-size: 13px;
+  }
+
 }
 
 
@@ -958,6 +992,9 @@ h4.centang-box, .centang-box span {
   .sidebar .language{
     margin: 0;
     padding: 0 0 0 10px;
+  }
+  .formbold-form-wrapper{
+    width: 100%;
   }
   }
   
