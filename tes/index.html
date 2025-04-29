@@ -29,7 +29,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="style1.css?v=1.1" />
+    <link rel="stylesheet" href="style1.css?v=1.2" />
   </head>
   <body>
     
@@ -57,6 +57,7 @@
           <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
           <li><a class="nav-tentang" href="#">Tentang</a></li>
           <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
           <li><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
           <div class="language">
@@ -76,6 +77,7 @@
           <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
           <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
           <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li class="hideOnMobile"><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
           <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
 
@@ -123,6 +125,7 @@
           <li><a href="/index.html">Home</a></li>
           <li><a href="#">Tentang</a></li>
           <li><a href="/galeri/index.html">Galeri</a></li>
+          <li><a href="/Team-Page/tim.html">Tim</a></li>
           <li><a href="/KR RUN/event.html">Registrasi</a></li>
           <li><a href="/Contact/contact.html">Hubungi</a></li>
         </ul>
@@ -135,6 +138,7 @@
           <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
           <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
           <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+          <li class="hideOnMobile"><a class="nav-tim" href="/Team-Page/tim.html">Galeri</a></li>
           <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
           <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
           <div class="language">
@@ -350,24 +354,22 @@
               </div>
               <div>
                 <label
-                  for="kategori_lomba"
-                  class="formbold-form-label kategori-lomba-label"
+                  for="alamat_domisili"
+                  class="formbold-form-label alamat-domisili-label"
                   required
                 >
-                  Kategori Lomba
+                  Alamat Domisili
                 </label>
-                <select
-                  name="kategori_lomba"
-                  id="kategori_lomba"
+                <input
+                  name="alamat_domisili"
+                  id="alamat_domisili"
                   class="formbold-form-input"
+                  placeholder="Sesuai KTP"
                   required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="lari">5K</option>
-                  <option value="jalan">10K</option>
-                  <option value="jalan">21K</option>
-                </select>
+                />
               </div>
+
+
             </div>
 
             <div class="formbold-input-flex">
@@ -472,8 +474,8 @@
             <div class="formbold-input-flex">
               <div>
                 <label
-                  for="riwayat_kesehatan"
-                  class="formbold-form-label riwayat-kesehatan-label"
+                  for="tipe_nomor"
+                  class="formbold-form-label tipe-nomor"
                   required
                 >
                   Tipe Nomor Identitas
@@ -493,8 +495,8 @@
               </div>
               <div>
                 <label
-                  for="golongan_darah"
-                  class="formbold-form-label golongan-darah-label"
+                  for="nomor_identitas"
+                  class="formbold-form-label nomor-identitas"
                   required
                 >
                 Nomor Identitas
@@ -511,7 +513,7 @@
               <div>
                 <label
                   for="asuransi"
-                  class="formbold-form-label"
+                  class="formbold-form-label asuransi"
                   required
                 >
                   Asuransi
@@ -530,19 +532,23 @@
               </div>
               <div>
                 <label
-                  for="alamat_domisili"
-                  class="formbold-form-label alamat-domisili-label"
+                  for="kategori_lomba"
+                  class="formbold-form-label kategori-lomba-label"
                   required
                 >
-                  Alamat Domisili
+                  Kategori Lomba
                 </label>
-                <input
-                  name="alamat_domisili"
-                  id="alamat_domisili"
+                <select
+                  name="kategori_lomba"
+                  id="kategori_lomba"
                   class="formbold-form-input"
-                  placeholder="Sesuai KTP"
                   required
-                />
+                >
+                  <option value="" disabled selected>Pilih</option>
+                  <option value="lari">5K</option>
+                  <option value="jalan">10K</option>
+                  <option value="jalan">21K</option>
+                </select>
               </div>
               </div>
 

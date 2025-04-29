@@ -15,6 +15,7 @@ $(function () {
     $(".nav-beranda").text("Beranda");
     $(".nav-tentang").text("Tentang");
     $(".nav-galeri").text("Galeri");
+    $(".nav-tim").text("Tim");
     $(".nav-registrasi").text("Registrasi");
     $(".nav-hubungi").text("Hubungi");
 
@@ -43,6 +44,7 @@ $(function () {
     $(".nav-beranda").text("Home");
     $(".nav-tentang").text("About");
     $(".nav-galeri").text("Gallery");
+    $(".nav-tim").text("Tim");
     $(".nav-registrasi").text("Registration");
     $(".nav-hubungi").text("Contact");
 

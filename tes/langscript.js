@@ -12,6 +12,7 @@
       $(".nav-beranda").text("Beranda");
       $(".nav-tentang").text("Tentang");
       $(".nav-galeri").text("Galeri");
+      $(".nav-tim").text("Tim");
       $(".nav-registrasi").text("Registrasi");
       $(".nav-hubungi").text("Hubungi");
   
@@ -40,8 +41,11 @@
       $(".ukuran-kaos-label").text("Ukuran Baju");
       $(".riwayat-kesehatan-label").text("Riwayat Kesehatan");
       $(".golongan-darah-label").text("Golongan Darah");
+      $(".asuransi").text("Asuransi");
+      $(".tipe-nomor").text("Tipe Nomor Identitas");
+      $(".nomor-identitas").text("Nomor Identitas");
       $(".kontak-darurat-label").text("Kontak Darurat (Nama / No Telepon)");
-      $(".syarat-ketentuan-label").text("Saya telah membaca dan menyetujui syarat dan ketentuan");
+      $(".syarat-ketentuan-label").text("Saya setuju dengan Persyaratan Layanan dan saya membaca Pemberitahuan Privasi.");
       $(".syarat-ketentuan-link").text("Lihat syarat dan ketentuan");
       $(".beli-tiket-button").text("Beli Tiket");
   
@@ -66,12 +70,13 @@
       $(".nav-beranda").text("Home");
       $(".nav-tentang").text("About");
       $(".nav-galeri").text("Gallery");
+      $(".nav-tim").text("Team");
       $(".nav-registrasi").text("Registration");
       $(".nav-hubungi").text("Contact");
   
       // ------ Utama --------
       $(".formbold-event-wrapper span").text("Kaerindo Jaya Komunikasi");
-      $(".formbold-event-wrapper h3").text("Jelajah Kedaulatan Rakyat");
+      // $(".formbold-event-wrapper h3").text("KR RUN");
       $(".formbold-event-wrapper h4").text("What will you get?");
       $(".formbold-event-wrapper p").text("Can participate in events within kaerindo jaya communication");
       // ----- Detail Acara ------
@@ -95,8 +100,13 @@
       $(".ukuran-kaos-label").text("Shirt Size");
       $(".riwayat-kesehatan-label").text("Health History");
       $(".golongan-darah-label").text("Blood Type");
+      $(".tipe-nomor").text("identity Number Type");
+      $(".nomor-identitas").text("Identity Number");
+      $(".asuransi").text("Insurance");
+  
+
       $(".kontak-darurat-label").text("Emergency Contact (Name / Phone Number)");
-      $(".syarat-ketentuan-label").text("I have read and agree to the terms and conditions");
+      $(".syarat-ketentuan-label").text("I agree to the Terms of Service and I read the Privacy Notice.");
       $(".syarat-ketentuan-link").text("View terms and conditions");
       $(".beli-tiket-button").text("Buy Ticket");
   
