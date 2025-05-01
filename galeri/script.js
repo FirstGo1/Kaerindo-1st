@@ -144,14 +144,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-//   ------------------- klik diluar element ------------
-const menu = document.querySelector('menu-button');
 
-document.addEventListener('click', function (e) {
-  if (!menu.contains(e.target) && !sidebar.contains(e.target)) {
-    navbarNav.classList.remove('active');
-  }
-});
 
 
 const tentangKamiLinks = document.querySelectorAll('.nav-tentang');

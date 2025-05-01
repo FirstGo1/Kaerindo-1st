@@ -256,7 +256,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-radius: 50%;
-  transition: 0.3s ease-in-out;
+  transition:  0.3s ease-in-out;
 }
 /* .contentBx .card .sci li a:hover {
   background: #ff0000;
@@ -269,6 +269,7 @@ body {
 }
 .contentBx .card .sci li .instagram-color:hover{
   background: #E1306C;
+  
 }
 .contentBx .card .sci li .whatsapp-color:hover{
   background: #25d366;

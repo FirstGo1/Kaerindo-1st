@@ -21,36 +21,142 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=1.1" />
+    <link rel="stylesheet" href="style.css?v=1.2" />
   </head>
   <body>
-
-    <section class="sub-header">
-      <nav>
-        <a href="index.html"><img src="/img/111.png" alt=""></a>
-        <div class="nav-links" id="navLinks">
-          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/about.html">Tentang</a></li>
+        <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
+        <li><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
+        <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
           <ul>
-            <li><a href="/index.html">BERANDA</a></li>
-            <li class="nav-tentang"><a href="#">TENTANG</a></li>
-            <li><a href="/galeri/index.html">GALERI</a></li>
-            <li><a href="/Team-Page/tim.html">TIM</a></li>
-            <li><a href="/Contact/contact.html">HUBUNGI</a></li>
-            <li class="regis-hide"><a href="/tes/index.html" target="_blank">REGISTRASI</a></li>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
           </ul>
         </div>
-              <!-- membuat language -->
-              <div class="lang-menu">
-                <div class="selected-lang">ID</div>
-                <ul>
-                    <li>
-                      <a href="#home" class="en">EN</a>
-                    </li>
-                  </ul>
-              </div>
-        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-      </nav>
-      <h1><span class="merah">Galeri</span> Kami</h1>
+      </ul>
+  
+      <!-- ------- NAV Paling atas --------- -->
+      <ul>
+        <li>
+          <a href="#"><img src="img/1111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+  
+        <div class="language hide">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+  
+    <nav class="nav-bawah">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/index.html">Beranda</a></li>
+        <li><a href="/about.html">Tentang</a></li>
+        <li><a href="/galeri/index.html">Galeri</a></li>
+        <li><a href="/Team-Page/tim.html">Tim</a></li>
+        <li><a href="/KR RUN/event.html">Registrasi</a></li>
+        <li><a href="/Contact/contact.html">Hubungi</a></li>
+      </ul>
+  
+      <!-- -----------Nav scroll bawah -----------  -->
+      <ul>
+        <li>
+          <a href="#"><img src="img/111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/galeri/index.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Galeri</h1>
+        <p>Galeri ini menampilkan dokumentasi kegiatan, proyek, dan pencapaian perusahaan kami.</p>
+      </div>
     </section>
 
 
@@ -321,7 +427,7 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+      <script src="language.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
