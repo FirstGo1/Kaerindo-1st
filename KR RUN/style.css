@@ -419,6 +419,7 @@ a.en:before{
   font-size: 15px;
   color: #fff;
   line-height: 2;
+  animation: fadeInDown 1s both 0.2s;
 }
 
 
@@ -1238,6 +1239,7 @@ section h3 {
     width: 200px;
     top: 0;
     right: 0;
+    margin: 0;
   }
 
   .sidebar.show{
@@ -1327,6 +1329,7 @@ section h3 {
 @media (max-width: 400px) {
   .sidebar {
     width: 100%;
+    margin: 0;
   }
   .menu-button {
     display: block;

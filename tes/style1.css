@@ -119,6 +119,7 @@ nav li:first-child {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.377);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px) ;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
@@ -590,8 +591,8 @@ input[type="checkbox"]:not(:checked) {
   opacity: 0.6;
 }
 .formbold-btn.disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  background-color: #e60000;
+  /* cursor: not-allowed; */
 }
 
 
@@ -600,8 +601,8 @@ input[type="checkbox"]:not(:checked) {
 /* ------- different term & conditions------- */
 .terms-box {
   max-width: 460px;
-  background-color: #111;
-  color: #fff;
+  background: #ffffffe0;
+  color: #000;
   font-family: "Poppins";
   padding: 60px 30px;
   border-radius: 10px;
@@ -625,11 +626,11 @@ input[type="checkbox"]:not(:checked) {
   overflow-y: auto;
   font-size: 14px;
   font-weight: 500;
-  color: #f1f1f1;
+  color: #000;
   position: relative;
 }
 .terms-text::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
   background-color: #282828;
 }
 .terms-text::-webkit-scrollbar-thumb {
@@ -697,7 +698,7 @@ h4.centang-box, .centang-box span {
   font-size: 30px;
   cursor: pointer;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   border: none;
   border-radius: 5px;
   width: 30px;
@@ -722,7 +723,7 @@ h4.centang-box, .centang-box span {
   width: calc(50% - 6px);
   border: 0;
   border-radius: 6px;
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 500;
   color: #fff;
   transition: 0.3s linear;
@@ -1082,7 +1083,7 @@ h4.centang-box, .centang-box span {
     }
     .terms-box{
       width: 90vw;
-      height: 70vh;
+      height: 73vh;
     }
     h4.centang-box, .centang-box span{
       font-size: 12px;

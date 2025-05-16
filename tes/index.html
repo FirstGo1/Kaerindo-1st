@@ -29,12 +29,12 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="style1.css?v=1.3" />
+    <link rel="stylesheet" href="style1.css?v=1.4" />
   </head>
   <body>
     
     <section class="showcase">
-      <video src="bg3333.mp4" muted loop autoplay></video>
+      <video src="bg3333.mp4" muted loop autoplay playsinline></video>
       <div class="overlay"></div>
 
       <nav>
@@ -328,7 +328,7 @@
                 </label>
                 <input 
                 placeholder="ex : 08xx-xxxx-xxxx"
-                  type="tel"
+                  type="number"
                   name="nomor_telepon"
                   id="nomor_telepon"
                   class="formbold-form-input"
@@ -558,7 +558,7 @@
             <div class="form-group">
               <label
                 for="kontak_darurat"
-                class="formbold-form-label isi-tengah kontak-darurat-label"
+                class="formbold-form-label kontak-darurat-label"
                 required
               >
                 Kontak Darurat
