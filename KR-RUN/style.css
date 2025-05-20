@@ -643,7 +643,6 @@ section h3 {
 .category:hover {
   transform: translateY(-6px) scale(1.04);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  /* background: linear-gradient(145deg, #ffb6c1, #fff0f5); */
 }
 
 .category h3 {

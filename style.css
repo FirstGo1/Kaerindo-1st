@@ -37,6 +37,7 @@ p {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
+  animation: fadeInUpCustom 1s both 0.2s;
 }
 
 .layar-dalam {
@@ -477,11 +478,10 @@ section h3 {
 .kaerindo h3 {
   font-size: 36px;
   font-weight: 600;
-  /* animation: fadeInUpCustom 1s both 0.2s; */
 }
-.kaerindo .judult{
-  animation: fadeInUpCustom 1s both 0.2s;
-}
+/* .kaerindo .judult{
+  animation: fadeInDown 1s both 0.2s;
+} */
 .kaerindo .judult::after {
   content: "";
   border-bottom: 5px solid #c86b85;
@@ -495,7 +495,6 @@ section h3 {
   text-align: center;
   justify-content: center;
 }
-
 .kaerindo .row {
   margin-top: 2%;
   display: flex;
@@ -663,6 +662,7 @@ section.abuabu {
 }
 
 /* SPAN BUAT ZOOM CLICK */
+
 .wide .popup-image {
   position: fixed;
   top: 0;
@@ -717,9 +717,7 @@ section.abuabu {
   font-weight: bolder;
   color: #fff;
   cursor: pointer;
-  background: #333;
   padding: 15px;
-  border-radius: 20px;
   transition: 0.3s ease;
 }
 
@@ -741,12 +739,12 @@ section.abuabu {
   cursor: pointer;
   z-index: 100;
   transition: 0.3s ease;
-  padding: 15px;
+  padding: 5px;
 }
 .zoom-in:hover,
 .zoom-out:hover,
 .close-button:hover {
-  background: #ff0000;
+  color: red;
 }
 
 .zoom-in {
@@ -770,11 +768,18 @@ section.quote {
   padding: 300px;
 }
 section.quote .layar-dalam p {
-  display: inline;
-  background: url("asset/quote-icon.png") no-repeat;
   color: black;
   padding: 40px;
   font-size: 50px;
+}
+section.quote .layar-dalam p::before{
+  content: '❝';
+  font-size: 5rem;
+  font-weight: 300;
+  color: #ff0000;
+  top: -20px;
+  left: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* OUR TEAM */
@@ -965,14 +970,8 @@ p.phone {
   text-align: center;
 }
 
-@keyframes moving {
-  0% {
-    left: -20px;
-  }
-  100% {
-    left: 100%;
-  }
-}
+
+
 
 .footer-col ul {
   list-style-type: none;
@@ -1111,7 +1110,7 @@ p.phone {
 }
 
 /* swiper slider  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .card-wrapper {
     margin: 0 10px 25px;
   }
@@ -1135,12 +1134,11 @@ p.phone {
   div.swiper-slider-content .slider-title {
     font-size: 2.5rem;
   }
-  div.swiper-slider-content .span {
-    font-size: 2.5rem;
-  }
-
   div.swiper-slider-content .kaerindo-judul span {
     font-size: 2.5rem;
+  }
+  div.swiper-slider-content h2 .utami {
+    display: block;
   }
   div.swiper-slider-content .span-class {
     font-size: 2.5rem;
@@ -1185,14 +1183,18 @@ p.phone {
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   section.quote {
     background-size: 100% 100%;
-    padding: 150px;
+    padding: 100px;
+  }
+  section.quote .layar-dalam.dalam-quote{
+    width: 100%;
+    margin: 0;
   }
   section.quote .layar-dalam p {
     font-size: 15px;
-    padding: 15px 30px;
+    padding: 0;
     background-size: 20px;
   }
   .nav-links ul li.regis-hide {
@@ -1205,9 +1207,13 @@ p.phone {
     background-size: 100% 100%;
     padding: 100px;
   }
+  section.quote .layar-dalam.dalam-quote{
+    width: 100%;
+    margin: 0;
+  }
   section.quote .layar-dalam p {
     font-size: 15px;
-    padding: 15px;
+    padding: 0;
   }
   .containerrr .popup-image span {
     top: 2px;
@@ -1218,10 +1224,10 @@ p.phone {
     font-size: 2rem;
   }
   div.swiper-slider-content .slider-title.kaerindo-judul {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   div.swiper-slider-content .slider-title.kaerindo-judul span {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   div.swiper-slider-content .span-class {
     font-size: 2rem;
@@ -1291,6 +1297,28 @@ p.phone {
     margin: 0;
     padding: 0;
   }
+  .wide .popup-image img{
+    width: 100%;
+    height: auto;
+    /* transform: translate(-70%, -50%); */
+  }
+  .wide .popup-image{
+    width: 100vw;
+    height: 100%;
+  }
+  .close-button{
+    top: 10px;
+    right: 10px;
+  }
+  #slider-2{
+    padding:20px 0;
+  }
+  section.quote .layar-dalam p::before{
+    content: '“';
+    font-size: 2rem;
+    color: #ff0000;
+  }
+
 
 }
 
@@ -1338,6 +1366,19 @@ p.phone {
   }
   .tim div {
     width: 60%;
+  }
+  .wide .popup-image img{
+    width: 90vw;
+    height: auto;
+    /* transform: translate(-70%, -50%); */
+  }
+  .wide .popup-image{
+    width: 100vw;
+    height: 100%;
+  }
+  .close-button{
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -1389,6 +1430,17 @@ p.phone {
   
 }
 
+.fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+.fadeInDown {
+  animation: fadeInDown 1s ease-out forwards;
+}
+.fadeInUpCustom {
+  animation: fadeInUpCustom 1s ease-out forwards;
+}
+
+
 
 /* @media (prefers-reduced-motion: no-preference) */
   @keyframes fadeInUp {
@@ -1424,4 +1476,13 @@ p.phone {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+    }
+
+    @keyframes moving {
+      0% {
+        left: -20px;
+      }
+      100% {
+        left: 100%;
+      }
     }
