@@ -1,690 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="judul-utama">KR RUN</title>
-    <link rel="icon" href="img/logo kjk-2321.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midtrans Integration Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="YOUR_CLIENT_KEY"></script>
+  <style>
+    .error-field { border: 2px solid red; }
+    .error-checkbox { outline: 2px solid red; }
+  </style>
+</head>
+<body>
+  <form id="paymentForm">
+    <input type="text" id="nama_lengkap" placeholder="Nama Lengkap" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="nomor_telepon" placeholder="Nomor Telepon" required />
+    <select id="kategori_lomba" required>
+      <option value="" disabled selected>Pilih Kategori Lomba</option>
+      <option value="lari">5K</option>
+      <option value="jalan">10K</option>
+      <option value="jalan21k">21K</option>
+    </select>
+    <button type="submit" id="submitButton">Beli Tiket</button>
+  </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    <!-- ------ midtrans ------- -->
-    <!-- Icon W3Schools -->
-    <script
-      src="https://kit.fontawesome.com/52ec4b3348.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Linking swiperJS css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+      const requiredFields = ['nama_lengkap', 'email', 'nomor_telepon', 'kategori_lomba'];
+      let errors = [];
 
-    <!-- Cloudflare -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+      requiredFields.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+          errors.push(field);
+          field.classList.add('error-field');
+        } else {
+          field.classList.remove('error-field');
+        }
+      });
 
-    <!-- Feather icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+      if (errors.length > 0) {
+        Swal.fire('Error', 'Harap isi semua field yang diperlukan.', 'error');
+        return;
+      }
 
-    <link rel="stylesheet" href="style1.css?v=1.4" />
-  </head>
-  <body>
-    
-    <section class="showcase">
-      <video src="bg3333.mp4" muted loop autoplay playsinline></video>
-      <div class="overlay"></div>
+      const data = {
+        nama_lengkap: document.getElementById('nama_lengkap').value,
+        email: document.getElementById('email').value,
+        nomor_telepon: document.getElementById('nomor_telepon').value,
+        kategori_lomba: document.getElementById('kategori_lomba').value,
+      };
 
-      <nav>
-        <ul class="sidebar">
-          <li onclick="hideSidebar()">
-            <a href="#"
-              ><svg
-                class="x-menu"
-                xmlns="http://www.w3.org/2000/svg"
-                height="26px"
-                viewBox="0 -960 960 960"
-                width="26px"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                /></svg
-            ></a>
-          </li>
-          <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
-          <li><a class="nav-tentang" href="#">Tentang</a></li>
-          <li><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
-          <li><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
-          <li><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
-          <div class="language">
-            <div class="language-selected">ID</div>
-            <ul>
-              <li><a href="#" class="id">ID</a></li>
-              <li><a href="#" class="en">EN</a></li>
-            </ul>
-          </div>
-        </ul>
-
-        <!-- ------- NAV Paling atas --------- -->
-        <ul>
-          <li>
-            <a href="#"><img src="1111.png" /></a>
-          </li>
-          <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-          <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
-          <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
-          <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
-          <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
-
-          <div class="language hide">
-            <div class="language-selected">ID</div>
-            <ul>
-              <li><a href="#" class="id">ID</a></li>
-              <li><a href="#" class="en">EN</a></li>
-            </ul>
-          </div>
-          <li class="menu-button" onclick="showSidebar()">
-            <a href="#"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="26px"
-                viewBox="0 -960 960 960"
-                width="26px"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                /></svg
-            ></a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav class="nav-bawah">
-        <ul class="sidebar">
-          <li onclick="hideSidebar()">
-            <a href="#"
-              ><svg
-                class="x-menu"
-                xmlns="http://www.w3.org/2000/svg"
-                height="26px"
-                viewBox="0 -960 960 960"
-                width="26px"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                /></svg
-            ></a>
-          </li>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Tentang</a></li>
-          <li><a href="/galeri/index.html">Galeri</a></li>
-          <li><a href="/Team-Page/tim.html">Tim</a></li>
-          <li><a href="/KR RUN/event.html">Registrasi</a></li>
-          <li><a href="/Contact/contact.html">Hubungi</a></li>
-        </ul>
-
-        <!-- -----------Nav scroll bawah -----------  -->
-        <ul>
-          <li>
-            <a href="#"><img src="111.png" /></a>
-          </li>
-          <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Home</a></li>
-          <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
-          <li class="hideOnMobile"><a class="nav-galeri" href="/galeri/index.html">Galeri</a></li>
-          <li class="hideOnMobile"><a class="nav-tim" href="/Team-Page/tim.html">Tim</a></li>
-          <li class="hideOnMobile"><a class="nav-registrasi" href="/KR RUN/event.html">Registrasi</a></li>
-          <li class="hideOnMobile"><a class="nav-hubungi" href="/Contact/contact.html">Hubungi</a></li>
-          <div class="language">
-            <div class="language-selected">ID</div>
-            <ul>
-              <li><a href="#" class="id">ID</a></li>
-              <li><a href="#" class="en">EN</a></li>
-            </ul>
-          </div>
-          <li class="menu-button" onclick="showSidebar()">
-            <a href="#"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="26px"
-                viewBox="0 -960 960 960"
-                width="26px"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                /></svg
-            ></a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="formbold-main-wrapper">
-        <div class="formbold-form-wrapper">
-          <div class="formbold-event-wrapper">
-            <span>Kaerindo Jaya Komunikasi</span>
-            <h3>KR RUN</h3>
-            <img class="img-box" src="bg event.jpg" />
-            <!-- <h4>Apa yang akan kamu dapatkan?</h4>
-            <p>
-             Ikut partisipasi di KR RUN 2025 Yogyakarta
-            </p> -->
-
-            <div class="formbold-event-details">
-              <h5>Detail acara</h5>
-
-              <ul>
-                <li>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_1675_1725)">
-                      <path
-                        d="M12.75 2.25H15.75C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25H5.25V0.75H6.75V2.25H11.25V0.75H12.75V2.25ZM11.25 3.75H6.75V5.25H5.25V3.75H3V6.75H15V3.75H12.75V5.25H11.25V3.75ZM15 8.25H3V14.25H15V8.25Z"
-                        fill="#536387"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1675_1725">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  28 September, 2025
-                </li>
-                <li>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_1675_1735)">
-                      <path
-                        d="M9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9C16.5 13.1422 13.1422 16.5 9 16.5ZM9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15ZM9.75 9H12.75V10.5H8.25V5.25H9.75V9Z"
-                        fill="#536387"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1675_1735">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  08:30am - 06:00pm
-                </li>
-                <li>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_1675_1730)">
-                      <path
-                        d="M9 17.7959L4.227 13.0229C3.28301 12.0789 2.64014 10.8762 2.3797 9.56683C2.11925 8.25746 2.25293 6.90026 2.76382 5.66687C3.27472 4.43347 4.13988 3.37927 5.24991 2.63757C6.35994 1.89588 7.66498 1.5 9 1.5C10.335 1.5 11.6401 1.89588 12.7501 2.63757C13.8601 3.37927 14.7253 4.43347 15.2362 5.66687C15.7471 6.90026 15.8808 8.25746 15.6203 9.56683C15.3599 10.8762 14.717 12.0789 13.773 13.0229L9 17.7959ZM12.7125 11.9624C13.4467 11.2282 13.9466 10.2927 14.1492 9.27435C14.3517 8.25596 14.2477 7.20039 13.8503 6.24111C13.4529 5.28183 12.78 4.46192 11.9167 3.88507C11.0533 3.30821 10.0383 3.00032 9 3.00032C7.96167 3.00032 6.94666 3.30821 6.08332 3.88507C5.21997 4.46192 4.54706 5.28183 4.14969 6.24111C3.75231 7.20039 3.64831 8.25596 3.85084 9.27435C4.05337 10.2927 4.55333 11.2282 5.2875 11.9624L9 15.6749L12.7125 11.9624ZM9 9.74994C8.60218 9.74994 8.22065 9.5919 7.93934 9.3106C7.65804 9.02929 7.5 8.64776 7.5 8.24994C7.5 7.85212 7.65804 7.47058 7.93934 7.18928C8.22065 6.90798 8.60218 6.74994 9 6.74994C9.39783 6.74994 9.77936 6.90798 10.0607 7.18928C10.342 7.47058 10.5 7.85212 10.5 8.24994C10.5 8.64776 10.342 9.02929 10.0607 9.3106C9.77936 9.5919 9.39783 9.74994 9 9.74994Z"
-                        fill="#536387"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1675_1730">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Yogyakarta, Yogyakarta
-                </li>
-                <li>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_1675_1740)">
-                      <path
-                        d="M8.17501 1.57422L15.5993 2.63547L16.6598 10.0605L9.76576 16.9545C9.62512 17.0951 9.43438 17.1741 9.23551 17.1741C9.03664 17.1741 8.84591 17.0951 8.70526 16.9545L1.28026 9.52947C1.13966 9.38882 1.06067 9.19809 1.06067 8.99922C1.06067 8.80035 1.13966 8.60962 1.28026 8.46897L8.17501 1.57422ZM8.70526 3.16572L2.87101 8.99922L9.23551 15.363L15.069 9.52947L14.274 3.96072L8.70526 3.16572ZM10.2953 7.93872C10.0139 7.65726 9.85587 7.27556 9.85594 6.87758C9.85598 6.68052 9.89482 6.4854 9.97027 6.30336C10.0457 6.12131 10.1563 5.95591 10.2956 5.81659C10.435 5.67728 10.6004 5.56678 10.7825 5.4914C10.9646 5.41602 11.1597 5.37724 11.3568 5.37728C11.7548 5.37735 12.1364 5.53551 12.4178 5.81697C12.6991 6.09843 12.8572 6.48013 12.8571 6.87811C12.857 7.27609 12.6988 7.65773 12.4174 7.93909C12.1359 8.22046 11.7542 8.37848 11.3562 8.37841C10.9583 8.37834 10.5766 8.22018 10.2953 7.93872Z"
-                        fill="#536387"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1675_1740">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Informasi tambahan
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- <form action="https://formbold.com/s/FORM_ID" method="POST"> --> 
-            <form>
-            <h2 class="formbold-form-title form-title">Registrasi sekarang !</h2>
-
-            <div class="formbold-input-flex">
-              <div>
-                <label for="nama_lengkap" class="formbold-form-label name-label" required>
-                  Nama Lengkap
-                </label>
-                <input
-                  type="text"
-                  name="nama_lengkap"
-                  id="nama_lengkap"
-                  placeholder="Name"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="jenis_kelamin" class="formbold-form-label jenis-kelamin-label" required>
-                  Jenis Kelamin
-                </label>
-                <select
-                  name="jenis_kelamin"
-                  id="jenis_kelamin"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="Laki-laki">Laki-laki</option>
-                  <option value="Perempuan">Perempuan</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="formbold-input-flex">
-              <div>
-                <label for="tanggal_lahir" class="formbold-form-label tanggal-lahir-label" required>
-                  Tanggal Lahir
-                </label>
-                <input
-                  type="date"
-                  name="tanggal_lahir"
-                  id="tanggal_lahir"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="nomor_telepon" class="formbold-form-label nomor-telepon-label" required>
-                  Nomor Whatsapp
-                </label>
-                <input 
-                placeholder="ex : 08xx-xxxx-xxxx"
-                  type="number"
-                  name="nomor_telepon"
-                  id="nomor_telepon"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-              </div>
-            
-
-            <div class="formbold-input-flex">
-              <div>
-                <label for="email" class="formbold-form-label email-label" required>
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="ex : example@email.com"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  for="alamat_domisili"
-                  class="formbold-form-label alamat-domisili-label"
-                  required
-                >
-                  Alamat Domisili
-                </label>
-                <input
-                  name="alamat_domisili"
-                  id="alamat_domisili"
-                  class="formbold-form-input"
-                  placeholder="Sesuai KTP"
-                  required
-                />
-              </div>
-
-
-            </div>
-
-            <div class="formbold-input-flex">
-              <div>
-                <label
-                  for="komunitas_lari"
-                  class="formbold-form-label komunitas-lari-label"
-                  required
-                >
-                  Komunitas Lari
-                </label>
-                <input
-                  type="text"
-                  name="komunitas_lari"
-                  id="komunitas_lari"
-                  class="formbold-form-input"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="ukuran_kaos" class="formbold-form-label ukuran-kaos-label" required>
-                  Ukuran Baju
-                </label>
-                <select
-                  name="ukuran_kaos"
-                  id="ukuran_kaos"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="XS">XS</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                </select>
-              </div>
-            </div>
-            <div class="formbold-input-flex">
-              <div>
-                <label
-                  for="riwayat_kesehatan"
-                  class="formbold-form-label riwayat-kesehatan-label"
-                  required
-                >
-                  Riwayat Kesehatan
-                </label>
-                <select
-                  name="riwayat_kesehatan"
-                  id="riwayat_kesehatan"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="Asma">Asma</option>
-                  <option value="Hipertensi">Hipertensi</option>
-                  <option value="Diabetes">Diabetes</option>
-                  <option value="Alergi">Alergi</option>
-                  <option value="Backpain">Backpain</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-                <input
-                  type="text"
-                  name="riwayat_kesehatan_lainnya"
-                  id="riwayat_kesehatan_lainnya"
-                  class="formbold-form-input"
-                  placeholder="Tulis riwayat lainnya"
-                  style="display: none"
-                />
-              </div>
-              <div>
-                <label
-                  for="golongan_darah"
-                  class="formbold-form-label golongan-darah-label"
-                  required
-                >
-                  Golongan Darah
-                </label>
-                <select
-                  name="golongan_darah"
-                  id="golongan_darah"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option class="firstOption" value="" disabled selected>Pilih</option>
-                  <option value="A+">A+</option>
-                  <option value="A-">A-</option>
-                  <option value="B+">B+</option>
-                  <option value="B-">B-</option>
-                  <option value="AB+">AB+</option>
-                  <option value="AB-">AB-</option>
-                  <option value="O+">O+</option>
-                  <option value="O-">O-</option>
-                </select>
-              </div>
-            </div> 
-
-
-
-            <div class="formbold-input-flex">
-              <div>
-                <label
-                  for="tipe_nomor"
-                  class="formbold-form-label tipe-nomor"
-                  required
-                >
-                  Tipe Nomor Identitas
-                </label>
-                <select
-                  name="tipe_nomor"
-                  id="tipe_nomor"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="KTP">KTP/SIM</option>
-                  <option value="PASPORT">PASPORT/KITAS</option>
-                  <option value="KIA">KIA</option>
-                  <option value="STUDENT">STUDENT CARD</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  for="nomor_identitas"
-                  class="formbold-form-label nomor-identitas"
-                  required
-                >
-                Nomor Identitas
-                </label>
-             <input type="number"
-             name="nomor_identitas"
-              id="nomor_identitas"
-              class="formbold-form-input"
-              required>
-              </div>
-            </div> 
-
-            <div class="formbold-input-flex">
-              <div>
-                <label
-                  for="asuransi"
-                  class="formbold-form-label asuransi"
-                  required
-                >
-                  Asuransi
-                </label>
-                <select
-                  name="asuransi"
-                  id="asuransi"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="Asma">Allianz</option>
-                  <option value="Hipertensi">BPJS</option>
-                </select>
-                
-              </div>
-              <div>
-                <label
-                  for="kategori_lomba"
-                  class="formbold-form-label kategori-lomba-label"
-                  required
-                >
-                  Kategori Lomba
-                </label>
-                <select
-                  name="kategori_lomba"
-                  id="kategori_lomba"
-                  class="formbold-form-input"
-                  required
-                >
-                  <option value="" disabled selected>Pilih</option>
-                  <option value="lari">5K</option>
-                  <option value="jalan">10K</option>
-                  <option value="jalan">21K</option>
-                </select>
-              </div>
-              </div>
-
-
-
-
-            <div class="form-group">
-              <label
-                for="kontak_darurat"
-                class="formbold-form-label kontak-darurat-label"
-                required
-              >
-                Kontak Darurat
-              </label>
-              <div class="input-row">
-              <input
-                type="text"
-                name="nama_kontak_darurat"
-                id="nama_kontak_darurat"
-                class="formbold-form-input"
-                placeholder="Name"
-                required
-              />
-              <input
-                type="number" min="0" maxlength="14"
-                name="number_kontak_darurat"
-                id="number_kontak_darurat"
-                placeholder="Number"
-                class="formbold-form-input"
-                required
-              />
-            </div>
-          </div>
-
-
-
- 
-
-            <div class="formbold-policy custom-checkbox">
-              <input
-                type="checkbox"
-                id="syarat-ketentuan"
-                name="syarat-ketentuan"
-                required
-              />
-              <label class="syarat-ketentuan-label" for="syarat-ketentuan"
-                >Saya setuju dengan <span>Persyaratan Layanan</span> dan saya membaca Pemberitahuan Privasi.</label
-              >
-            </div>
-
-            <button class="formbold-btn disabled beli-tiket-button" id="formboldButton">
-              Beli Tiket
-            </button>
-          </form>
-
-
-          <div class="terms-box">
-            <div class="terms-text">
-              <h2>Syarat & Ketentuan</h2>
-              <p>Edit terakhir: 20/03/2025</p>
-              <p>Harap membaca syarat dan ketentuan berikut sebelum melakukan pembelian tiket event.</p>
-      
-              <h2>Ketentuan Umum</h2>
-              <p>Tiket hanya berlaku untuk event yang diselenggarakan oleh <strong>Kaerindo Jaya Komunikasi</strong>. Dengan membeli tiket, peserta dianggap menyetujui syarat dan ketentuan ini.</p>
-      
-              <h2>Pembelian dan Pembayaran</h2>
-              <ul>
-                <li>Transaksi dilakukan secara online melalui website kami.</li>
-                <li>Pembayaran dapat dilakukan melalui transfer bank, kartu kredit, e-wallet, dan metode lain yang tersedia.</li>
-                <li>Harga tiket adalah <strong>R220.000</strong> per peserta (belum termasuk biaya layanan jika ada).</li>
-            </ul>
-      
-            <h2>E-Tiket</h2>
-            <ul>
-              <li>Setelah pembayaran berhasil, peserta akan menerima e-ticket melalui email.</li>
-              <li>Tiket bersifat <strong>non-transferable</strong> dan hanya dapat digunakan oleh email peserta yang terdaftar.</li>
-              <li>Peserta wajib membawa e-ticket saat registrasi ulang di lokasi event.</li>
-              <li>Penyelenggara berhak menolak peserta yang tidak memenuhi syarat keikutsertaan.</li>
-          </ul>
-      
-          <h2>Kebijakan</h2>
-          <ul>
-            <li><strong>Tiket yang sudah dibeli tidak dapat dikembalikan atau diuangkan kembali.</strong></li>
-            <li>Jika event dibatalkan oleh penyelenggara, peserta akan mendapatkan pengembalian dana dalam waktu 7 hari kerja.</li>
-        </ul>
-      
-        <h2>Keamanan dan Privasi</h2>
-              <p>
-                Data pribadi peserta hanya digunakan untuk keperluan event dan diproses dengan aman.
-              </p>
-              <p>
-                Penyelenggara tidak bertanggung jawab atas perubahan event akibat bencana alam, pandemi, atau keputusan pemerintah.
-              </p>
-              <p>
-                <strong>Jika ada pertanyaan lebih lanjut, silakan hubungi kami melalui email atau kontak yang tersedia di website.</strong>
-              </p>
-
-              
-            </div>
-
-            <div class="box-centang">
-              <input type="checkbox" id="terms-checkbox" required />
-              <h4 class="centang-box">
-                Saya setuju dengan <span>Persyaratan Layanan</span> dan saya membaca Pemberitahuan Privasi.
-              </h4>
-            </div>
-
-            <div class="buttons">
-              <button class="btn red-btn" id="accept-btn" disabled>Terima</button>
-              <button class="btn gray-btn">Tolak</button>
-              <button class="terms-box-close">&times;</button>
-
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-    </section>
-
-    <section class="footer">
-      <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
-    </section>
-
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
-
-    <!-- LINKING swiperJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    
-    <script src="script1.js"></script>
-    <script src="langscript.js"></script>
-  </body>
+      fetch('http://localhost:3000/create-transaction', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(response => {
+        if (response.token) {
+          window.snap.pay(response.token, {
+            onSuccess: function(result) {
+              Swal.fire('Success', 'Pembayaran berhasil!', 'success');
+            },
+            onPending: function(result) {
+              Swal.fire('Pending', 'Pembayaran sedang diproses.', 'info');
+            },
+            onError: function(result) {
+              Swal.fire('Error', 'Pembayaran gagal.', 'error');
+            }
+          });
+        } else {
+          Swal.fire('Error', 'Gagal mendapatkan token pembayaran.', 'error');
+        }
+      })
+      .catch(() => Swal.fire('Error', 'Gagal menghubungi server.', 'error'));
+    });
+  </script>
+</body>
 </html>
