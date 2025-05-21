@@ -114,41 +114,6 @@ document.querySelector(".popup-image").addEventListener("click", function (e) {
 
 
 
-
-// document.querySelectorAll("#swiper-2 .swiper-slide img").forEach((image) => {
-//   image.onclick = () => {
-//     document.querySelector(".popup-image").style.display = "block";
-//     document.querySelector(".popup-image img").src = image.getAttribute("src");
-//   };
-// });
-
-// document.querySelector(".popup-image span").onclick = () => {
-//   document.querySelector(".popup-image").style.display = "none";
-// };
-
-// const popupImage = document.querySelector('.popup-image');
-// const img = document.querySelector('.onclick-img-jpg');
-// const zoomIn = document.querySelector('.zoom-in');
-// const zoomOut = document.querySelector('.zoom-out');
-
-// img.addEventListener('click', () => {
-//   popupImage.style.display = 'block';
-// });
-
-// zoomIn.addEventListener('click', () => {
-//   img.style.width = '80%';
-// });
-
-// zoomOut.addEventListener('click', () => {
-//   img.style.width = '50%';
-// });
-
-
-
-
-
-
-
 // ----------------- GALERI HTML ---------- 
 const container = document.querySelector(".rows")
 const likeBtns = document.querySelector(".like-btn")
@@ -165,70 +130,6 @@ var swiper = new Swiper(".rows .swiper", {
     delay: 0,
   },
 });
-
-// function stopAutoplay() {
-//   const swiperTranslate = swiper.getTranslate();
-//   swiper.setTranslate(swiperTranslate);
-//   swiper.autoplay.stop();
-// }
-
-// function startAutoplay() {
-//   swiper.slideTo(swiper.activeIndex, 3000, false);
-//   swiper.autoplay.start();
-// }
-
-// container.addEventListener("mouseenter", () => stopAutoplay());
-// container.addEventListener("mouseleave", () => startAutoplay());
-
-// likeBtns.forEach((likeBtn) => {
-//   likeBtn.addEventListener("click", () => {
-//     likeBtn.classList.toggle("active");
-//     likeBtn.classList.toggle("pulse");
-//   });
-// });
-
-
-
-
-
-
-// ----------------------- fadeinDown ----------
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fadeInDown'); // Animasi hanya ini
-        observer.unobserve(entry.target); // animasi hanya 1x
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  // Ubah selector di bawah ini sesuai elemen yang mau kamu animasikan
-  const elementsToAnimate = document.querySelectorAll('.judult');
-  elementsToAnimate.forEach(el => observer.observe(el));
-});
-
-// ----------------------- fadeinupcustom ----------
-
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fadeInUpCustom'); // Animasi hanya ini
-        observer.unobserve(entry.target); // animasi hanya 1x
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  // Ubah selector di bawah ini sesuai elemen yang mau kamu animasikan
-  const elementsToAnimate = document.querySelectorAll('hero-btn, .tim1, .abuabu, .kaerindo-col, .para' );
-  elementsToAnimate.forEach(el => observer.observe(el));
-});
-
 
 
 // ------------ nav - tentang maintenance -------

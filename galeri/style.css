@@ -86,6 +86,7 @@ nav a {
   color: rgb(255, 255, 255);
   transition: 0.3s ease;
   position: relative;
+  animation: fadeInDown 1s both 0.2s;
 }
 nav a:hover {
   color: #ff0000;
@@ -251,7 +252,7 @@ a.en:before{
 
 .hero {
   height: 60vh;
-  background-image: url('/galeri/img/img2.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/galeri/img/img2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -259,33 +260,26 @@ a.en:before{
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
   color: white;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay supaya teks lebih kelihatan */
-  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
   color: #ff0000;
+  z-index: 1;
+  animation: fadeInDown 1s both 0.2s;
 }
 
 .hero p {
   font-size: 20px;
   color: #fff;
+  animation: fadeInUpCustom 1s both 0.6s;
 }
 
 
@@ -304,7 +298,7 @@ a.en:before{
 }
 
 .wide {
-  max-width: 100%;
+  max-width: 70%;
   padding: 0;
   margin-top: 1rem;
 }
@@ -328,7 +322,7 @@ a.en:before{
   overflow: hidden;
   border: 2px solid transparent;
   border-radius: 12px;
-  transition: 0.2s;
+  transition: 0.3s ease;
 }
 .wide .swiper-slide figure:active img {
   cursor: grabbing;
@@ -338,7 +332,7 @@ a.en:before{
 }
 
 .swiper-slide figure:hover img {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .wide .swiper-custom-nav {
@@ -365,11 +359,14 @@ a.en:before{
   background: rgba(0, 0, 0, 0.9);
   height: 100vh;
   width: 100vw;
-  z-index: 1000;
+  z-index: 999;
   display: none;
+  border-radius: 10px;
 }
 .onclick-img-jpg {
   z-index: 1000;
+  position: fixed;
+  border-radius: 10px;
 }
 .wide .popup-image span:hover {
   color: #f00101;
@@ -380,12 +377,14 @@ a.en:before{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  /* TOP , LEFT & Transform ini 1 paket membuatnya Menjadi Tengah */
+  border: 5px solid #666666;
+  border-radius: 5px;
   width: 57%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 16/10;
-  cursor: pointer;
+  cursor: grab;
 }
 
 /* .wide .popup-image span {
@@ -401,6 +400,7 @@ a.en:before{
 } */
 
 .close-button {
+  display: block;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -408,9 +408,7 @@ a.en:before{
   font-weight: bolder;
   color: #fff;
   cursor: pointer;
-  background: #333;
   padding: 15px;
-  border-radius: 20px;
   transition: 0.3s ease;
 }
 
@@ -463,41 +461,68 @@ a.en:before{
   display: flex;
   /* align-items: center;
   justify-content: center; */
+
 }
 
 .myGallery {
-  width: 100%;
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
 }
 .myGallery .teratas,
 #slider-2 .teratas {
+  position: relative;
   font-size: 40px;
   margin: 25px;
   justify-content: center;
   text-align: center;
+  color: #333;
+  animation: fadeInUpCustom 1s both 0.2s;
 }
+.myGallery .teratas::after,
+#slider-2 .teratas::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%) scaleX(0);
+  width: 100px;
+  height: 3px;
+  background-color: #ff2121;
+  transform-origin: center;
+  transition: transform 0.4s ease 0.5s;
+  animation: growLine 0.6s ease forwards 1s;
+}
+
 .myGallery p,
 #slider-2 p {
   justify-content: center;
   text-align: center;
-  width: 80%;
+  font-size: 24px;
+  color: #333;
+  width: 60%;
   margin: auto;
   margin-bottom: 30px;
+  font-size: 'Jost', sans-serif;
+  font-weight: 700;
+  animation: fadeInUpCustom 1s both 0.2s;
 }
+
 
 .myGallery .swiper {
   width: 100%;
   padding: 0;
 }
 .myGallery .swiper-slide {
-  position: relative;
-  width: 300px;
+  width: 250px;
   aspect-ratio: 3/4;
-  border-radius: 12px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   cursor: grab;
   user-select: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
+  position: relative;
 }
 
 .myGallery .swiper-slide img {
@@ -506,6 +531,11 @@ a.en:before{
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+  transition: .3s ease;
+}
+.myGallery .swiper-slide:hover img{
+  transform: scale(1.3);
 }
 
 .myGallery .caption {
@@ -521,7 +551,7 @@ a.en:before{
   align-items: center;
   padding: 10px 20px;
   transform: translateY(70px);
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 .myGallery .swiper-slide:hover .caption {
   transform: translateY(0);
@@ -560,6 +590,73 @@ ion-icon.pulse {
 .myGallery .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+.logo-section {
+  text-align: center;
+  padding: 60px 0 20px;
+}
+
+.logo-section h2 {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  animation: fadeInUpCustom 1s both 0.5s;
+}
+
+
+.logo-swiper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+  background: #f1eeee;
+  overflow: hidden;
+  /* border-radius: 12px; */
+  cursor: grabbing;
+}
+
+.logo-wrapper {
+  display: flex;
+ 
+}
+
+.logo-slide {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 120px; */
+  margin-right: 30px;
+  /* border-left: 1px solid #999; */
+  width: 120px; 
+  height: 80px;
+}
+
+.logo-slide img {
+  max-width: 250px;
+  max-height: 100px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  object-fit:unset; 
+}
+
+.logo-slide img:hover {
+  opacity: 1;
+}
+.logo-right {
+  padding-bottom: 0;
+}
+.swiper-right {
+  direction: rtl;
+}
+.swiper-right .swiper-wrapper {
+  direction: ltr; /* balik isi supaya text tidak ikut mirror */
+}
+
+
+
+
 
 /* ------------- footer style 2 ------------  */
 .footer {
@@ -705,8 +802,59 @@ ion-icon.pulse {
       font-size: 15px;
       line-height: 1.4;
     }
-
+    .logo-section h2{
+      width: 90%;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .logo-swiper{
+      /* overflow: none; */
+      width: 95%;
+      padding: 0;
+    }
+    .logo-slide img {
+      max-width: 100px;
+      max-height: 80px;
+      opacity: 1;
   }
+  .containerrr .popup-image span {
+    top: 5px;
+    right: 5px;
+    font-size: 50px;
+  }
+  .wide .popup-image img{
+    width: 100%;
+    height: auto;
+    /* transform: translate(-70%, -50%); */
+  }
+  .wide .popup-image{
+    width: 100vw;
+    height: 100%;
+  }
+  .close-button{
+    top: 10px;
+    right: 10px;
+  }
+  .myGallery{
+    width: 100%;
+  }
+  .myGallery .swiper-slide{
+    width: 200px;
+  }
+  .myGallery .caption{
+    height: 40px;
+  }
+  .myGallery .caption h1{
+    font-size: 13px;
+  }
+  .wide {
+    max-width: 100%;
+  }
+  .myGallery .teratas,
+#slider-2 .teratas{
+    font-size: 28px;
+  }
+}
   @media (max-width: 400px) {
     .sidebar {
       width: 100%;
@@ -743,4 +891,84 @@ ion-icon.pulse {
       text-align: center;
       justify-content: center;
     }
+    .containerrr .popup-image span {
+      top: 2px;
+      right: 2px;
+      font-size: 15px;
+    }
+    .wide .popup-image img{
+      width: 90vw;
+      height: auto;
+      /* transform: translate(-70%, -50%); */
+    }
+    .wide .popup-image{
+      width: 100vw;
+      height: 100%;
+    }
+    .close-button{
+      top: 10px;
+      right: 10px;
+    }
   }
+
+
+
+
+
+
+
+  
+  /* @media (prefers-reduced-motion: no-preference) */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    @keyframes fadeInUpCustom {
+      from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+      }
+      to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+      }
+      }
+
+      @keyframes fadeSlideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Animasi garis membesar */
+      @keyframes growLine {
+        to {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
+      @keyframes growLine {
+        to {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
