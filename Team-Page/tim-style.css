@@ -10,12 +10,250 @@ body {
   align-items: center;
   height: 100vh;
   background: url(img/KR.jpg);
+  background-image: 100vw 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(5px);
   overflow: hidden;
 }
+/* ------- nav v2 -------- */
+
+nav {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color:transparent;
+  transition: 0.6s ease-out;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  top: 0;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+}
+.nav-bawah {
+  position: fixed;
+  top: -100px;
+  width: 90%;
+  left: 50%;
+  border-radius: 0 0 10px 10px;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.904);
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: top 0.75s ease-out;
+}
+
+.nav-bawah.show {
+  top: 0;
+}
+.nav-bawah ul li a {
+  color: black;
+}
+.nav-bawah ul li a:hover {
+  color: #ff0000;
+}
+
+nav img {
+  width: 150%;
+  height: 150%;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* position: relative; */
+}
+nav li {
+  height: 50px;
+  /* position: relative; */
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease;
+  position: relative;
+}
+nav a:hover {
+  color: #ff0000;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+.label-merah{
+  color: red;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.377);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  transition: 0.75s ease;
+}
+.sidebar.show {
+  display: flex;
+  right: 0;
+}
+
+.sidebar li {
+  width: 100%;
+  position: relative;
+}
+.sidebar a {
+  width: 100%;
+  color: #ffffff;
+  left: 0;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
+  justify-content: left;
+}
+
+.menu-button {
+  left: 0;
+  color: black;
+  display: none;
+}
+/* .nav .menu-button svg {
+  fill: #fff;
+} */
+.x-menu {
+  fill: #000;
+}
+.nav-bawah .menu-button svg {
+  fill: #000;
+}
+
+nav svg {
+  fill: #000;
+  transition: 0.2s ease-out;
+}
+nav svg:hover {
+  fill: red;
+}
+
+
+.language{
+  position: relative;
+  width: 120px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.language-selected {
+  display: flex;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+}
+.language-selected:before{
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(https://flagsapi.com/ID/flat/64.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+
+}
+
+/* ------ Jquery ------  */
+.language-selected.change-id:before{
+  background-image: url(https://flagsapi.com/ID/flat/64.png);
+}
+.language-selected.change-en:before{
+  background-image: url(https://flagsapi.com/US/flat/64.png);
+}
+
+.language ul {
+  border-radius: 5px;
+  /* display: block; */
+  padding: 0;
+  position: absolute;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  transition: 0.3s ease;
+}
+.language:hover ul{
+  display: block;
+}
+
+.language ul li{
+  list-style: none;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  /* padding: 10px; */
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+.language ul li:hover{
+  background-color: #c4c4c4;
+}
+.language ul li a{
+  width: 100%;
+  font-size: 16px;
+  display: block;
+  color: #252525;
+  /* padding-top: 5px 10px; */
+  padding: 10px 0;
+}
+.language ul li a:before{
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px 0 2px;
+  padding: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  /* margin-right: 10px; */
+}
+a.id:before{
+  background-image: url(https://flagsapi.com/ID/flat/64.png);
+}
+a.en:before{
+  background-image: url(https://flagsapi.com/US/flat/64.png);
+}
+
+.nav-bawah .language-selected{
+  color: #000000;
+}
+
+
+
 .back-to-home{
   position: absolute;
   bottom: 10px;
@@ -304,6 +542,48 @@ body {
     font-size: 12px;
     margin: 0;
   }
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .sidebar {
+    width: 200px;
+    top: 0;
+    right: 0;
+
+    margin: 0;
+  }
+
+  .sidebar.show{
+    right: 0;
+    top: 0;
+  }
+  .nav-bawah {
+    width: 100%;
+  }
+  nav{
+    width: 100%;
+    padding: 0;
+  }
+  nav img {
+    width: 125%;
+    height: 125%;
+  }
+  nav .ul-utama{
+    padding: 0;
+  }
+  .language.hide {
+    display: none;
+  }
+  .nav-bawah .language{
+    display: none;
+  }
+   .sidebar .language{
+    margin: 0;
+    padding: 0;
+  }
 
 }
 @media (max-width: 400px){
@@ -341,5 +621,46 @@ body {
   .back-to-home a::before{
     font-size: 10px;
     margin: 0;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  .sidebar a {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+  nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-bawah {
+    top: -100px;
+    padding: 0;
+    width: 100%;
+  }
+  nav img {
+    width: 100%;
+    height: 100%;
+  }
+  nav .ul-utama{
+    padding: 0;
+  }
+  .sidebar .language-selected {
+    position: relative;
+  }
+  .sidebar .language {
+    margin: 0 auto;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
   }
   }

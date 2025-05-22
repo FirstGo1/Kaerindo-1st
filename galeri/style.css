@@ -54,7 +54,9 @@ nav {
 .nav-bawah ul li a:hover {
   color: #ff0000;
 }
-
+.nav-galeri{
+  color: #ff0000;
+}
 nav img {
   width: 150%;
   height: 150%;
@@ -432,7 +434,7 @@ a.en:before{
   padding: 15px;
 }
 .zoom-in:hover, .zoom-out:hover, .close-button:hover {
-  background: #ff0000;
+  color: #ff0000;
 }
 
 .zoom-in {
@@ -518,11 +520,13 @@ a.en:before{
   aspect-ratio: 3/4;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  cursor: grab;
   user-select: none;
   overflow: hidden;
   z-index: -1;
   position: relative;
+}
+.myGallery .swiper-slide:active img{
+  cursor: grabbing;
 }
 
 .myGallery .swiper-slide img {
@@ -533,6 +537,7 @@ a.en:before{
   height: 100%;
   position: relative;
   transition: .3s ease;
+  cursor: pointer;
 }
 .myGallery .swiper-slide:hover img{
   transform: scale(1.3);
@@ -614,6 +619,33 @@ ion-icon.pulse {
   overflow: hidden;
   /* border-radius: 12px; */
   cursor: grabbing;
+  position: relative;
+
+}
+/* Fade kiri */
+.logo-swiper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, #f1eeee 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Fade kanan */
+.logo-swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to left, #f1eeee 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .logo-wrapper {
@@ -630,29 +662,84 @@ ion-icon.pulse {
   margin-right: 30px;
   /* border-left: 1px solid #999; */
   width: 120px; 
-  height: 80px;
+  height: 100px;
+  
 }
 
 .logo-slide img {
   max-width: 250px;
   max-height: 100px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-  object-fit:unset; 
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.7s ease;
+  object-fit: unset; 
 }
 
 .logo-slide img:hover {
   opacity: 1;
 }
+.logo-slide:hover img{
+  transform: scale(1.1);
+}
 .logo-right {
   padding-bottom: 0;
 }
+.swiper-left{
+  border-radius: 20px 20px 0 0 ;
+}
 .swiper-right {
   direction: rtl;
+  border-radius:  0 0 20px 20px;
 }
 .swiper-right .swiper-wrapper {
   direction: ltr; /* balik isi supaya text tidak ikut mirror */
+
 }
+
+.cta-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.valorant-button {
+  position: relative;
+  padding: 12px 32px;
+  background: transparent;
+  border: 2px solid #666;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.valorant-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  background: #ff4655;
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
+.valorant-button:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.valorant-button:hover {
+  color: white;
+  border-color: #999;
+}
+
+
 
 
 
@@ -739,6 +826,7 @@ ion-icon.pulse {
   position: relative;
   top: 10px;
   font-size: 12px;
+  margin-top: 20px;
 }
 
 
@@ -853,6 +941,16 @@ ion-icon.pulse {
   .myGallery .teratas,
 #slider-2 .teratas{
     font-size: 28px;
+  }
+  .valorant-button{
+    padding: 8px 25px ;
+    font-size: 12px;
+    background-color: #ff0000;
+    color: #fff;
+  }
+  .footer p{
+    margin-top: 10px;
+    font-size: 12px;
   }
 }
   @media (max-width: 400px) {

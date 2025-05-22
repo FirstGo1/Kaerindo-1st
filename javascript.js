@@ -59,7 +59,7 @@ var index = new Swiper("#swiper-2", {
   centeredSlides: true,
   spaceBetween: 10,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
   },
   lazyLoading: true,
   loop: true,
@@ -74,7 +74,7 @@ var index = new Swiper("#swiper-2", {
     300: {
       slidesPerView: 2,
       spaceBetween: 2,
-      centeredSlides: false,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 3,

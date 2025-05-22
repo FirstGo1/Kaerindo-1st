@@ -154,10 +154,10 @@ window.addEventListener('scroll', function() {
 const swipers = new Swiper('.logo-swiper', {
   wrapperClass: 'logo-wrapper',
   slideClass: 'logo-slide',
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   loop: true,
-  speed: 10000,
+  speed: 20000,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
@@ -170,30 +170,6 @@ const swipers = new Swiper('.logo-swiper', {
     768: { slidesPerView: 4 },
     1024: { slidesPerView: 5 },
   },
-});
-
-let swiperrr = new Swiper('.swiper-left', {
-  loop: true,
-  speed: 3000,
-  slidesPerView: 'auto',
-  spaceBetween: 40,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false
-  }
-});
-
-// Swiper 2: Ke kanan (reverse)
-let swiperss = new Swiper('.swiper-right', {
-  loop: true,
-  speed: 3000,
-  slidesPerView: 'auto',
-  spaceBetween: 40,
-  autoplay: {
-    delay: 0,
-    reverseDirection: true, // <-- ini yang penting!
-    disableOnInteraction: false
-  }
 });
 
 

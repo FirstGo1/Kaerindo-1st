@@ -469,7 +469,7 @@ section h3 {
 
 /* ---------------Kaerindo------------- */
 .kaerindo {
-  width: 90%;
+  width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -490,22 +490,28 @@ section h3 {
   margin: 20px auto;
 }
 .kaerindo p {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
+  font-size: 16px;
 }
+
+
+
+
 .kaerindo .row {
   margin-top: 2%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .kaerindo-col {
-  flex-basis: 42%;
+  flex-basis: 46%;
   border-radius: 10px;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .kaerindo-col img {
   width: 100%;
@@ -571,17 +577,69 @@ section h3 {
   color: #fff;
 }
 
+.cta-container {
+  text-align: center;
+  margin-top: 220px;
+  flex-direction: column;
+  display: none;
+}
+.valorant-button {
+  position: relative;
+  padding: 12px 32px;
+  background: transparent;
+  border: 2px solid #666;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.valorant-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  background: #ff4655;
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
+.valorant-button:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.valorant-button:hover {
+  color: white;
+  border-color: #999;
+}
+
 /* Javascript */
 
 section.abuabu {
   background-color: #f5f6f6;
+  width: 80%;
+  margin: 0 auto;
 }
-.support,
-.blog {
+.support {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+.support{ 
+   justify-content: space-around;
+  flex-wrap: wrap;
+  }
+  
 .support h6 {
   margin: 0px;
   margin-top: 20px;
@@ -592,16 +650,20 @@ section.abuabu {
 .support img {
   width: 50px;
 }
-.support div {
+.support-item {
   text-align: center;
   width: 26%;
+}
+.support-item .prof{
+  margin-top: 27px;
 }
 
 /* SWIPER SLIDER FOR GALERI */
 /* Container */
 #slider-2 {
   /* background-color: #f5f6f6; */
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 .wide {
   max-width: 46rem;
@@ -642,7 +704,7 @@ section.abuabu {
 }
 
 .swiper-slide figure:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .wide .swiper-custom-nav {
@@ -757,6 +819,8 @@ section.abuabu {
 
 /* QUOTEE SEKSI */
 section.quote {
+  width: 80%;
+  margin: 0 auto;
   background: url("img/KR.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -765,7 +829,8 @@ section.quote {
   color: #fff;
   /* font-size: 25px; */
   font-style: italic;
-  padding: 300px;
+  padding: 200px;
+  border-radius: 0 250px 0 250px;
 }
 section.quote .layar-dalam p {
   color: black;
@@ -787,6 +852,7 @@ section.quote .layar-dalam p::before{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
 }
 
 #team {
@@ -794,6 +860,8 @@ section.quote .layar-dalam p::before{
   text-align: center;
   /* float: left; */
   /* width: 100%; */
+  width: 80%;
+  margin: 0 auto;
 }
 
 .tim div {
@@ -857,9 +925,11 @@ section.quote .layar-dalam p::before{
   transform: scale(1.2);
 }
 
+
+
 /* FOOTER */
 footer {
-  background: linear-gradient(to right, #3c0000, #4e4e4e);
+  background: #ff0000;
   border-radius: 90px 0 0 0;
   position: flex;
   bottom: 0;
@@ -890,32 +960,7 @@ footer * {
   padding: 0;
 }
 
-@media (max-width: 800px) {
-  .footer-col h2 {
-    font-size: 13px;
-  }
-  .containerf {
-    flex-direction: column;
-  }
-  .tim {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .tim img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .tim div {
-    width: 70%;
-    margin: 10px;
-  }
-  .kaerindo .row {
-    flex-direction: column;
-    padding-top: 30px;
-  }
-}
+
 
 p.email {
   margin: 30px 0;
@@ -1064,6 +1109,58 @@ p.phone {
   max-width: 250px;
 }
 
+
+
+
+
+.backgroundBack{
+  background-color: #000000b4;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(to right, #3c0000b9, #4e4e4ed7);
+  border-top: solid 1px #000;
+  margin-top: 50px;
+  position: relative;
+  /* border-radius: 90px 0 0 0; */
+}
+
+.footer p {
+  font-size: 15px;
+  color: #fff;
+}
+.ending-page {
+  position: relative;
+  top: 20px;
+  font-size: 12px;
+}
+
+.swiper-slider-content .slider-title.eventAtas{
+  font-family: 'Duvall', sans-serif ;
+
+  margin-top: 50px;
+ 
+}
+.swiper-slider-content .slider-description.angkaEvent{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  /* padding-bottom: 10px; */
+
+}
+.satu {
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+  line-height: 2;
+  
+}
+
 /* Media queerry */
 
 @media screen and (max-width: 991.98px) {
@@ -1103,10 +1200,11 @@ p.phone {
   .support {
     display: block;
   }
-  .support div {
+  .support-item {
     width: 100%;
     padding-bottom: 30px;
   }
+
 }
 
 /* swiper slider  */
@@ -1164,8 +1262,16 @@ p.phone {
     font-size: 1px;
   }
   .kaerindo p{
-    width: 100%;
+    width: 90%;
     padding: 0;
+    font-size: 13px;
+    text-align: left;
+  }
+  .kaerindo {
+    width: 90%;
+  }
+  section.abuabu{
+    width: 100%;
   }
 }
 
@@ -1185,8 +1291,11 @@ p.phone {
 
 @media screen and (max-width: 800px) {
   section.quote {
+    margin-top: 50px;
     background-size: 100% 100%;
     padding: 100px;
+    width: 100%;
+    border-radius: 100px 0 100px 0;
   }
   section.quote .layar-dalam.dalam-quote{
     width: 100%;
@@ -1206,6 +1315,7 @@ p.phone {
   section.quote {
     background-size: 100% 100%;
     padding: 100px;
+    width: 100%;
   }
   section.quote .layar-dalam.dalam-quote{
     width: 100%;
@@ -1311,15 +1421,72 @@ p.phone {
     right: 10px;
   }
   #slider-2{
+    margin-top: 50px;
     padding:20px 0;
+    width: 98%;
   }
   section.quote .layar-dalam p::before{
     content: '“';
     font-size: 2rem;
     color: #ff0000;
   }
-
-
+  #team{
+    width: 100%;
+  }
+  .footer {
+    padding: 80px;
+  }
+  .footer p{
+    font-size: 12px;
+  }
+  .valorant-button {
+    padding: 8px 25px ;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .footer-col h2 {
+    font-size: 13px;
+  }
+  .containerf {
+    flex-direction: column;
+  }
+  .tim {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tim img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .tim div {
+    width: 70%;
+    margin: 10px;
+  }
+  .tim h6{
+    font-size: 16px;
+  }
+  .tim span{
+    font-size: 14px;
+  }
+  .kaerindo .row {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .cta-container{
+    display: block;
+    margin-top: 0;
+  }
+  .support-item .prof{
+    margin-top: 20px;
+  }
+  .support-item  p{
+    font-size: 13px;
+  }
+  .support-item  h6{
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1380,55 +1547,27 @@ p.phone {
     top: 10px;
     right: 10px;
   }
+  .footer p{
+    font-size: 10px;
+  }
+  .tim h6{
+    font-size: 15px;
+  }
+  .tim span{
+    font-size: 12px;
+  }
+  .valorant-button {
+    padding: 5px 20px ;
+    font-size: 13px;
+  }
 }
 
-.backgroundBack{
-  background-color: #000000b4;
-}
 
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 60px 0;
-  background: linear-gradient(to right, #3c0000b9, #4e4e4ed7);
-  border-top: solid 1px #000;
-  margin-top: 50px;
-  position: relative;
-  /* border-radius: 90px 0 0 0; */
-}
 
-.footer p {
-  font-size: 15px;
-  color: #fff;
-}
-.ending-page {
-  position: relative;
-  top: 20px;
-  font-size: 12px;
-}
 
-.swiper-slider-content .slider-title.eventAtas{
-  font-family: 'Duvall', sans-serif ;
 
-  margin-top: 50px;
- 
-}
-.swiper-slider-content .slider-description.angkaEvent{
-  font-size: 30px;
-  margin-top: 0px;
-  margin-bottom: 0;
-  /* padding-bottom: 10px; */
 
-}
-.satu {
-  padding: 0;
-  padding-bottom: 10px;
-  margin: 0;
-  font-size: 15px;
-  color: #fff;
-  line-height: 2;
-  
-}
+
 
 .fadeInUp {
   animation: fadeInUp 1s ease-out forwards;

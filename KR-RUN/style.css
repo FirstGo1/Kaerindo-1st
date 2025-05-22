@@ -276,7 +276,7 @@ a.en:before{
   background-image: url(https://flagsapi.com/US/flat/64.png);
 }
 .label-merah{
-  color: red;
+  color: #ff0000;
 }
 
 .nav-bawah .language-selected{
@@ -830,86 +830,6 @@ section h3 {
   }
 
   /* ---------------------FAQ--------- */
-.faqUtama{
-  font-family: "Poppins", sans-serif;
-  /* min-height: 100vh; */
-  width: 70%;
-  margin: 0 auto;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.faqUtama h1{
-  font-size: 3rem;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.faqUtama h1::after {
-  content: "";
-  border-bottom: 3px solid #ff0048;
-  width: 90px;
-  display: block;
-  margin: 5px auto;
-}
-
-.faq{
-  /* max-width: 700px; */
-  width: 100%;
-  margin-top: 2rem;
-  padding-bottom: 0.5rem;
-  /* padding-left: 20px; */
-  border-bottom: 2px solid #888;
-  cursor: pointer;
-  color: #333;
-}
-.question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.question h3{
-  font-size: 1.2rem;
-  margin: 0;
-  transition: color 0.3s ease;
-}
-
-.question h3:hover{
-  color: #ff0000;
-}
-.answer{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s ease;
-}
-.answer p{
-  padding-top: 0;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #666;
-}
-.answer p a{
-    text-decoration: none;
-    color: #666;
-    animation: colorShift 3s infinite ease-in-out;
-    transition: color 0.3s ease, border-color 0.3s ease;
-
-}
-.faq.active .answer{
-  max-height: 300px;
-  animation: fade 1s ease-in-out;
-}
-.faq.active svg{
-  transform: rotate(180deg);
-  fill: red;
-}
-.question svg{
-  transition: transform 0.5s ease-in;
-}
-
-
 
 .faq-wrapper {
   padding: 60px 20px;
