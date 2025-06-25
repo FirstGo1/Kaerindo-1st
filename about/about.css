@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
@@ -88,7 +88,7 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
-.label-merah{
+.label-merah {
   color: red;
 }
 .sidebar {
@@ -150,8 +150,7 @@ nav svg:hover {
   fill: red;
 }
 
-
-.language{
+.language {
   position: relative;
   width: 120px;
   margin-left: 40px;
@@ -163,8 +162,8 @@ nav svg:hover {
   color: #fff;
   cursor: pointer;
 }
-.language-selected:before{
-  content: '';
+.language-selected:before {
+  content: "";
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -172,14 +171,13 @@ nav svg:hover {
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 10px;
-
 }
 
 /* ------ Jquery ------  */
-.language-selected.change-id:before{
+.language-selected.change-id:before {
   background-image: url(https://flagsapi.com/ID/flat/64.png);
 }
-.language-selected.change-en:before{
+.language-selected.change-en:before {
   background-image: url(https://flagsapi.com/US/flat/64.png);
 }
 
@@ -195,11 +193,11 @@ nav svg:hover {
   display: none;
   transition: 0.3s ease;
 }
-.language:hover ul{
+.language:hover ul {
   display: block;
 }
 
-.language ul li{
+.language ul li {
   list-style: none;
   /* margin: 0 auto; */
   display: flex;
@@ -209,10 +207,10 @@ nav svg:hover {
   transition: 0.3s ease;
   border-radius: 5px;
 }
-.language ul li:hover{
+.language ul li:hover {
   background-color: #c4c4c4;
 }
-.language ul li a{
+.language ul li a {
   width: 100%;
   font-size: 16px;
   display: block;
@@ -220,8 +218,8 @@ nav svg:hover {
   /* padding-top: 5px 10px; */
   padding: 10px 0;
 }
-.language ul li a:before{
-  content: '';
+.language ul li a:before {
+  content: "";
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -232,17 +230,16 @@ nav svg:hover {
   vertical-align: middle;
   /* margin-right: 10px; */
 }
-a.id:before{
+a.id:before {
   background-image: url(https://flagsapi.com/ID/flat/64.png);
 }
-a.en:before{
+a.en:before {
   background-image: url(https://flagsapi.com/US/flat/64.png);
 }
 
-.nav-bawah .language-selected{
+.nav-bawah .language-selected {
   color: #000000;
 }
-
 
 /* Section Awal Mula */
 .awal-mula {
@@ -265,9 +262,8 @@ a.en:before{
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-  
 }
-.image-side img{
+.image-side img {
   object-fit: cover;
   max-width: 100%;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
@@ -318,7 +314,6 @@ a.en:before{
   color: #d62828;
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -350,7 +345,7 @@ a.en:before{
 .hero-about {
   position: relative;
   height: 70vh;
-  background: url('asset/jelajah\ bg\ form.jpg') center center/cover no-repeat;
+  background: url("asset/jelajah\ bg\ form.jpg") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -420,7 +415,6 @@ a.en:before{
   display: block;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  
 }
 
 .info-text {
@@ -431,7 +425,7 @@ a.en:before{
   /* margin: 0 auto; */
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   z-index: 2;
 }
 
@@ -452,8 +446,6 @@ a.en:before{
   color: #d62828;
   font-weight: bold;
 }
-
-
 
 .footer {
   background: #1e1e1e;
@@ -488,7 +480,8 @@ a.en:before{
   font-weight: 500;
 }
 
-.footer-col p, .footer-col li {
+.footer-col p,
+.footer-col li {
   font-size: 14px;
   color: #ccc;
   line-height: 1.6;
@@ -504,28 +497,36 @@ a.en:before{
   text-decoration: none;
   display: block;
   margin: 6px 0;
+  transition: 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #fff;
+  color: #ff0000;
 }
 
 .logo img {
   width: 100px;
   /* margin-bottom: 15px; */
   height: 100px;
-  object-fit: cover  ;
+  object-fit: cover;
 }
 
-.social-icons a {
+.social-icons a,
+.social-icons .fab {
   color: #ccc;
   font-size: 30px;
-  margin-right: 12px;
-  transition: color 0.3s;
+  margin-right: 5px;
+  transition: color 0.3s ease-in-out;
 }
 
-.social-icons a:hover {
-  color: #fff;
+.social-icons .fa-instagram:hover {
+  color: #e1306c;
+}
+.social-icons .fa-whatsapp:hover {
+  color: #25d366;
+}
+.social-icons .fa-youtube:hover {
+  color: #ff0000;
 }
 
 .store-btn {
@@ -544,18 +545,14 @@ a.en:before{
   font-size: 13px;
 }
 
-
-
-
-
 /* Responsiveness */
 @media (max-width: 800px) {
   .content-wrapper {
     flex-direction: column;
   }
 
-
-  .text-side, .image-side {
+  .text-side,
+  .image-side {
     flex: 1 1 100%;
     margin: 0;
     padding: 0;
@@ -565,12 +562,12 @@ a.en:before{
     font-size: 1.5rem;
   }
   .text-side p {
-   font-size: 13px; 
+    font-size: 13px;
   }
   .motto h3 {
     font-size: 1.2rem;
   }
-  .motto p{
+  .motto p {
     font-size: 13px;
     text-align: left;
   }
@@ -581,7 +578,7 @@ a.en:before{
     text-align: center;
     height: 80vh;
   }
-  .hero-text{
+  .hero-text {
     width: 100%;
     z-index: 1;
   }
@@ -597,7 +594,7 @@ a.en:before{
     flex-direction: column;
     align-items: center;
   }
-  .info-card img{
+  .info-card img {
     height: 300px;
   }
 
@@ -632,14 +629,14 @@ a.en:before{
     margin: 0;
   }
 
-  .sidebar.show{
+  .sidebar.show {
     right: 0;
     top: 0;
   }
   .nav-bawah {
     width: 100%;
   }
-  nav{
+  nav {
     width: 100%;
     padding: 0;
   }
@@ -647,21 +644,20 @@ a.en:before{
     width: 125%;
     height: 125%;
   }
-  nav .ul-utama{
+  nav .ul-utama {
     padding: 0;
   }
   .language.hide {
     display: none;
   }
-  .nav-bawah .language{
+  .nav-bawah .language {
     display: none;
   }
-   .sidebar .language{
+  .sidebar .language {
     margin: 0;
     padding: 0;
   }
 }
-
 
 @media (max-width: 400px) {
   .sidebar {
@@ -693,7 +689,7 @@ a.en:before{
     width: 100%;
     height: 100%;
   }
-  nav .ul-utama{
+  nav .ul-utama {
     padding: 0;
   }
   .sidebar .language-selected {
@@ -706,5 +702,3 @@ a.en:before{
     justify-content: center;
   }
 }
-
-
