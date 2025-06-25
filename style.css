@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Inter:opsz,wght@14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import url('https://fonts.cdnfonts.com/css/duvall');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Inter:opsz,wght@14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 * {
   /* font-family: Arial, Helvetica, sans-serif; */
   /* line-height: 20px;
@@ -17,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  
 }
 /* body:has(option[value="dark"]:checked){
   --background: black;
@@ -467,6 +469,141 @@ section h3 {
   text-align: center;
 }
 
+/* --------- kr run -------- */
+/* ------------- categories ------ */
+.marathon-categories {
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.judulUtama{
+  /* font-family: "Quicksans", sans-serif; */
+  margin-top: 50px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 40px;
+}
+.judulUtama::after {
+  content: "";
+  border-bottom: 3px solid #ff0048;
+  width:  90px;
+  display: block;
+  margin: 5px auto;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.category {
+  background:  #f3f3f3;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* transition: transform 0.3s ease; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+  will-change: opacity, transform;
+  
+}
+.category.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.category.delay-1 {
+  transition-delay: 0.2s;
+}
+.category.delay-2 {
+  transition-delay: 0.4s;
+}
+.category.delay-3 {
+  transition-delay: 0.6s;
+}
+
+.category:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  /* color: #e91e63; */
+  /* color: #e46e63; */
+  color: #f80000;
+}
+.category p{
+  text-align: left;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+}
+.category ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 15px;
+  padding-left: 0;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.category ul li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+.category ul li::before {
+  content: "✔"; /* Bisa diganti: "✔️", ✅"⭐", "🔹", dst */
+  margin-right: 8px;
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+.badge {
+  background-color: #f80000;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+.registration {
+  margin-top: 30px;
+  animation: fadeInUp 1s both 0.4s ;
+}
+
+.btn-register {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #f80000;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #8d0202;
+}
+
+
 /* ---------------Kaerindo------------- */
 .kaerindo {
   width: 80%;
@@ -476,8 +613,11 @@ section h3 {
 
 }
 .kaerindo h3 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 40px;
+  /* font-weight: 600; */
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  color: #333;
 }
 /* .kaerindo .judult{
   animation: fadeInDown 1s both 0.2s;
@@ -491,10 +631,13 @@ section h3 {
 }
 .kaerindo p {
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   justify-content: center;
   font-size: 16px;
+  font-size: 'Jost', sans-serif;
+  font-weight: 700;
+  color: #333;
 }
 
 
@@ -583,6 +726,7 @@ section h3 {
   flex-direction: column;
   display: none;
 }
+
 .valorant-button {
   position: relative;
   padding: 12px 32px;
@@ -622,6 +766,14 @@ section h3 {
   color: white;
   border-color: #999;
 }
+.team-cta{
+  display: block;
+  margin-top: 0;
+  padding: 20px;
+}
+.team-btn{
+  padding: 10px 30px;
+}
 
 /* Javascript */
 
@@ -645,7 +797,9 @@ section.abuabu {
   margin-top: 20px;
   padding: 0px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Jost', sans-serif;
+  color: #333;
 }
 .support img {
   width: 50px;
@@ -821,7 +975,7 @@ section.abuabu {
 section.quote {
   width: 80%;
   margin: 0 auto;
-  background: url("img/KR.jpg") no-repeat;
+  background: url("/asset/img/KR.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -868,6 +1022,12 @@ section.quote .layar-dalam p::before{
   text-align: center;
   width: 26%;
 }
+.layar-dalam h3 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 40px;
+}
 
 .tim h6 {
   margin: 0px;
@@ -875,6 +1035,8 @@ section.quote .layar-dalam p::before{
   padding: 0px;
   font-size: 18px;
   font-weight: bold;
+  font-family: 'Jost', sans-serif;
+  color: #333;
 }
 .tim span {
   color: rgba(0, 0, 0, 0.555);
@@ -1487,6 +1649,12 @@ p.phone {
   .support-item  h6{
     font-size: 16px;
   }
+  .marathon-categories{
+    width: 100%;
+   }
+   .category-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1560,6 +1728,9 @@ p.phone {
     padding: 5px 20px ;
     font-size: 13px;
   }
+  .marathon-categories{
+    width: 100%;
+   }
 }
 
 

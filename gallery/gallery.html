@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaerindo Jaya Komunikasi</title>
+    <link rel="icon" href="img/logo kjk-2321.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Cloudflare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+       <!-- Icon W3Schools -->
+   <script src="https://kit.fontawesome.com/52ec4b3348.js" crossorigin="anonymous"></script>
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css?v=1.5" />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+        <li><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+      </ul>
+  
+      <!-- ------- NAV Paling atas --------- -->
+      <ul>
+        <li>
+          <a href="#"><img src="img/1111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+  
+        <div class="language hide">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+  
+    <nav class="nav-bawah">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li><a href="/gallery/gallery.html">Galeri</a></li>
+        <li><a href="/team/tim.html">Tim</a></li>
+        <li><a href="/event/event.html">Registrasi</a></li>
+        <li><a href="/contact/contact.html">Hubungi</a></li>
+      </ul>
+  
+      <!-- -----------Nav scroll bawah -----------  -->
+      <ul>
+        <li>
+          <a href="#"><img src="img/111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="judulf">Galeri</h1>
+        <p>Galeri ini menampilkan dokumentasi kegiatan, proyek, dan pencapaian perusahaan kami.</p>
+      </div>
+    </section>
+
+
+<!-- -------- galeri 1 ------------  -->
+    <section id="slider-2">
+      <h1 class="teratas">Pengalaman Kami</h1>
+      <p>Dokumentasi perjalanan wisata dan berbagai event spesial dari Kaerindo Jaya Komunikasi. Dari pengalaman perjalanan yang mengesankan hingga momen seru di berbagai kegiatan.</p>
+      <div class="container wide">
+        <div class="swiper" id="swiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure>
+                <img src="/asset/img/kerja/1.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img src="/asset/img/kerja/2.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img src="/asset/img/kerja/3.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/4.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img src="/asset/img/kerja/5.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/6.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/7.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/8.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/9.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/10.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/11.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/12.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/13.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/14.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/15.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/16.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/17.jpg" loading="lazy"/>
+              </figure>
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+              <figure>
+                <img
+                  src="/asset/img/kerja/18.jpg" loading="lazy"/>
+              </figure>
+            </div>
+          </div>
+          <!-- end swiper-wrapper -->
+
+        <!-- end swiper -->
+        <div class="popup-image">
+          <span class="close-button">&times;</span>
+          <!-- Entitas tombol tutup X , bukan huruf X -->
+          <img src="img/1.jpg" class="onclick-img-jpg">
+        </div>
+
+      </div>
+      <!-- end container -->
+    </section>
+
+
+
+
+
+
+<!-- ---------------------- galeri -------------------- -->
+<div class="container myGallery">
+  <h1 class="teratas">Paket Wisata</h1>
+  <p>Kami menghadirkan berbagai pilihan perjalanan menarik, mulai dari wisata alam, budaya, hingga event olahraga seperti marathon.</p>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0020.jpg" class="img-galeri" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/1234.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0013.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0015.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0016.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0030.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0031.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0032.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0033.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0035.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/Photos of WEB/IMG-20241223-WA0015.jpg" alt="" loading="lazy">
+        <div class="caption">
+          <h1>Kaerindo</h1>
+          <ion-icon name="heart" class="like-btn"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+</div>
+<section class="logo-section">
+  <h2>Lebih dari 90 juta pengguna dan 250.000 perusahaan berkolaborasi dalam Kaerindo Jaya Komunikasi</h2>
+
+<div class="logo-swiper swiper-left">
+  <div class="logo-wrapper logo-left">
+    <div class="logo-slide"><img src="/asset/collab/1.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/2.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/3.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/41.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/5.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/6.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/7.png" alt="" /></div>
+    <!-- Tambahkan slide lainnya -->
+  </div>
+</div>
+<div class="logo-swiper swiper-right">
+  <div class="logo-wrapper logo-right">
+    <div class="logo-slide"><img src="/asset/collab/1.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/2.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/3.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/41.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/5.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/6.png" alt="" /></div>
+    <div class="logo-slide"><img src="/asset/collab/7.png" alt="" /></div>
+    <!-- Tambahkan slide lainnya -->
+  </div>
+</div>
+</section>
+<div class="cta-container">
+  <a href="/team/tim.html" class="valorant-button">Lihat Semua Tim</a>
+</div>
+
+
+
+    <!-- ------------ footer -------------  -->
+    <section class="footer">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61571691801000" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/+6285966157745" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/kaerindojaya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Kaerindo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://maps.app.goo.gl/6ETS9bqCij2JGWzQ9" target="_blank"><i class="fa-brands fa-google"></i></a>
+    </div>
+    <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
+  </section>
+
+
+
+      <!-- Feather Icons -->
+      <script>
+        feather.replace();
+      </script>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     
+
+<script src="language.js"></script>
+    <script src="script.js?v=1.5"></script>
+  </body>
+</html>

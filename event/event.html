@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaerindo Jaya Komunikasi</title>
+    <link rel="icon" href="img/logo kjk-2321.png">
+
+    <!-- -------- font ----------  -->
+    <link href="https://fonts.cdnfonts.com/css/duvall" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Inter:opsz,wght@14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  
+    <!-- Icon W3Schools -->
+    <script src="https://kit.fontawesome.com/52ec4b3348.js" crossorigin="anonymous"></script>
+    <!-- Linking swiperJS css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Cloudflare -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css?v=1.6" />
+  </head>
+  <body>
+
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li><a class="nav-registrasi label-merah" href="/event/event.html">Registrasi</a></li>
+        <li><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+      </ul>
+
+      <!-- ------- NAV Paling atas --------- -->
+      <ul>
+        <li>
+          <a href="#"><img src="/asset/img/1111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/event/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+
+        <div class="language hide">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="nav-bawah">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/index.html">Beranda</a></li>
+        <li><a href="/about/about.html">Tentang</a></li>
+        <li><a href="/gallery/gallery.html">Galeri</a></li>
+        <li><a href="/team/tim.html">Tim</a></li>
+        <li><a class="label-merah" href="/event/event.html">Registrasi</a></li>
+        <li><a href="/contact/contact.html">Hubungi</a></li>
+      </ul>
+
+      <!-- -----------Nav scroll bawah -----------  -->
+      <ul>
+        <li>
+          <a href="#"><img src="/asset/img/111.png" /></a>
+        </li>
+        <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="#">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+        <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+        <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/event/event.html">Registrasi</a></li>
+        <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- SLIDER TAMPILAN DEPAN -->
+    <div class="layar-penuh">
+            <header id="home">
+              <div class="swiper-tampilan-depan">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <img src="img/bg event3.jpg" alt="">
+                    <div class="swiper-slider-content">
+                      <h2 class="slider-title eventAtas">5k <span class="span-class">10k</span> 21k</h2>
+                      <!-- <p class="slider-description angkaEvent">5k 10k 21k
+                      </p> -->
+                      <p class="satu">Ikuti event ini bersama kami! <br>28 September 2025</p>
+                      <a href="#categories" class="slider-action">Daftar Sekarang !</a>
+                    </div>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <img class="khusus-kr" src="img/bg event4.jpg" alt="">
+                    <div class="swiper-slider-content kaerindo-jdl">
+                      <h2 class="slider-title eventAtas">KR <span class="span-class">RUN</span> 2025</h2>
+                      <p class="satu">Yogyakarta
+                      </p>
+                      <a href="#about_1" class="slider-action">Telusuri</a>
+                    </div>
+                  </div>
+            
+                </div>
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+              </div>
+            </header>
+    </div>
+      
+    <div class="container" id="about_1">
+      <h1>Kedaulatan Rakyat RUN</h1>
+      <p class="tambahanDalam palingAtas">
+         Tentang KR RUN 2025</p>
+      <div class="rows">
+      <div class="text-section">
+          <div class="card">
+              <h3>Mengapa KR RUN?</h3>
+              <p>Sebagai koran tertua di Indonesia, Kedaulatan Rakyat tidak hanya memulai sejarah, tapi juga terus bergerak bersama zaman. KR Run 2025 digelar sebagai bagian dari perayaan perjalanan panjang 8 windu Kedaulatan Rakyat dalam mengawal informasi sejak era perjuangan kemerdekaan hingga hari ini. Bukan sekadar event lari, KR Run dimaksudkan menghadirkan energi baru dari generasi muda untuk mengenang sejarah lewat langkah kaki yang berlari menyusuri jejak-jejak bersejarah di Kota Yogyakarta.
+              </p>
+          </div>
+          <div class="card">
+              <h3>Pengalaman Berlari yang Unik</h3>
+              <p>
+                Dengan rute yang melewati ikon-ikon heritage Yogyakarta, KR Run 2025 mengajak peserta untuk berlari sambil menyerap atmosfer sejarah kota ini. Bayangkan berlari melintasi kawasan bersejarah, menyapa bangunan tua, dan merasakan denyut perjalanan kota yang penuh cerita. Ini bukan hanya tentang siapa yang tercepat, tapi tentang merayakan perjalanan, menghormati sejarah, dan membawa semangat Kedaulatan Rakyat terus hidup, dari lembaran koran ke langkah kehidupan nyata.
+              </p>
+          </div>
+          <!-- <div class="card">
+              <h3>Kenali KR RUN</h3>
+              <p>
+                KR RUN adalah ajang yang dirancang untuk semua level pelari. Dari pemula hingga profesional, setiap orang dapat menikmati berlari sambil mengeksplorasi kekayaan budaya. Mari bergabung dalam perjalanan ini!
+              </p>
+          </div> -->
+      </div>
+      <div class="image-section">
+        <img src="img/FUZZ00172.JPG" alt="" />
+    </div>
+    </div>
+  </div>
+
+
+  <section class="marathon-categories" id="categories">
+    <h1 class="judulUtama">Kategori</h1>
+    <div class="category-grid">
+      
+      <div class="category delay-1">
+        
+        <div class="badge">🌟 Cocok untuk Pemula</div>
+        <h3>5K</h3>
+        <p>Lari jarak pendek untuk pemula atau keluarga.</p>
+        <ul>
+          <li><strong>Usia</strong> Semua umur</li>
+          <li><strong>Start Time</strong> 06.30 WIB</li>
+          <li><strong>Biaya</strong> unknown</li>
+          <li><strong>Benefit</strong> Jersey, BIB, Snack, Medali Finisher</li>
+          <li><strong>Rute</strong> Sekitar pusat kota Yogyakarta dengan view taman kota</li>
+        </ul>
+      </div>
+      <div class="category delay-2">
+        <div class="badge">🔥 Populer</div>
+        <h3>10K</h3>
+        <p>Tantangan jarak menengah untuk pelari aktif.</p>
+        <ul>
+          <li><strong>Usia</strong> 15 tahun ke atas</li>
+          <li><strong>Start Time</strong> 06.00 WIB</li>
+          <li><strong>Biaya</strong> unknown</li>
+          <li><strong>Benefit</strong> Jersey, BIB, Snack, Medali Finisher, E-Certificate</li>
+          <li><strong>Rute</strong> Melewati landmark kota Yogyakarta dan jalan utama</li>
+        </ul>
+      </div>
+      <!-- <div class="category delay-3">
+        <div class="badge">🏅 Untuk Pelari Berpengalaman</div>
+        <h3>21K</h3>
+        <p>Half Marathon untuk pelari berpengalaman.</p>
+        <ul>
+          <li><strong>Usia</strong> 18 tahun ke atas</li>
+          <li><strong>Start Time</strong> 05.30 WIB</li>
+          <li><strong>Biaya</strong> unknown</li>
+          <li><strong>Benefit</strong> Jersey Premium, BIB, Medali Khusus, Refreshment, E-Certificate</li>
+          <li><strong>Rute</strong> Rute panjang melalui 3 kecamatan, kombinasi tanjakan dan turunan</li>
+        </ul>
+      </div> -->
+    </div>
+    <div id="countdown" style="text-align: center; margin-top: 20px; font-size: 1.2rem;"></div>
+    <div class="registration">
+      <a href="registration-without-server/form2.html" class="btn-register">Registrasi Sekarang</a>
+    </div>
+
+  </section>
+
+
+
+  <div class="const-4">
+    <h1>Peraturan</h1>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc1')">A. Istilah yang digunakan</h3>
+        <div id="desc1" class="rule-description">
+            <p>Dalam Peraturan dan Ketentuan ini istilah yang digunakan memiliki arti sebagai berikut (kecuali dalam hal kalimat yang bersangkutan memberikan arti yang lain):</p>
+            <ul>
+                <li>Acara adalah kegiatan KR RUN 2025.</li>             
+                <li>Acara ini bersifat in person event.</li>
+                <li>Biaya Pendaftaran adalah biaya keikutsertaan Acara yang ditetapkan dan wajib dibayar Peserta untuk dapat ikut serta dalam Acara.</li>
+                <li>Formulir Pendaftaran adalah formulir pendaftaran Acara.</li>
+                <li>Pengelola dan penyelenggara adalah Kedaulatan Rakyat yang bertindak sebagai KR RUN Race Collaborator bersama Kaerindo Jaya Komunikasi.</li>
+                <li>Pemilik Acara (race owned by) adalah Kedaulatan Rakyat yang berkolaborasi dengan PT. Pertamina.</li>
+                <li>Peserta adalah perorangan yang melakukan pendaftaran Acara.</li>
+                <li>Race Pack adalah paket berlari yang diterima para Peserta sebelum Hari-H. Adapun informasi lengkap mengenai lokasi dan waktu pengambilan telah terlebih dahulu disampaikan kepada Peserta oleh Pengelola melalui email Surel Peserta yang terdaftar dan melalui media sosial resmi Penyelenggara.</li>
+                <li>Finisher Pack adalah paket resmi finisher yang diserahkan kepada Peserta resmi sesuai ketentuan.</li>
+                <li>Peraturan dan Ketentuan (Rules & Regulations) adalah Peraturan dan ketentuan mengenai pelaksanaan Acara termasuk tata cara pendaftaran dan tata tertib keikutsertaan.</li>
+                <li>Website kegiatan adalah laman resmi Acara yaitu <a href="http://kaerindojaya.com">kaerindojaya.com</a>.</li>
+                <li>Website Pendaftaran adalah laman resmi pendaftaran online yang dikelola oleh Penyelenggara sebagaimana terdapat dalam tautan yang ada dalam laman kegiatan.</li>
+                <li>Media sosial resmi <a href="https://www.instagram.com/krrunjogja/">@krrunjogja </a>adalah media komunikasi kegiatan kepada Peserta.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc2')">B. Keberlakuan Syarat dan Ketentuan</h3>
+        <div id="desc2" class="rule-description">
+            <ul>
+              <li>Hal-hal lain yang belum tercantum dalam peraturan ini akan ditetapkan kemudian oleh Penyelenggara. Penyelenggara berhak melakukan penyesuaian dan modifikasi atas aturan lomba jika dipandang perlu. Segala penyesuaian dan modifikasi akan dilakukan dengan pemberitahuan kepada Peserta melalui media komunikasi utama berupa surel (surat elektronik), dan media sosial; dan atau bila diperlukan surat, pesan pendek selular, dan/atau media pengumuman lainnya.</li>
+              <li>Peserta dianggap telah memahami, menerima dan tunduk pada Syarat dan Ketentuan ini setelah: (i) melengkapi Formulir Pendaftaran dan melakukan pembayaran; dan/atau (ii) telah tercatat resmi pada daftar peserta Acara yang dikeluarkan oleh Penyelenggara. Syarat dan Ketentuan juga berlaku untuk peserta Acara yang terdaftar melalui klasifikasi charity/amal dan/atau eksibisi.</li>
+              <li>Syarat dan Ketentuan ini berlaku bagi setiap pihak yang mendaftar dan/atau mengikuti Acara.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc3')">C. Keberlakuan Syarat dan Ketentuan</h3>
+        <div id="desc3" class="rule-description">
+          <ul>
+            <li>Kegiatan lomba diselenggarakan dengan skema in person event atau offline.</li>
+            <li>Peserta agar melakukan tahap registrasi sampai dengan selesai dan melakukan pembayaran untuk dapat tercatat resmi sebagai peserta.</li>
+            <li>Peserta yang karena satu dan lain hal gagal hadir pada Hari-H, tidak dapat mengalihkan kesempatannya kepada orang lain.</li>
+          </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc4')">D. Skema Kegiatan</h3>
+        <div id="desc4" class="rule-description">
+          <ul>
+            <li>Peserta dianggap telah memahami, menyadari dan mengakui bahwa Acara memiliki risiko yang dapat mengakibatkan cedera, cacat, bahkan kematian. Peserta menjamin bahwa pihaknya berada pada kesiapan fisik dan kondisi kesehatan yang cukup dan fit secara mental dan fisik untuk mengikuti Acara dan setuju untuk bertanggung jawab atas tindakan dirinya saat mengikuti Acara.</li>
+            <li>Peserta setuju untuk membebaskan Penyelenggara (termasuk namun tidak terbatas pada manajemen/karyawan/afiliasi Penyelenggara, profesional dan pihak lain yang ditunjuk oleh Penyelenggara dan sponsor yang bekerja sama dengan Penyelenggara) atas segala kerugian dan kerusakan yang timbul sehubungan dengan lomba, kecuali dalam hal kerugian dan kerusakan tersebut timbul dari hal yang terbukti disengajakan.</li>
+            <li>Lomba akan dibatalkan jika timbul hal-hal di luar kendali Penyelenggara dan Pengelola (termasuk hujan deras, badai, musibah, wabah pandemi yang muncul kembali secara kuat, demonstrasi besar dan masif, tidak dikeluarkannya izin lomba, ataupun alasan lainnya). Dalam hal lomba dibatalkan karena hal-hal di luar kendali panitia, maka Biaya Pendaftaran tidak dikembalikan dan Penyelenggara dan Pengelola tidak bertanggung jawab atas kerugian atau ketidaknyamanan yang timbul.</li>
+            <li>Pengembalian Biaya Pendaftaran juga tidak diberikan kepada Peserta yang dikeluarkan untuk alasan keamanan/ketertiban dan/atau didiskualifikasi. Penyelenggara dan Pengelola tidak bertanggung jawab atas kerugian atau ketidaknyamanan yang timbul atas tidak dikembalikannya Biaya Pendaftaran ataupun pembatalan Acara.</li>
+            <li>Peserta memahami bahwa ketidakpatuhan baik disengaja ataupun tidak disengaja terhadap peraturan lomba dapat mengakibatkan peserta kehilangan hak yang seharusnya didapat pada kegiatan ini.</li>
+          </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc5')">E. Tindakan Keamanan dan Ketertiban</h3>
+        <div id="desc5" class="rule-description">
+            <ul>
+              <li>Penyelenggara menjaga agar Peserta dapat berlari dengan aman yang nyaman di area lintasan yang telah ditentukan.</li>
+              <li>Pengelola berhak setiap saat untuk mengeluarkan Peserta dari Acara atau mencegah Peserta mengambil bagian dalam Acara jika menurut kebijakan Penyelenggara dan Pengelola tindakan tersebut diperlukan untuk alasan keamanan dan ketertiban serta kenyamanan yang kondusif bagi jalannya Acara secara keseluruhan dan peserta yang terlibat di dalamnya dan atau karena alasan lain dalam batas kewajaran yang relevan dengan peraturan lomba dan Acara.</li>
+              <li>Setiap Peserta dilindungi asuransi selama pelaksanaan lomba. Agar Peserta memastikan data diri akurat saat mengisi formular registrasi. Kesalahan pengisian yang dapat berdampak pada akses terhadap asuransi adalah menjadi tanggungjawab individu.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc6')">F. Penyampaian Informasi</h3>
+        <div id="desc6" class="rule-description">
+            <ul>
+              <li>Penyelenggara akan mengirimkan semua materi komunikasi dan informasi Acara lain yang relevan ke alamat surel yang diberikan oleh Peserta pada Formulir Pendaftaran.</li>
+              <li>Penyelenggara tidak bertanggung jawab atas segala kerusakan perangkat elektronik Peserta yang digunakan untuk mengakses website Acara/ kegiatan atau kelalaian teknis lainnya yang mungkin terjadi dalam proses mengirimkan materi komunikasi dan korespondensi surel yang dapat menyebabkan kegagalan penerimaan oleh Peserta.</li>
+              <li>Peserta wajib memastikan dan meyakini bahwa segala informasi (termasuk alamat surel) yang diberikan adalah benar dan akurat.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc7')">G. Batas Umur</h3>
+        <div id="desc7" class="rule-description">
+            <ul>
+              <li>Batas umur ditetapkan pada kegiatan lomba yakni minimal 13 tahun dan maksimal 70 tahun. Bagi Peserta di atas usia yang ditetapkan atau setidaknya di atas usia 60 tahun agar melengkapi diri dengan surat keterangan sehat dari dokter atau klinik/rumah sakit secara resmi dan membawanya pada saat race pack collections.</li>
+              <li>Batasan umur yang berlaku per kategori adalah berdasarkan umur Peserta secara tepat pada saat bergabung dalam lomba pada tahun berjalan.</li>
+              <li>Peserta anak-anak di bawah usia 17 tahun (13 tahun – 16 tahun) wajib melengkapi diri dengan persetujuan orang tua dengan membuat Persetujuan Orang Tua - tertulis (Parental Consent Form) yang bisa didapat di lokasi race pack collection.</li>
+              <li>Peserta anak-anak berusia 5 tahun – 12 tahun hanya dapat mengikuti kategori 5K dan wajib melengkapi diri dengan persetujuan orang tua dengan membuat Persetujuan Orang Tua - tertulis (Parental Consent Form) yang bisa didapat di lokasi race pack collection.</li>
+              <li>Peserta dibedakan (klasifikasi) sebagai nasional dan master.</li>
+              <li>Batas umum kategori master adalah di atas 40 tahun dan 50 tahun atau telah berulang tahun ke-40 tahun dan ke-50 tahun pada saat mengikuti lomba pada tahun berjalan dengan merujuk pada butir satu di atas.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc8')">H. Tindakan Keamanan dan Ketertiban</h3>
+        <div id="desc8" class="rule-description">
+            <ul>
+              <li>Acara dapat diikuti oleh Warga Negara Indonesia (WNI) dan WNA.</li>
+              <li>Juara dan pemenang hanya berlaku bagi WNI dan WNA pada kelas Open untuk kategori 21K/HM saja. Bagi peserta kategori lain hanya tersedia juara dan pemenang WNI.
+              </li>
+              <li>Bagi peserta yang bermaksud menjadi juara atau pemenang diwajibkan melengkapi diri dengan kartu identitas, untuk bisa mendapatkan hak apabila menjadi juara atau pemenang. Bagi peserta WNA yang menjadi juara dan pemenang di kelas Opan agar melengkapi diri dengan KITAS dan atau Paspor dengan Visa Kerja.</li>
+              <li>Peserta wajib mengisi semua informasi yang diminta dalam Formulir Pendaftaran. Apabila Peserta memasukan data yang tidak benar, maka Pengelola berhak mendiskualifikasi pendaftaran Peserta.</li>
+              <li>Terkait kebijakan kesehatan sehubungan, Peserta wajib mengisi data kesehatan dengan valid.
+              </li>
+              <li>Peserta menyadari, menyetujui dan mengakui bahwa kepesertaannya adalah bersifat pribadi dan tidak dapat dialihkan hak atau kewajibannya kepada pihak lain.
+              </li>
+              <li>Peserta menyatakan dan menjamin bahwa pendaftaran yang dilakukannya adalah untuk penggunaan pribadi saja dan tidak akan digunakan untuk kegiatan komersial (termasuk untuk dialihkan kepada pihak ketiga). Pelanggaran hal ini dapat berakibat diskualifikasi.
+              </li>
+              <li>Peserta wajib mengisi semua informasi yang diminta dalam Formulir Pendaftaran. Apabila Peserta memasukan data yang tidak benar, maka Pengelola berhak mendiskualifikasi pendaftaran Peserta dan menyatakan diskualifikasi juga pada saat perlombaan berlangsung terkait dengan hak Peserta.
+              </li>
+              <li>Peserta wajib mematuhi semua tata tertib dan semua petunjuk serta pedoman yang diberikan oleh Pengelola, marshal dan personel keamanan yang ditunjuk oleh Pengelola. Peserta mengakui dan setuju bahwa Pengelola akan mengatur dan menjalankan Acara dan akan memiliki otoritas tunggal dan menjadi penentu akhir pada semua keputusan yang berkaitan dengan keselamatan, selama dan pengaturan Acara, timing/finish time dan penerapannya dalam kurun waktu jalannya Acara yang ditetapkan. Semua keputusan dan peraturan terkait Acara yang dikeluarkan oleh Pengelola adalah dianggap final.
+              </li>
+              <li>Peserta menyadari, menyetujui dan mengakui bahwa kepesertaannya adalah bersifat pribadi dan tidak dapat dialihkan hak atau kewajibannya kepada pihak lain untuk alasan apapun.
+              </li>
+              <li>Peserta wajib menunjukkan identitas pribadi berupa KTP, SIM, KITAS atau paspor (dalam bentuk asli atau fotokopi) yang berlaku pada saat mengambil Race Pack. Pengambilan Race Pack dapat dilakukan melalui wakil/orang lain dengan membawa softcopy/hardcopy surel Race Pack peserta, fotokopi kartu identitas peserta dan surat kuasa asli dari Peserta.
+              </li>
+              <li>Peserta agar mematuhi peraturan sesuai ketentuan untuk tetap memastikan hak kepesertaannya.
+              </li>
+              <li>Pelari yang mendapat tes doping akan mendapat hak atas hadiahnya sebesar 50% dari total hadiah sebelum dipotong pajak. Sisa hadiah akan diberikan apabila hasil tes doping telah terbit dan dinyatakan lolos tes doping atau hasil negative dari zat yang termasuk dalam klasifikasi dilarang dikonsumsi oleh atlet yang berlomba.
+              </li>
+              <li>Peserta yang mendaftarkan diri lebih dari satu kategori atau mendaftarkan diri berkali-kali pada kategori yang sama, hanya berhak berlari untuk satu kategori saja.
+              </li>
+              <li>Penyelenggara akan mengkonfirmasi peserta yang tercatat mendaftar di satu lomba untuk memilih kategori yang akan diambil dan menggugurkan kepesertaannya di kategori yang tidak dipilih.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc9')">I. Tata Tertib Pendaftaran dan Pemesanan</h3>
+        <div id="desc9" class="rule-description">
+            <ul>
+              <li>Peserta (i) wajib mengisi Formulir Pendaftaran melalui website Pendaftaran secara lengkap dan benar. dan (ii) membayar Biaya Pendaftaran sesuai dengan informasi yang ditetapkan resmi pada website Acara.</li>
+              <li>Masa berlaku pembayaran adalah 1x24 jam sejak pendaftaran selesai dilakukan secara lengkap. Peserta harus melakukan pendaftaran ulang apabila bermaksud melanjutkan kepesertaannya setelah tenggang waktu 1x24 jam berakhir tanpa terjadi dan atau melakukan pembayaran sesuai ketentuan.
+              </li>
+              <li>Penyelenggara akan menerbitkan konfirmasi pendaftaran sesudah Peserta terdaftar secara resmi.
+              </li>
+              <li>Peserta tidak dapat mengalihkan kepesertaannya.
+              </li>
+              <li>Peserta tidak berhak untuk mengubah informasi setelah konfirmasi pendaftaran dikirim, oleh karena itu Peserta diimbau untuk hanya mengisi data akurat dan memastikan semua data terisi secara benar.
+              </li>
+              <li>Pengelola berhak menutup masa pendaftaran sesudah jangka waktu tertentu dan atau setiap saat jika kuota telah dipenuhi.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc10')">J. Tata Tertib Kegiatan</h3>
+        <div id="desc10" class="rule-description">
+            <ul>
+              <li>Agar Peserta memperhatikan hal terkait Acara termasuk progres kegiatan dan informasi terkini yang disampaikan baik melalui surel maupun kanal sosial media KR RUN 2025.
+              </li>
+              <li>Setiap Peserta wajib hadir di lokasi Lomba 30 menit sebelum flag off dimulai. Peserta bertanggung jawab untuk memperhitungkan segala waktu yang diperlukan untuk keperluan pribadinya (termasuk perjalanan, parkir, baggage drop/deposit bag, dll).
+              </li>
+              <li>Peserta yang terlambat start diberikan toleransi sampai dengan sepuluh (10) menit sesudah flag off. Apabila Peserta gagal untuk start dalam waktu toleransi tersebut maka Peserta tidak diperkenankan start dan mendapat status Did Not Started (DNS) dan terkena diskualifikasi serta tidak diperkenankan berada di lintasan lari. Risiko atas kondisi gagal start atau DNS ini sepenuhnya menjadi tanggung jawab Peserta. Apabila peserta tetap memaksakan diri berlari pada jalur atau rute lomba maka panitia berhak mencabut nomor dada peserta dan menghapuskan hak peserta atas fasilitas di jalur lomba.
+              </li>
+              <li>Peserta yang tidak dapat menyelesaikan jarak tempuh pada lintasan sesuai kategori dan waktu yang telah ditentukan, dianggap tidak menyelesaikan kegiatan atau Did Not Finished (DNF).
+              </li>
+              <li>Penyelenggara berhak menetapkan batas waktu atau cut off time (COT). Batas waktu atau dapat dimodifikasi (dipercepat atau diperlambat) jika menurut pertimbangan Penyelenggara hal ini diperlukan. Peserta yang tidak pernah mencapai dan tidak tercatat pada timing system di garis finish sebelum batas waktu akan mendapat status Did Not Finished (DNF) dan tidak berhak atas hak sebagai finisher.
+              </li>
+              <li>Perubahan batas waktu ini dapat dilakukan sebelum atau pada saat hari berlangsungnya race sesuai dengan pertimbangan yang bersifat sangat khusus dan signifikan sesuai butir (6) di atas.
+              </li>
+              <li>Peserta yang mencapai garis finish sesudah cut off time selesai akan ditetapkan sebagai over cut off time. Peserta demikian tidak berhak atas fasilitas finisher.
+              </li>
+              <li>Untuk mengatur tertib jalannya lomba, Penyelenggara akan mengatur jalannya Acara pada area start dengan zonasi atau pen. Setiap Peserta harus mematuhi posisi pada pen berapa ia berada. Peserta yang tidak mematuhi pen position akan didiskualifikasi oleh Penyelenggara. Peserta yang tidak mengisi data zonasi maka akan dikelompokkan pada zonasi atau pen terakhir.
+              </li>
+             
+              <li>Zona Pada race ini akan ditetapkan zonasi start atau pen, silakan isi pilihan pace untuk mendapatkan zonasi yang sesuai:
+                <ol class="sub-list">
+                  <li>Zona A Pace di bawah 3</li>
+                  <li>Zona B Pace 4 - 6</li>
+                  <li>Zona C Pace 6 - 8</li>
+                  <li>Zona D Pace 8 - 10</li>
+                  <li>Zona E Pace di atas 10</li>
+                </ol>
+              </li>
+              
+              <li>Disediakan zonasi khusus line up start untuk perempuan. Peserta perempuan yang akan mengakses zona khusus ini agar memastikan telah mengisi data pada formular registrasi dengan benar. Para peserta perempuan yang memilih zona start khusus perempuan tidak dapat mengikuti zonasi pace.
+              </li>
+              <li>Zona start khusus perempuan akan berada di pada line up belakang setiap kategorinya.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc11')">K. Perubahan Acara</h3>
+        <div id="desc11" class="rule-description">
+            <ul>
+              <li>Penyelenggara berhak untuk mengubah tanggal Acara dengan dan untuk dasar pertimbangan yang lazim dan wajar demi kepentingan keberlangsungan penyelenggaraan dan kenyamanan Peserta dalam batas waktu penyampaian informasi perubahan kepada Peserta secara wajar dan berada dalam batas kelaziman.
+              </li>
+              <li>Bilamana perubahan tanggal telah diumumkan baik melalui surel kepada masing-masing Peserta dan atau media sosial dan media informasi lainnya, dan Peserta telah berhalangan berkegiatan dan atau hadir pada tanggal perubahan tersebut, maka Peserta mengakui bahwa ketidakhadirannya terjadi karena keadaan dirinya sendiri dan tidak akan membebankan hal yang timbul dari keadaan tersebut kepada Penyelenggara dan pihak lain yang relevan.
+              </li>
+              <li>Penyelenggara dengan pertimbangan wajar dan atau demi keberlangsungan kegiatan dan kenyamanan dan keamanan peserta berhak untuk mengubah format Acara dalam kebijakannya atau membatalkan Acara karena keadaan di luar kendali yang wajar (tidak termasuk hujan deras, badai, atau musibah, wabah penyakit berbahaya, dan demonstrasi besar dan masif).
+              </li>
+              <li>Dalam hal Acara harus dibatalkan bukan karena alasan pada butir 3 di atas, Penyelenggara dibebankan kewajiban untuk melakukan pengembalian dana penuh dengan tidak lagi bertanggung jawab atas apapun yang timbul dari pembatalan tersebut. Dalam hal Acara diubah ke format lain, Peserta tidak berhak atas pengembalian dan tidak ada kewajiban apapun yang timbul dari perubahan tersebut.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc12')">L. Tanggung Jawab/Kewajiban Penyelenggara</h3>
+        <div id="desc12" class="rule-description">
+            <ul>
+              <li>Penyelenggara bertanggung jawab dalam batas kewajaran dan kelaziman untuk menjaga keberlangsungan Acara dan kenyamanan Peserta dalam menjalankan Acara sesuai dengan kelaziman.
+              </li>
+              <li>Dalam kondisi apapun Penyelenggara tidak bertanggung jawab kepada Peserta untuk setiap kejadian, kecelakaan, cedera fisik dan medis, kesalahan (termasuk kelalaian) atau untuk kerugian bisnis, pendapatan atau keuntungan, tabungan atau pengeluaran sia-sia, kehilangan atau kerusakan atau peralatan pribadi milik Peserta atau kerusakan apapun baik langsung atau konsekuensial (walaupun kerugian tersebut berada dalam pertimbangan para pihak pada tanggal mengirimkan Formulir Pendaftaran) yang timbul dari Peserta dalam mengambil bagian dalam Acara atau masalah lainnya yang timbul berdasarkan Peraturan dan Ketentuan ini juga untuk jumlah keseluruhan lebih besar dari Biaya Pendaftaran yang dibayarkan oleh Peserta. Tanpa membatasi hal tersebut, Penyelenggara tidak akan bertanggung jawab atas setiap tindakan dari setiap penonton atau pihak ketiga lainnya kecuali yang ditetapkan secara berbeda.
+              </li>
+              <li>Dengan serta-merta, tegas dan tidak dapat dibatalkan oleh Peserta, untuk dirinya sendiri, ahli waris dan penerus yang berhak untuk melakukan penuntutan atau klaim apapun terhadap Penyelenggara, pejabat, karyawan, pemasok dan/atau sponsor dan/atau pihak- pihak yang dianggap bertanggung jawab ("Pihak Asosiasi") sebagai akibat dari segala jenis kerugian fisik, mental atau kerugian lainnya atau kerusakan apapun (termasuk kehilangan pendapatan, keuntungan, atau rasa sakit dan penderitaan) yang diderita oleh Peserta, langsung atau tidak langsung, atau dengan keluarga/atau oleh tanggungan dan disebabkan oleh sebuah peristiwa dengan cara apapun berkaitan dengan partisipasi Peserta dalam Acara dan Peserta dengan ini menyanggupi, untuk dirinya sendiri, ahli waris dan penerus yang berhak untuk mengganti kerugian dan membebaskan Penyelenggara, dan Pihak Terkait dari setiap biaya dan/atau jumlah yang mereka atau salah satu dari mereka mungkin butuhkan untuk membayar sebagai akibat dari tuntutan atau klaim tersebut di atas yang dibuat oleh siapapun
+              </li>
+              <li>Panitia menyediakan form waiver letter kepada Peserta untuk diketahui dan dipahami oleh para Peserta terkait asumsi risiko dalam Acara ini. Peserta agar mengisi bagian tersebut sesuai ketentuan pada saat mendaftarkan diri dengan memberi tanda centang pada bagian terkait pada lembar registrasi pada website resmi pada saat melakukan pendaftaran.
+              </li>
+              <li>Peserta juga setuju untuk mengganti kerugian Penyelenggara dan Pihak Terkait untuk setiap klaim, tindakan, kewajiban atau kerugian dari pelanggaran Peserta atas dan/atau tindakan lalai atau kelalaian dan/atau kesalahan yang disengaja.
+              </li>
+
+              <ol class="sub-list">
+                <li>Bersamaan dengan ketentuan ini juga berakibat</li>
+                <li>Untuk kematian atau cedera pribadi yang disebabkan oleh kelalaian Pengelola;</li>
+                <li>Juga untuk penipuan atau yang secara tidak sengaja terjadi; atau
+                </li>
+                <li>Juga untuk setiap hal yang dianggap ilegal bagi Penyelenggara Acara untuk mengecualikan atau mencoba untuk mengesampingkan tanggung jawab;</li>
+                <li>Klausul ini harus dibaca dan ditafsirkan dan tunduk pada pembatasan yang diberlakukan oleh hukum yang berlaku.</li>
+              </ol>
+              
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc13')">M. Hak atas Materi Publikasi</h3>
+        <div id="desc13" class="rule-description">
+            <ul>
+              <li>Tampil dalam Acara yang sedang difilmkan, direkam, ditayangkan dan dieskplorasi secara keseluruhan atau sebagian dalam program televisi, film, video atau siaran dalam bentuk apapun dengan segala cara dan di semua media dan format, berlaku saat atau dibuat setelah tanggal Ketentuan ini;
+              </li>
+              <li>Penggunaan dan reproduksi nama Peserta, kemiripan, penampilan dan foto-foto, film dan rekaman dengan segala cara dan di semua media untuk tujuan periklanan, publisitas dan lainnya dalam kaitannya dengan eksplorasi Acara (dan kejadian di masa depan) dan/atau promosi Acara (dan kejadian di masa depan) dan hak komersial yang berkaitan dengan Acara (dan kejadian di masa depan), sejauh penggunaan tersebut tidak menunjukkan dukungan langsung oleh Peserta dari setiap sponsor resmi atau pendukung Acara.
+              </li>
+              <li>Setiap film, foto (dengan kamera atau ponsel), atau rekaman lainnya yang bergerak atau gambar diam, dan semua kekayaan intelektual yang berhubungan dengannya (termasuk namun tidak terbatas pada hak cipta) akan tetap menjadi milik dari Penyelenggara Acara, dan di mana seperti kekayaan intelektual tidak secara otomatis terkait oleh Penyelenggara Acara, Ketentuan ini bersifat mengikat secara hukum dan Peserta wajib menandatangani semua dokumen yang wajar yang diperlukan untuk hal tersebut. Dengan demikian setiap rekaman tersebut tidak akan digunakan selain untuk penggunaan pribadi tanpa persetujuan tertulis oleh pihak Penyelenggara.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc14')">N. Potential Winner</h3>
+        <div id="desc14" class="rule-description">
+            <ul>
+              <li>Pemegang kalung potential winner wajib melakukan verifikasi pada tenda verifikasi, segera setelah tiba di finish line.
+              </li>
+              <li>Proses verifikasi hanya berlaku pada saat segera setelah mendapat kalung verifikasi.
+              </li>
+              <li>Pemegang kalung potential winner yang tidak melakukan verifikasi dalam waktu maksimal 30 menit setelah finish dan menerima kalung potential winner dianggap mengundurkan diri sebagai potential winner dan tidak berhak melakukan klaim kemudian atau di kemudian hari.
+              </li>
+              <li>Tidak ada verifikasi lain selain yang ditentukan di atas.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc15')">O. Hadiah dan Penghargaan</h3>
+        <div id="desc15" class="rule-description">
+            <ul>
+              <li>Ketentuan Promosi bagi pelari tercepat yaitu :
+                <ol class="sub-list">
+                  <li>Juara dan atau pemenang dari Kelas Nasional pada kategori yang sama, apabila lebih cepat waktu tempuh sejak start hingga finish sesuai gun time dan apabila memiliki catatan waktu lebih baik daripada Juara Pertama pada kelas Open dan dinyatakan lolos verifikasi, dapat mengajukan untuk berpindah ke kelas Open. Dengan demikian yang bersangkutan menjadi Juara Pertama pada kelas Open.
+                  </li>
+                  <li>Tidak terdapat promosi pada kelas Master, kelas Master hanya ada pada kategori Nasional.
+                  </li>
+                  <li>Tidak terdapat promosi pada kelas Pelajar.
+                  </li>
+                </ol>
+              </li>
+              <li>Penyelenggara akan memberikan hadiah kepada pemenang lomba sesuai komposisi, dan kelas yang ditentukan bagi tiga juara dan pemenang.
+              </li>
+              <li>Penyelenggara juga akan memberikan hadiah dalam gimmick atau challenges kegiatan yang akan diinformasikan melalui media sosial resmi (Instagram).
+              </li>
+              <li>Hadiah bagi para pemenang akan diberikan oleh penyelenggara, dengan tenggang waktu maksimal tujuh hari kerja, atau setelah tes doping selesai dilakukan apabila pemenang mendapat kewajiban menjalani tes doping sesudah finis. Hadiah hanya akan diberikan dengan catatan syarat dan data peserta terpenuhi. Hadiah lomba akan dikenakan pajak sesuai ketentuan yang berlaku.
+              </li>
+              <li>Jenis dan nilai hadiah akan diumumkan kemudian..
+              </li>
+              <li>Pemenang hanya akan berhak atas satu jenis hadiah. Jika karena perbedaan kelas, Peserta diindikasikan mendapatkan dua hadiah, maka terhadap Peserta tersebut akan mendapatkan hadiah yang lebih tinggi.
+              </li>
+              <li>Hadiah akan dipotong pajak sesuai ketentuan yang berlaku.
+              </li>
+              <li>Penilaian juara dan pemenang adalah berdasarkan waktu kedatangan pelari atau gun time..
+              </li>
+              <li>Verifikasi juara dan pemenang lomba dilakukan dengan merujuk pada catatan waktu para juri, waktu pada check point sesuai matras check point timing system (mesin pencatat waktu) yang tersedia dan pita atau gelang check point yang diterima pelari secara utuh pada setiap titik check point yang disediakan di rute.
+              </li>
+              <li>Tes Doping:
+<ol class="sub-list">
+  <li>Adalah tes untuk mendeteksi penggunaan zat terlarang dalam olahraga yang dapat diduga mempertinggi performa atau penampilan seseorang atlet pada kompetisi olahraga dalam hal ini adalah Jakarta Half Marathon.
+  </li>
+  <li>Tes doping akan diberikan kepada satu orang atlet potential winner pertama perempuan dan laki-laki pada kategori terjauh dan kelas tertinggi serta satu pelari potential winner lainnya secara acak.
+  </li>
+  <li>Tes doping dilakukan segera setelah proses verifikasi selesai.
+  </li>
+  <li>Kepada Potential Winner yang akan mendapat tes doping akan dibantu prosedurnya pengambilan sampelnya dengan didampingi petugas sejak awal sampai dengan prosedur pengambilan sampel urine selesai.
+  </li>
+  <li>Pelari yang mendapat tes doping akan mendapat hak atas hadiahnya sebesar 10% dari total hadiah sebelum dipotong pajak. Sisa hadiah akan diberikan apabila hasil tes doping telah terbit dan dinyatakan lolos tes doping atau hasil negative dari zat yang termasuk dalam klasifikasi dilarang dikonsumsi oleh atlet yang berlomba.
+  </li>
+</ol>              </li>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc16')">P. Diskualifikasi & Sengketa Hasil Lomba</h3>
+        <div id="desc16" class="rule-description">
+            <ul>
+              <li>Peserta setuju atas keputusan Pengelola dan Penyelenggara atas tindakan diskualifikasi karena melanggar seluruh atau sebagian aturan diskualifikasi finisher dan/atau diskualifikasi podium.
+              </li>
+              <li>Data Peserta yang tidak terekam dalam mesin pencatat waktu, tidak mengenakan bib sesuai data diri, memanipulasi data kepesertaan, mengenakan bib orang lain, tidak mengenakan chip yang dibagikan panitia, tidak mengenakan tanda check-point yang dibagikan sepanjang rute lomba secara lengkap sesuai dengan peraturan lomba, dan nama Peserta yang terdaftar di dua atau lebih kategori lomba, dan atau nama pada nomor dada berbeda dengan surat keterangan diri resmi; mengambil jalan pintas, menggunakan alat bantu baik beroda ataupun tidak yang dapat mempercepat langkah, kecuali bagi peserta penyandang disabiltas; akan mengakibatkan posisi podium juara dan pemenang terdiskualifikasi.
+              </li>
+              <li>Setiap sengketa posisi podium harus dilakukan di tempat oleh Peserta yang bersangkutan, dengan mengajukan protes tertullis maksimal 10 menit setelah pengumuman lomba resmi selesai.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc17')">Q. Tata Cara Protes atau Ajuan Keberatan</h3>
+        <div id="desc17" class="rule-description">
+            <ul>
+              <li>Protes dilakukan maksimal 10 menit setelah pengumuman resmi juara dan pemenang, yang ditandai dengan pengumuman yang dibacakan oleh pembawa acara atau pihak lain yang ditunjuk secara resmi oleh Penyelenggara. Form Protes bisa didapat pada tenda verifikasi pemenang.
+              </li>
+              <li>Protes diajukan resmi secara tertulis dalam surat yang dilengkapi materai Rp 10.000 dan ditandatangani pengaju protes.
+              </li>
+              <li>Pengaju protes wajib menempatkan uang jaminan/deposit atas protes sebesar Rp 1.500.000.
+              </li>
+              <li>Protes akan diproses oleh Hakim Lomba dengan melibatkan juri dan wasit yang keseluruhannya telah ditunjuk resmi sebelumnya dan terdapat dalam organogram lomba oleh Penyelenggara.
+              </li>
+              <li>Atas pengajuan protes yang diterima dan dinyatakan benar oleh Dewan Hakim Lomba maka deposit akan dikembalikan secara utuh.
+              </li>
+              <li>Atas pengajuan protes yang tidak diterima dan dinyatakan kalah maka deposit tidak dikembalikan dan menjadi hak penyelenggara.
+              </li>
+              <li>Keputusan Hakim Lomba tidak dapat diganggu gugat.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc18')">R. Umum</h3>
+        <div id="desc18" class="rule-description">
+            <ul>
+              <li>Ketentuan ini (dan seluruh dokumen sebagaimana dimaksud di dalamnya) merupakan seluruh perjanjian dan kesepahaman para pihak dan menggantikan setiap perjanjian sebelumnya antara para pihak yang terkait dengan Acara.
+              </li>
+              <li>Peserta memahami, mengakui dan setuju bahwa dalam mengirimkan Formulir Pendaftaran (dan dokumen sebagaimana dimaksud di dalamnya) tidak bergantung pada, dan tidak berarti menimbulkan hubungan, pernyataan, jaminan, pemahaman, janji atau jaminan lain (apakah lalai atau tidak disengaja) dari setiap orang (baik pihak yang berkaitan dengan Ketentuan ini atau tidak) selain secara tegas diatur dalam Ketentuan ini.
+              </li>
+              <li>Tidak ada dalam Syarat dan Ketentuan ini yang dapat diduga dan dianggap sebagai kemitraan antara para pihak atau dianggap salah satu pihak sebagai agen yang lain untuk tujuan apapun dan para pihak tidak memiliki kewenangan atau kekuasaan untuk mengikat diri atau kontrak atas nama yang lain dengan cara apapun atau untuk tujuan apapun.
+              </li>
+              <li>Penyelenggara tidak dapat dipersalahkan/diminta tanggung jawab apabila penyelenggaran Acara menjadi terganggu atau tidak dapat dilaksanakan karena terjadinya peristiwa atau yang disebabkan diluar pengendalian Penyelenggara dan Pengelola (baik yang muncul dari sebab-sebab alami, perbuatan manusia atau lainnya) termasuk tidak terbatas pada:
+<ol class="sub-list">
+  <li>Bencana alam; gempa, badai, banjir, air bah, wabah penyakit berbahaya, dan sebagainya,</li>
+  <li>Kebakaran, tindakan perusakan/vandalisme, sabotase, demonstrasi besar dan masif, kerusuhan, pemogokan, terorisme dan gangguan sipil, perang atau keadaan perang dan</li>
+  <li>Karena adanya perubahan atas peraturan yang berlaku.</li>
+</ol>              </li>
+              <li>Ketentuan pembebasan tuntutan ini berlaku secara otomatis karena setiap Peserta diwajibkan membaca dengan seksama dan telah dianggap memahami, tunduk, dan patuh pada Peraturan. Penegasan pernyataan tunduk pada Peraturan dan Ketentuan dapat dilakukan secara tertulis apabila dipandang perlu pada lembar khusus yang disediakan Penyelenggara baik secara online maupun di lokasi Race Pack Collection.
+              </li>
+              <li>Sejauh diizinkan oleh hukum semua ketentuan ini harus dipisahkan dan tidak ada ketentuan yang terpengaruh oleh ketidakberlakuan atau tidak berlakunya ketentuan lainnya dengan ketentuan yang tersisa jika dibutuhkan, yang telah diamandemen seperti yang akan diperlukan untuk memberikan efek yang sama dengan Ketentuan ini sejauh mungkin.
+              </li>
+              <li>Syarat dan Ketentuan ini harus ditafsirkan sesuai dengan hukum Indonesia dan setiap sengketa yang timbul berdasarkan Perjanjian ini harus tunduk pada yurisdiksi eksklusif dari Pengadilan Indonesia.
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc19')">ATURAN TAMBAHAN</h3>
+        <div id="desc19" class="rule-description">
+            <ul>
+              
+              <li>Peserta wajib mengisi data Kesehatan yang diminta secara valid.
+              </li>
+              <li>Peserta yang melanggar ketentuan (2) di atas akan mendapat diskualifikasi dan digugurkan kepesertaannya.
+              </li>
+              <li>Acara berlangsung pada 28 September 2025.
+              </li>
+              <li>Peserta wajib mengenakan nomor dada resmi.
+              </li>
+              <li>Peserta wajib berlari sesuai kategori yang telah dipilih pada saat registrasi peserta.
+              </li>
+              <li>Peserta wajib mematuhi ketentuan Penyelenggara selama kegiatan berlangsung.
+              </li>
+              <li>Peserta wajib mematuhi peraturan protokol kesehatan yang ditetapkan.
+              </li>
+              <li>Seluruh peserta akan mendapat asuransi kegiatan. Peserta agar mengisi waiver letter dan mengembalikannya kepada Penyelenggara
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rule">
+        <h3 class="rule-title" onclick="toggleDescription('desc20')">PROTOKOL KESEHATAN</h3>
+
+        <div id="desc20" class="rule-description">
+          <p>Untuk memastikan kenyamanan, kesehatan peserta dan kelancaran penyelenggaraan acara, Peserta dan Penyelenggara yang terlibat dalam kegiatan offline wajib mematuhi tata tertib terkait protokol kesehatan sbb:
+          </p>
+            <ul>
+              <li>Peserta yang diizinkan bergabung dalam event ini berusia antara 5 tahun s.d 70 tahun dan dalam keadaan sehat.
+              </li>
+              <li>Peserta berada dalam keadaan sehat dan tidak memiliki penyakit bawaan.
+              </li>
+              <li>Mengupayakan tidak sering menyentuh fasilitas/peralatan yang dipakai bersama di area lomba.
+              </li>
+              <li>Peserta agar membawa cairan antiseptik sendiri.
+              </li>
+              <li>Membersihkan alat yang digunakan dan disentuh orang dengan cairan antiseptik secara berkala.
+              </li>
+              <li>Peserta dan Penyelenggara meminimalisir kontak seperti jabat tangan atau memeluk (victory celebration).
+              </li>
+              <li>Peserta dan Penyelenggara serta mereka yang diizinkan berada di area, tidak berbagi peralatan pribadi seperti tempat makan/minum, handuk, dan lain lain.
+              </li>
+              <li>Dilarang merokok bagi siapapun yang terlibat dalam keadaan ini sampai dengan Cut Off Time berakhir.
+              </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+  <section class="faq-wrapper">
+  <div class="faq-container">
+    <!-- Kiri: Judul -->
+    <div class="faq-left">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p>Rangkuman pertanyaan yang sering ditanyakan peserta.</p>
+    </div>
+
+    <!-- Kanan: List FAQ -->
+    <div class="faq-right">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>1. Kapan dan di mana KR RUN 2025 diselenggarakan?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          KR RUN 2025 akan diadakan pada tanggal 28 September 2025 di Kawasan Ikonik Kota Yogyakarta. Rute akan melewati area bersejarah dan pusat kota.
+        </div>
+      </div>
+    
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>2. Dimana lokasi acara berlangsung?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Lokasi acara akan diumumkan melalui email resmi peserta. Lokasi utama berada di pusat kota Yogyakarta.
+        </div>
+      </div>
+    
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>3. Apakah tersedia kategori lari anak-anak?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Ya, tersedia kategori Family Run untuk anak-anak dan orang tua dengan jarak tempuh lebih pendek.
+        </div>
+      </div>
+      
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>4. Bagaimana cara mendaftar KR RUN 2025?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Pendaftaran dilakukan secara online melalui website resmi kami. Klik tombol “Daftar Sekarang” dan ikuti langkah-langkahnya.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>5. Apa saja kategori lomba yang tersedia?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Kami menyediakan tiga kategori: 5K Fun Run, 10K Competitive Run, dan Family Run untuk peserta dengan anak-anak.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>6. Apakah peserta mendapatkan medali atau sertifikat?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Ya! Semua peserta yang menyelesaikan lomba akan mendapatkan medali finisher dan e-sertifikat resmi KR RUN 2025.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>7. Apakah ada batasan usia untuk mengikuti KR RUN?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Peserta minimal berusia 12 tahun. Untuk peserta di bawah 17 tahun wajib didampingi atau menyertakan izin orang tua.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>8. Apakah ada fasilitas medis selama lomba?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Tentu! Tim medis dan ambulans akan disiapkan di beberapa titik sepanjang rute untuk memastikan keamanan peserta.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>9. Apa saja fasilitas yang disediakan untuk peserta?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Setiap peserta akan mendapatkan race pack (kaos, BIB number, dan goodie bag), akses ke hydration point, area pemanasan, dan hiburan di garis finish.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>10. Bagaimana jika saya tidak bisa hadir setelah mendaftar?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Biaya pendaftaran tidak dapat dikembalikan. Namun, kamu bisa mengalihkan nomor lomba ke peserta lain sebelum batas waktu yang ditentukan.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>11. Apakah boleh membawa stroller atau hewan peliharaan?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Demi kenyamanan dan keselamatan bersama, stroller dan hewan peliharaan tidak diperbolehkan selama perlombaan berlangsung.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>12. Dimana saya bisa melihat hasil lomba atau waktu tempuh?</span>
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-answer">
+          Hasil lomba akan diumumkan di website resmi KR RUN 2025 dalam waktu 2 hari setelah event selesai.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <section class="footer">
+        <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
+      </section>
+    </div>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!-- LINKING swiperJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="javascript.js?v=1.6"></script>
+    <script src="language.js?v=1.6"></script>
+  </body>
+</html>

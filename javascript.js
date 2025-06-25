@@ -35,9 +35,9 @@ window.addEventListener("scroll", function () {
 //  Swiper for  tampilan depan
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
-  effect: 'fade',
+  // effect: 'fade',
   autoplay: {
-    delay: 5000,
+    delay: 8000,
   },
 
   navigation: {
@@ -132,18 +132,39 @@ var swiper = new Swiper(".rows .swiper", {
 });
 
 
-// ------------ nav - tentang maintenance -------
-const tentangKamiLinks = document.querySelectorAll('.nav-tentang');
 
-tentangKamiLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    Swal.fire({
-      icon: 'info',
-      title: 'Maintenance',
-      text: 'Halaman Tentang Kami sedang dalam perbaikan. Mohon tunggu ya!',
-      confirmButtonText: 'Oke',
-      confirmButtonColor: '#3085d6'
-    });
+
+
+// --------- KR RUN categories  ------------
+
+const categories = document.querySelectorAll('.category');
+
+function checkCategories() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  categories.forEach(category => {
+    const boxTop = category.getBoundingClientRect().top;
+    const boxBottom = category.getBoundingClientRect().bottom;
+
+    if (boxTop < triggerBottom && boxBottom > 0) {
+      category.classList.add('show');
+    } else {
+      category.classList.remove('show');
+    }
   });
-});
+}
+
+window.addEventListener('scroll', checkCategories);
+window.addEventListener('load', checkCategories);
+
+
+
+
+const eventDate = new Date("2025-09-27T06:00:00").getTime();
+const countdown = document.getElementById("countdown");
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  countdown.innerHTML = `🕒 Event dimulai ${days} hari lagi!`;
+}, 1000);

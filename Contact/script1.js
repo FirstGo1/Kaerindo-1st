@@ -86,17 +86,3 @@ function sendMail() {
   }
 }
 
-const tentangKamiLinks = document.querySelectorAll('.nav-tentang');
-
-tentangKamiLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    Swal.fire({
-      icon: 'info',
-      title: 'Maintenance',
-      text: 'Halaman Tentang Kami sedang dalam perbaikan. Mohon tunggu ya!',
-      confirmButtonText: 'Oke',
-      confirmButtonColor: '#3085d6'
-    });
-  });
-});

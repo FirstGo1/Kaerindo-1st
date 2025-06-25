@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaerindo Jaya Komunikasi</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Icon W3Schools -->
+  <script src="https://kit.fontawesome.com/52ec4b3348.js" crossorigin="anonymous"></script>
+  <!-- Linking swiperJS css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Cloudflare -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+
+  <link rel="stylesheet" href="about.css?v=1.1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()">
+        <a href="#"
+          ><svg
+            class="x-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            height="26px"
+            viewBox="0 -960 960 960"
+            width="26px"
+            fill="#e3e3e3"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            /></svg
+        ></a>
+      </li>
+      <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+      <li><a class="nav-tentang label-merah" href="/about/about.html">Tentang</a></li>
+      <li><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+      <li><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+      <li><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+      <li><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+      <div class="language">
+        <div class="language-selected">ID</div>
+        <ul>
+          <li><a href="#" class="id">ID</a></li>
+          <li><a href="#" class="en">EN</a></li>
+        </ul>
+      </div>
+    </ul>
+
+    <!-- ------- NAV Paling atas --------- -->
+    <ul class="ul-utama">
+      <li>
+        <a href="#"><img src="asset/1111.png" /></a>
+      </li>
+      <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+      <li class="hideOnMobile"><a class="nav-tentang label-merah" href="/about/about.html">Tentang</a></li>
+      <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+      <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+      <li class="hideOnMobile"><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+      <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+
+      <div class="language hide">
+        <div class="language-selected">ID</div>
+        <ul>
+          <li><a href="#" class="id">ID</a></li>
+          <li><a href="#" class="en">EN</a></li>
+        </ul>
+      </div>
+      <li class="menu-button" onclick="showSidebar()">
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="26px"
+            viewBox="0 -960 960 960"
+            width="26px"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            /></svg
+        ></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="nav-bawah">
+    <ul class="sidebar">
+      <li onclick="hideSidebar()">
+        <a href="#"
+          ><svg
+            class="x-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            height="26px"
+            viewBox="0 -960 960 960"
+            width="26px"
+            fill="#e3e3e3"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            /></svg
+        ></a>
+      </li>
+      <li><a class="label-merah" href="/index.html">Beranda</a></li>
+      <li><a href="/about/about.html">Tentang</a></li>
+      <li><a href="/gallery/gallery.html">Galeri</a></li>
+      <li><a href="/team/tim.html">Tim</a></li>
+      <li><a href="/event/event.html">Registrasi</a></li>
+      <li><a href="/contact/contact.html">Hubungi</a></li>
+    </ul>
+
+    <!-- -----------Nav scroll bawah -----------  -->
+    <ul class="ul-utama">
+      <li>
+        <a href="#"><img src="asset/111.png" /></a>
+      </li>
+      <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
+      <li class="hideOnMobile"><a class="nav-tentang label-merah" href="/about/about.html">Tentang</a></li>
+      <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
+      <li class="hideOnMobile"><a class="nav-tim" href="/team/tim.html">Tim</a></li>
+      <li class="hideOnMobile"><a class="nav-registrasi" href="/event/event.html">Registrasi</a></li>
+      <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+      <div class="language">
+        <div class="language-selected">ID</div>
+        <ul>
+          <li><a href="#" class="id">ID</a></li>
+          <li><a href="#" class="en">EN</a></li>
+        </ul>
+      </div>
+      <li class="menu-button" onclick="showSidebar()">
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="26px"
+            viewBox="0 -960 960 960"
+            width="26px"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            /></svg
+        ></a>
+      </li>
+    </ul>
+  </nav>
+  
+    <!-- Hero About Us -->
+    <section class="hero-about">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>TENTANG KAMI</h1>
+        <!-- <p>
+          Be the <strong>Cause of Inspiration</strong><br>
+          Towards a <strong>Healthier Lifestyle</strong>
+        </p> -->
+      </div>
+    </section>
+
+  <!-- Section Awal Mula -->
+  <section class="awal-mula">
+    <div class="content-wrapper">
+      <div class="image-side">
+        <img src="asset/login.png" alt="Pelari" />
+      </div>
+      <div class="text-side">
+        <h4>Awal Mula</h4>
+        <h2>KAERINDO</h2>
+
+        <p>
+          Kaerindo lahir dari semangat yang tumbuh dalam perjalanan kami sebagai perusahaan rintisan yang bernaung di bawah Kedaulatan Rakyat — koran tertua di Indonesia yang telah menjadi saksi berbagai fase sejarah bangsa, dari masa perjuangan kemerdekaan hingga era digital hari ini. Sebagai bagian dari perayaan 8 windu Kedaulatan Rakyat, kami merasa terpanggil untuk menghadirkan sesuatu yang bukan sekadar event lari, melainkan juga wadah peringatan sejarah. Kaerindo Jaya Komunikasi dedikasikan untuk membangkitkan semangat generasi muda agar ikut merayakan nilai-nilai perjuangan, dengan cara yang menyenangkan dan penuh makna: berlari menyusuri jejak-jejak bersejarah di Yogyakarta, kota yang sarat kisah kemerdekaan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Motto -->
+  <section class="motto">
+    <h3>Berkembang Bersama Zaman, Bergerak Bersama Nilai</h3>
+    <p>
+      Kami percaya bahwa langkah kecil yang konsisten bisa membawa perubahan besar. Melalui Kaerindo, kami ingin menjadi penghubung antara semangat masa lalu dan semangat masa kini, dengan mendorong gaya hidup aktif, sehat, dan tetap mencintai akar sejarah bangsa.
+
+
+    </p>
+  </section>
+
+  <section class="info-section">
+    <!-- Box 1 -->
+    <div class="info-card">
+      <img src="asset/1.webp" alt="Visi">
+      <div class="info-text">
+        <h3>Visi</h3>
+        <p>
+          Memberikan pengalaman tidak terlupakan melalui kreatifitas secara profesional dan layanan berkualitas tinggi serta menjadi mitra terpercaya dalam mewujudkan setiap momen anda dengan tepat waktu dan detail.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Box 2 -->
+    <div class="info-card">
+      <img src="asset/2.webp" alt="Misi">
+      <div class="info-text">
+        <h3>Misi</h3>
+        <p>
+          Membangun hubungan jangka panjang degan klien, mitra berdasarkan kepercayaan dan integritas serta memberikan layanan profesional dengan perhatian terhadap detail untuk memastikan kepuasan maksimal klien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="logo">
+        <img src="asset/logo kjk-2321.png" alt="KR RUN Logo">
+      </div>
+
+      <div class="footer-col">
+        <!-- <div class="logo">
+          <img src="/logo kjk-2321.png" alt="KR RUN Logo">
+        </div> -->
+        <h4>Kaerindo Jaya Komunikasi</h4>
+        <p><i class="fas fa-map-marker-alt"></i>          Jl. P. Mangkubumi No.40-46, Gowongan, Kec. Jetis,<br> Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233</p>
+
+  
+        <h5>Ikuti Kami</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-col">
+        <h4>LINKS</h4>
+        <ul>
+          <li><a href="/index.html">Beranda</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="/team/tim.html">Tim</a></li>
+          <li><a href="/gallery/gallery.html">Galeri</a></li>
+          <li><a href="/event/event.html">Event</a></li>
+          <li><a href="/contact/contact.html">Hubungi</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Copyright 2025 Kaerindo Jaya Komunikasi</p>
+    </div>
+  </footer>
+  
+  
+  
+  
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!-- LINKING swiperJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js?v=1.1"></script>
+  <script src="language.js"></script>
+</body>
+</html>
