@@ -1429,7 +1429,7 @@ p.phone {
     width: 90%;
     padding: 0;
     font-size: 13px;
-    text-align: left;
+    text-align: justify;
   }
   .kaerindo {
     width: 90%;
@@ -1647,6 +1647,7 @@ p.phone {
   }
   .support-item  p{
     font-size: 13px;
+    text-align: justify;
   }
   .support-item  h6{
     font-size: 16px;
