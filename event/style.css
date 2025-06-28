@@ -129,6 +129,7 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
+
 .sidebar {
   position: fixed;
   right: 0;
@@ -277,6 +278,7 @@ a.en:before{
 }
 .label-merah{
   color: #ff0000;
+  animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
 .nav-bawah .language-selected{
@@ -524,21 +526,25 @@ section h3 {
   flex: 1;
   /* padding-left: 30px; */
   /* padding-top: 20px; */
-  transition:  transform 0.3s ease-in-out;
   margin: 10px;
   position: relative;
 }
-.image-section:hover{
-  transform: scale(1.05);
-  z-index: 1;
-  position: relative;
-}
+
 
 .image-section img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
   background-size: cover;
+  transition: 0.3s ease;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  filter: brightness(70%);
+
+}
+.image-section img:hover {
+  filter: brightness(100%);
+}
+.image-section img:active {
   cursor: pointer;
 }
 .image-section::before {
@@ -557,7 +563,9 @@ section h3 {
   margin: 0;
   transition: margin 0.3s ease-in-out;
 }
-
+.text-section:active {
+  cursor: pointer;
+}
 .text-section h2 {
   color: #790000;
 }
@@ -568,8 +576,7 @@ section h3 {
   padding: 20px;
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s;
-  cursor: pointer;  
+  transition: all 0.5s; 
 }
 .card:hover {
   background-color: #ff0000;
@@ -587,6 +594,7 @@ section h3 {
 .card p{
   color: #000;
   transition: all 0.3s ease-in-out;
+  text-align: justify;
 }
 .card:hover p {
   color: #fff;
@@ -604,6 +612,7 @@ section h3 {
 .judulUtama{
   /* font-family: "Quicksans", sans-serif; */
   margin-top: 50px;
+  font-size: 28px;
 }
 .judulUtama::after {
   content: "";
@@ -632,7 +641,7 @@ section h3 {
 
   opacity: 0;
   transform: translateY(80px);
-  transition: all 0.8s ease;
+  transition: all 0.6s ease;
   will-change: opacity, transform;
 }
 .category.show {
@@ -680,13 +689,18 @@ section h3 {
   text-align: left;
 }
 .category ul li::before {
-  content: "✔"; /* Bisa diganti: "✔️", ✅"⭐", "🔹", dst */
+  content: "✔"; /*  "✔️", ✅"⭐", "🔹",  */
   margin-right: 8px;
   display: inline-block;
   color: red;
   font-weight: bold;
   font-size: 16px;
 }
+/* .category ul li strong {
+   display: inline-block;
+  min-width: 70px; 
+  font-weight: bold;
+} */
 .badge {
   background-color: #f80000;
   color: white;
@@ -856,8 +870,18 @@ section h3 {
 }
 
 .faq-left h2 {
-  font-size: 2.5rem;
-  color: #222;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  position: relative;
+  margin-top: 0;
+}
+.faq-tagline {
+  font-style: italic;
+  color: #999;
+  margin-top: 10px;
+  font-size: 0.95rem;
 }
 
 .faq-left h2 span {
@@ -866,10 +890,18 @@ section h3 {
 }
 
 .faq-left p {
+
+  font-style: italic;
+  color: #999;
   margin-top: 10px;
-  color: #666;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
+.faq-illustration {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+
 
 .faq-right {
   display: flex;
@@ -899,7 +931,14 @@ section h3 {
 .faq-item.open .arrow {
   transform: rotate(90deg);
 }
-
+.faq-regs {
+  text-decoration: none;
+  color: red;
+  transition: 0.2s ease;
+}
+.faq-regs:hover{
+  color: #888;
+}
 
 .faq-item.open .faq-question{
   /* animation: fade 1s ease-in-out; */
@@ -960,7 +999,7 @@ section h3 {
   width: 100%;
   text-align: center;
   padding: 60px 0;
-  background: linear-gradient(to right, #000000b9, #971a1ad7);
+  background: linear-gradient(to right, #3c0000, #4e4e4e);  
   border-top: solid 1px #000;
   margin-top: 50px;
   position: relative;
@@ -995,11 +1034,6 @@ section h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .image-section:hover{
-    transform: scale(1.2);
-    z-index: 1;
-    position: relative;
   }
   .image-section img{
     width: 100%;
@@ -1185,6 +1219,7 @@ section h3 {
     width: 125%;
     height: 125%;
   }
+
   .language.hide {
     display: none;
   }
@@ -1202,6 +1237,9 @@ section h3 {
   .const-4{
     width: 100%;
   }
+  .const-4 h1{
+    font-size: 28px;
+  }
   .container{
     width: 100%;
   }
@@ -1214,9 +1252,6 @@ section h3 {
     height: 100%;
     padding: 10px;
     margin: 0;
-  }
-  .image-section:hover{
-    transform: scale(1.1);
   }
   .image-section img{
     width: 100%;
@@ -1242,6 +1277,9 @@ section h3 {
   .faq{
     width: 100%;
   }
+  .faq-left h2{
+    font-size: 2rem;
+  }
   .faq h3{
     font-size: 15px;
   }
@@ -1251,10 +1289,29 @@ section h3 {
   .marathon-categories{
    width: 100%;
   }
+  .category {
+    background:  #f3f3f3;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+  }
+  .category p{
+    font-size: 13px;
+  }
+  .category strong {
+    min-width: 50px;
+  }
+  .category ul li{
+    font-size: 12px;
+    margin: 0;
+  }
   .category-grid {
     grid-template-columns: 1fr;
   }
-
+  .faq-left {
+    text-align: center;
+  }
 
 }
 
@@ -1313,9 +1370,6 @@ section h3 {
     height: 100%;
     padding: 0;
     margin: 0;
-  }
-  .image-section:hover{
-    transform: scale(1.1);
   }
   .image-section img{
     width: 100%;
@@ -1441,29 +1495,22 @@ section h3 {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-3px); }
     }
+  
 
-    /* @keyframes slideDown {
-      from {
-        max-height: 0;
-        opacity: 0;
-        transform: translateY(-5px);
+  
+    
+    /* Glowing pulse merah */
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 0px #d62828;
       }
-      to {
-        max-height: 500px;
-        opacity: 1;
-        transform: translateY(0);
+      50% {
+        text-shadow: 0 0 10px #d62828, 0 0 20px #d62828aa;
+      }
+      100% {
+        text-shadow: 0 0 0px #d62828;
       }
     }
+    /* animation: pulseGlow 2.5s ease-in-out infinite; */
+
     
-    @keyframes slideUp {
-      from {
-        height: 500px;
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        height: 0;
-        opacity: 0;
-        transform: translateY(-5px);
-      }
-    } */

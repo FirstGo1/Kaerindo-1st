@@ -99,7 +99,9 @@ nav li:first-child {
 }
 .label-merah{
   color: red;
+     animation: pulseGlow 2.5s ease-in-out infinite;
 }
+
 .sidebar {
   position: fixed;
   right: 0;
@@ -365,22 +367,7 @@ a.en:before{
   bottom: 20px;
   animation: animate2 3s linear infinite;
 }
-@keyframes animate {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
-@keyframes animate2 {
-  0% {
-    background-position-x: 0px;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
+
 
 .icon {
   position: relative;
@@ -663,4 +650,33 @@ a.en:before{
     text-align: center;
     justify-content: center;
   }
+  }
+
+  @keyframes animate {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-position-x: 0px;
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+   /* Glowing pulse merah */
+   @keyframes pulseGlow {
+    0% {
+      text-shadow: 0 0 0px #d62828;
+    }
+    50% {
+      text-shadow: 0 0 10px #d62828, 0 0 20px #d62828aa;
+    }
+    100% {
+      text-shadow: 0 0 0px #d62828;
+    }
   }

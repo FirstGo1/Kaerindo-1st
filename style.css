@@ -132,6 +132,8 @@ nav li:first-child {
 }
 .label-merah{
   color: red;
+   animation: pulseGlow 2.5s ease-in-out infinite;
+     
 }
 .sidebar {
   position: fixed;
@@ -650,7 +652,7 @@ section h3 {
 }
 .kaerindo-col {
   flex-basis: 46%;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
@@ -976,7 +978,7 @@ section.quote {
   width: 80%;
   margin: 0 auto;
   background: url("/asset/img/KR.jpg") no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed ; */
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1794,5 +1796,17 @@ p.phone {
       }
       100% {
         left: 100%;
+      }
+    }
+     /* Glowing pulse merah */
+     @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 0px #d62828;
+      }
+      50% {
+        text-shadow: 0 0 10px #d62828, 0 0 20px #d62828aa;
+      }
+      100% {
+        text-shadow: 0 0 0px #d62828;
       }
     }

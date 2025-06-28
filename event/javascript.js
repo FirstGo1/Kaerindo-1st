@@ -101,36 +101,18 @@ setInterval(() => {
 // ----------------- faq---------------
 
 
-const items = document.querySelectorAll('.faq-item');
 
-items.forEach(item => {
-  const question = item.querySelector('.faq-question');
-  const answer = item.querySelector('.faq-answer');
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const parent = item.parentElement;
+    parent.classList.toggle('open');
 
-  question.addEventListener('click', () => {
-    const isOpen = item.classList.contains('open');
-
-    // Tutup semua
-    items.forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = '0';
+    // Tutup yang lain
+    document.querySelectorAll('.faq-item').forEach(i => {
+      if (i !== parent) i.classList.remove('open');
     });
-
-    // Kalau tadinya belum terbuka → buka dia
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-
-  // Setelah selesai transisi buka, reset height supaya responsif
-  answer.addEventListener('transitionend', () => {
-    if (item.classList.contains('open')) {
-      answer.style.maxHeight = 'none';
-    }
   });
 });
-
 
 
 

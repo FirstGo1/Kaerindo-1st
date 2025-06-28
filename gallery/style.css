@@ -97,8 +97,11 @@ nav li:first-child {
   margin-right: auto;
 }
 .label-merah{
+  position: relative;
   color: red;
+  animation: pulseGlow 2.5s ease-in-out infinite;
 }
+
 .sidebar {
   position: fixed;
   right: 0;
@@ -1073,3 +1076,14 @@ ion-icon.pulse {
           transform: translateX(-50%) scaleX(1);
         }
       }
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 0px #d62828;
+      }
+      50% {
+        text-shadow: 0 0 10px #d62828, 0 0 20px #d62828aa;
+      }
+      100% {
+        text-shadow: 0 0 0px #d62828;
+      }
+    }
