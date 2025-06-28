@@ -538,6 +538,7 @@ section h3 {
   background-size: cover;
   transition: 0.3s ease;
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   filter: brightness(70%);
 
 }
