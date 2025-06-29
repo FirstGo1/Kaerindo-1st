@@ -31,7 +31,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=1.7" />
+    <link rel="stylesheet" href="style.css?v=1.8" />
   </head>
   <body>
 
@@ -170,7 +170,7 @@
                 <div class="swiper-wrapper">
 
                   <div class="swiper-slide">
-                    <img src="img/11.jpg" alt="">
+                    <img src="img/11.jpg" alt="" loading="lazy">
                     <div class="swiper-slider-content">
                       <h2 class="slider-title eventAtas">5k <span class="span-class"></span> 10k</h2>
                       <!-- <p class="slider-description angkaEvent">5k 10k 21k
@@ -181,7 +181,7 @@
                   </div>
                   
                   <div class="swiper-slide">
-                    <img src="img/3.jpg" alt="">
+                    <img src="img/3.jpg" alt="" loading="lazygggggggg">
                     <div class="swiper-slider-content kaerindo-jdl">
                       <h2 class="slider-title eventAtas">KR <span class="span-class">RUN</span> 2025</h2>
                       <p class="satu">Yogyakarta
@@ -199,40 +199,69 @@
               </div>
             </header>
     </div>
-      
-    <div class="container" id="about_1">
-      <h1>Kedaulatan Rakyat RUN</h1>
-      <p class="tambahanDalam palingAtas">
-         Tentang KR RUN 2025</p>
-      <div class="rows">
-      <div class="text-section">
-          <div class="card">
-              <h3 class="card-1">Mengapa KR RUN?</h3>
-              <p class="para-1">Sebagai koran tertua di Indonesia, Kedaulatan Rakyat tidak hanya memulai sejarah, tapi juga terus bergerak bersama zaman. KR Run 2025 digelar sebagai bagian dari perayaan perjalanan panjang 8 windu Kedaulatan Rakyat dalam mengawal informasi sejak era perjuangan kemerdekaan hingga hari ini. Bukan sekadar event lari, KR Run dimaksudkan menghadirkan energi baru dari generasi muda untuk mengenang sejarah lewat langkah kaki yang berlari menyusuri jejak-jejak bersejarah di Kota Yogyakarta.
-              </p>
-          </div>
-          <div class="card">
-              <h3 class="card-2">Pengalaman Berlari yang Unik</h3>
-              <p class="para-2">
-                Dengan rute yang melewati ikon-ikon heritage Yogyakarta, KR Run 2025 mengajak peserta untuk berlari sambil menyerap atmosfer sejarah kota ini. Bayangkan berlari melintasi kawasan bersejarah, menyapa bangunan tua, dan merasakan denyut perjalanan kota yang penuh cerita. Ini bukan hanya tentang siapa yang tercepat, tapi tentang merayakan perjalanan, menghormati sejarah, dan membawa semangat Kedaulatan Rakyat terus hidup, dari lembaran koran ke langkah kehidupan nyata.
-              </p>
-          </div>
-          <!-- <div class="card">
-              <h3>Kenali KR RUN</h3>
-              <p>
-                KR RUN adalah ajang yang dirancang untuk semua level pelari. Dari pemula hingga profesional, setiap orang dapat menikmati berlari sambil mengeksplorasi kekayaan budaya. Mari bergabung dalam perjalanan ini!
-              </p>
-          </div> -->
+      <!-- -------- Countdown 2 -------- -->
+  <section class="countdown-wrapper">
+    <div class="countdown animated">
+      <div class="time-box">
+        <h1 id="days">00</h1>
+        <p>Days</p>
       </div>
-      <div class="image-section">
-        <img src="img/7.jpg" alt="" />
+      <div class="time-box">
+        <h1 id="hours">00</h1>
+        <p>Hours</p>
+      </div>
+      <div class="time-box">
+        <h1 id="minutes">00</h1>
+        <p>Minutes</p>
+      </div>
+      <div class="time-box">
+        <h1 id="seconds">00</h1>
+        <p>Seconds</p>
+      </div>
     </div>
-    </div>
-  </div>
+  </section>
 
+  <section class="info-section">
+    <h2 class="section-title">INFORMASI KR RUN</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon"><i class="fa-regular fa-calendar"></i></div>
+        <div class="info-text">
+          <h3>Tanggal</h3>
+          <p>28 September 2025</p>
+        </div>
+      </div>
+  
+      <div class="info-card">
+        <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+        <div class="info-text">
+          <h3>Waktu</h3>
+          <p>06.00 WIB</p>
+        </div>
+      </div>
+  
+      <div class="info-card">
+        <div class="info-icon"><i class="fa-regular fa-map"></i></i></div>
+        <div class="info-text">
+          <h3>Lokasi</h3>
+          <p>Jl. Mangkubumi, Yogyakarta</p>
+        </div>
+      </div>
+  
+      <div class="info-card">
+        <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="info-text">
+          <h3>WhatsApp</h3>
+          <p>+62 859-6615-7745</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
 
   <section class="marathon-categories" id="categories">
-    <h1 class="judulUtama">Kategori</h1>
+    <h1 class="judulUtama">Kategori Lomba</h1>
     <div class="category-grid">
       
       <div class="category delay-1">
@@ -273,12 +302,44 @@
         </ul>
       </div> -->
     </div>
-    <div id="countdown" style="text-align: center; margin-top: 20px; font-size: 1.2rem;"></div>
-    <div class="registration">
-      <a href="https://krrun.titipbayar.id/" class="btn-register">Registrasi Sekarang</a>
+    <div class="cta-container team-cta">
+      <a href="https://krrun.titipbayar.id/" class="valorant-button team-btn">Registrasi Sekarang</a>
     </div>
 
   </section>
+      
+    <div class="container" id="about_1">
+      <h1>Kedaulatan Rakyat RUN</h1>
+      <p class="tambahanDalam palingAtas">
+         Tentang KR RUN 2025</p>
+      <div class="rows">
+      <div class="text-section">
+          <div class="card">
+              <h3 class="card-1">Mengapa KR RUN?</h3>
+              <p class="para-1">Sebagai koran tertua di Indonesia, Kedaulatan Rakyat tidak hanya memulai sejarah, tapi juga terus bergerak bersama zaman. KR Run 2025 digelar sebagai bagian dari perayaan perjalanan panjang 8 windu Kedaulatan Rakyat dalam mengawal informasi sejak era perjuangan kemerdekaan hingga hari ini. Bukan sekadar event lari, KR Run dimaksudkan menghadirkan energi baru dari generasi muda untuk mengenang sejarah lewat langkah kaki yang berlari menyusuri jejak-jejak bersejarah di Kota Yogyakarta.
+              </p>
+          </div>
+          <div class="card">
+              <h3 class="card-2">Pengalaman Berlari yang Unik</h3>
+              <p class="para-2">
+                Dengan rute yang melewati ikon-ikon heritage Yogyakarta, KR Run 2025 mengajak peserta untuk berlari sambil menyerap atmosfer sejarah kota ini. Bayangkan berlari melintasi kawasan bersejarah, menyapa bangunan tua, dan merasakan denyut perjalanan kota yang penuh cerita. Ini bukan hanya tentang siapa yang tercepat, tapi tentang merayakan perjalanan, menghormati sejarah, dan membawa semangat Kedaulatan Rakyat terus hidup, dari lembaran koran ke langkah kehidupan nyata.
+              </p>
+          </div>
+          <!-- <div class="card">
+              <h3>Kenali KR RUN</h3>
+              <p>
+                KR RUN adalah ajang yang dirancang untuk semua level pelari. Dari pemula hingga profesional, setiap orang dapat menikmati berlari sambil mengeksplorasi kekayaan budaya. Mari bergabung dalam perjalanan ini!
+              </p>
+          </div> -->
+      </div>
+      <div class="image-section">
+        <img src="img/7.jpg" alt="" loading="lazy" />
+    </div>
+    </div>
+  </div>
+
+
+
 
 
 
@@ -847,7 +908,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=1.6"></script>
-    <script src="language.js?v=1.6"></script>
+    <script src="javascript.js?v=1.7"></script>
+    <script src="language.js?v=1.7"></script>
   </body>
 </html>

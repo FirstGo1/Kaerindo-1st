@@ -86,14 +86,14 @@ window.addEventListener('load', checkCategories);
 
 
 
-const eventDate = new Date("2025-09-27T06:00:00").getTime();
-const countdown = document.getElementById("countdown");
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  countdown.innerHTML = `🕒 Event dimulai ${days} hari lagi!`;
-}, 1000);
+// const eventDate = new Date("2025-09-27T06:00:00").getTime();
+// const countdown = document.getElementById("countdown");
+// setInterval(() => {
+//   const now = new Date().getTime();
+//   const distance = eventDate - now;
+//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   countdown.innerHTML = `🕒 Event dimulai ${days} hari lagi!`;
+// }, 1000);
 
 
 
@@ -116,3 +116,36 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 
 
+// -------countdown utama ----------
+
+
+// Set target date
+const eventDate = new Date("September 28, 2025 06:00:00").getTime();
+
+const countdown = () => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  if (distance < 0) {
+    document.getElementById("days").textContent = "00";
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = String(days).padStart(2, "0");
+  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+};
+
+// Run countdown every second
+setInterval(countdown, 1000);

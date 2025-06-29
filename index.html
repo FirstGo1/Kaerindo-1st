@@ -30,7 +30,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=1.9" />
+    <link rel="stylesheet" href="style.css?v=2.0" />
   </head>
   <body>
 
@@ -170,7 +170,7 @@
                 <div class="swiper-wrapper">
 
                   <div class="swiper-slide">
-                    <img src="/asset/img/3.jpg" alt="">
+                    <img src="/asset/img/3.jpg" alt="" loading="lazy">
                     <div class="swiper-slider-content">
                       <h2 class="slider-title kaerindo-judul">KR <span class="span-class run">RUN</span> 2025</h2>
                       <p class="slider-description angkaEvent">5k 10k
@@ -222,55 +222,32 @@
             </header>
     </div>
       
-<!-- ----------- KR RUN ---------- -->
-<section class="marathon-categories" id="categories">
-  <h1 class="judulUtama">KR RUN</h1>
-  <div class="category-grid">
+      <!-- -------- Countdown 2 -------- -->
+      <section class="countdown-wrapper">
+        <div class="countdown animated">
+          <div class="time-box">
+            <h1 id="days">00</h1>
+            <p>Days</p>
+          </div>
+          <div class="time-box">
+            <h1 id="hours">00</h1>
+            <p>Hours</p>
+          </div>
+          <div class="time-box">
+            <h1 id="minutes">00</h1>
+            <p>Minutes</p>
+          </div>
+          <div class="time-box">
+            <h1 id="seconds">00</h1>
+            <p>Seconds</p>
+          </div>
+        </div>
+        <div class="cta-container1 team-cta1">
+          <a href="/team/team.html" class="valorant-button1 team-btn1">REGISTRASI KR RUN</a>
+        </div>
+        
+      </section>
     
-    <div class="category delay-1">
-      
-      <div class="badge">🌟 Cocok untuk Pemula</div>
-      <h3>5K</h3>
-      <p>Lari jarak pendek untuk pemula atau keluarga.</p>
-      <ul>
-        <li><strong>Usia</strong> Semua umur</li>
-        <li><strong>Waktu</strong> 06.30 WIB</li>
-        <li><strong>Biaya</strong> unknown</li>
-        <li><strong>Benefit</strong> Jersey, BIB, Snack, Medali Finisher</li>
-        <li><strong>Rute</strong> Jl. Mangkubumi di depan Kantor KR</li>
-      </ul>
-    </div>
-    <div class="category delay-2">
-      <div class="badge">🔥 Populer</div>
-      <h3>10K</h3>
-      <p>Tantangan jarak menengah untuk pelari aktif.</p>
-      <ul>
-        <li><strong>Usia</strong> 15 tahun ke atas</li>
-        <li><strong>Waktu</strong> 06.00 WIB</li>
-        <li><strong>Biaya</strong> unknown</li>
-        <li><strong>Benefit</strong> Jersey, BIB, Snack, Medali Finisher, E-Certificate</li>
-        <li><strong>Rute</strong> Jl. Mangkubumi di depan Kantor KR</li>
-      </ul>
-    </div>
-    <!-- <div class="category delay-3">
-      <div class="badge">🏅 Untuk Pelari Berpengalaman</div>
-      <h3>21K</h3>
-      <p>Half Marathon untuk pelari berpengalaman.</p>
-      <ul>
-        <li><strong>Usia</strong> 18 tahun ke atas</li>
-        <li><strong>Start Time</strong> 05.30 WIB</li>
-        <li><strong>Biaya</strong> unknown</li>
-        <li><strong>Benefit</strong> Jersey Premium, BIB, Medali Khusus, Refreshment, E-Certificate</li>
-        <li><strong>Rute</strong> Rute panjang melalui 3 kecamatan, kombinasi tanjakan dan turunan</li>
-      </ul>
-    </div> -->
-  </div>
-  <div id="countdown" style="text-align: center; margin-top: 20px; font-size: 1.2rem;"></div>
-  <div class="registration">
-    <a href="/event/event.html" class="btn-register">Registrasi Sekarang</a>
-  </div>
-
-</section>
 
 
 <!-- ----------- Section GAMBAR --------- -->
@@ -658,7 +635,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=1.8"></script>
-    <script src="language.js?v=1.8"></script>
+    <script src="javascript.js?v=1.9"></script>
+    <script src="language.js?v=1.9"></script>
   </body>
 </html>
