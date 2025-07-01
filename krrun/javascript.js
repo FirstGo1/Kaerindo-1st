@@ -86,16 +86,6 @@ window.addEventListener('load', checkCategories);
 
 
 
-// const eventDate = new Date("2025-09-27T06:00:00").getTime();
-// const countdown = document.getElementById("countdown");
-// setInterval(() => {
-//   const now = new Date().getTime();
-//   const distance = eventDate - now;
-//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   countdown.innerHTML = `🕒 Event dimulai ${days} hari lagi!`;
-// }, 1000);
-
-
 
 
 // ----------------- faq---------------
@@ -120,7 +110,7 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 
 // Set target date
-const eventDate = new Date("September 28, 2025 06:00:00").getTime();
+const eventDate = new Date("September 28, 2025 05:30:00").getTime();
 
 const countdown = () => {
   const now = new Date().getTime();
