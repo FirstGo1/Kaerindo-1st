@@ -60,28 +60,27 @@ document.querySelectorAll('.rule-title').forEach(title => {
   });
 });
 
-
-// --------- categories  ------------
-
-const categories = document.querySelectorAll('.category');
-
-function checkCategories() {
+// ------------- transisi scroll -------
+function checkScrollFadeDirection() {
   const triggerBottom = window.innerHeight * 0.85;
+  const elements = document.querySelectorAll(
+    '.scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right'
+  );
 
-  categories.forEach(category => {
-    const boxTop = category.getBoundingClientRect().top;
-    const boxBottom = category.getBoundingClientRect().bottom;
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const bottom = el.getBoundingClientRect().bottom;
+    const inView = top < triggerBottom && bottom > 0;
 
-    if (boxTop < triggerBottom && boxBottom > 0) {
-      category.classList.add('show');
-    } else {
-      category.classList.remove('show');
-    }
+    el.classList.toggle('show', inView);
   });
 }
 
-window.addEventListener('scroll', checkCategories);
-window.addEventListener('load', checkCategories);
+window.addEventListener('scroll', checkScrollFadeDirection);
+window.addEventListener('load', checkScrollFadeDirection);
+
+
+
 
 
 
@@ -112,30 +111,41 @@ document.querySelectorAll('.faq-question').forEach(item => {
 // Set target date
 const eventDate = new Date("September 28, 2025 05:30:00").getTime();
 
+const updateTime = (id, value) => {
+  const element = document.getElementById(id);
+  if (element.textContent !== value) {
+    element.classList.add("animate");
+    element.textContent = value;
+    setTimeout(() => {
+      element.classList.remove("animate");
+    }, 300);
+  }
+};
+
 const countdown = () => {
   const now = new Date().getTime();
   const distance = eventDate - now;
 
   if (distance < 0) {
-    document.getElementById("days").textContent = "00";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
+    updateTime("days", "00");
+    updateTime("hours", "00");
+    updateTime("minutes", "00");
+    updateTime("seconds", "00");
     return;
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0");
+  const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+  const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+  const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, "0");
 
-  document.getElementById("days").textContent = String(days).padStart(2, "0");
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+  updateTime("days", days);
+  updateTime("hours", hours);
+  updateTime("minutes", minutes);
+  updateTime("seconds", seconds);
 };
 
-// Run countdown every second
 setInterval(countdown, 1000);
+
+
+
