@@ -1,236 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tim | Kaerindo Jaya Komunikasi</title>
-  <link rel="icon" href="/img/logo kjk-2321.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tim | Kaerindo Jaya Komunikasi</title>
+    <link rel="icon" href="/img/logo kjk-2321.png" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="stylesheet" href="tim-style.css?v=1.4">
-</head>
-<body>
-  <nav>
-    <ul class="sidebar">
-      <li onclick="hideSidebar()">
-        <a href="#"
-          ><svg
-            class="x-menu"
-            xmlns="http://www.w3.org/2000/svg"
-            height="26px"
-            viewBox="0 -960 960 960"
-            width="26px"
-            fill="#e3e3e3"
-          >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            /></svg
-        ></a>
-      </li>
-      <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
-      <li><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
-      <li><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
-      <li><a class="nav-tim label-merah" href="/team/team.html">Tim</a></li>
-      <li><a class="nav-registrasi" href="/krrun/krrun.html">KR RUN</a></li>
-      <li><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
-      <div class="language">
-        <div class="language-selected">ID</div>
-        <ul>
-          <li><a href="#" class="id">ID</a></li>
-          <li><a href="#" class="en">EN</a></li>
-        </ul>
-      </div>
-    </ul>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="tim-style.css?v=1.4" />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
+        <li><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
+        <li><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
+        <li><a class="nav-tim label-merah" href="/team/index.html">Tim</a></li>
+        <li><a class="nav-registrasi" href="/krrun/index.html">KR RUN</a></li>
+        <li><a class="nav-hubungi" href="/contact/index.html">Hubungi</a></li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+      </ul>
 
-    <!-- ------- NAV Paling atas --------- -->
-    <ul class="ul-utama">
-      <li>
-        <a href="#"><img src="/asset/img/111.png" /></a>
-      </li>
-      <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-      <li class="hideOnMobile"><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
-      <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
-      <li class="hideOnMobile"><a class="nav-tim label-merah" href="/team/team.html">Tim</a></li>
-      <li class="hideOnMobile"><a class="nav-registrasi" href="/krrun/krrun.html">KR RUN</a></li>
-      <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
+      <!-- ------- NAV Paling atas --------- -->
+      <ul class="ul-utama">
+        <li>
+          <a href="#"><img src="/asset/img/111.png" /></a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-beranda" href="/index.html">Beranda</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-tentang" href="/about/index.html">Tentang</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-galeri" href="/gallery/index.html">Galeri</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-tim label-merah" href="/team/index.html">Tim</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-registrasi" href="/krrun/index.html">KR RUN</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-hubungi" href="/contact/index.html">Hubungi</a>
+        </li>
 
-      <div class="language hide">
-        <div class="language-selected">ID</div>
-        <ul>
-          <li><a href="#" class="id">ID</a></li>
-          <li><a href="#" class="en">EN</a></li>
-        </ul>
-      </div>
-      <li class="menu-button" onclick="showSidebar()">
-        <a href="#"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="26px"
-            viewBox="0 -960 960 960"
-            width="26px"
-            fill="#e3e3e3"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            /></svg
-        ></a>
-      </li>
-    </ul>
-  </nav>
+        <div class="language hide">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
 
-  <nav class="nav-bawah">
-    <ul class="sidebar">
-      <li onclick="hideSidebar()">
-        <a href="#"
-          ><svg
-            class="x-menu"
-            xmlns="http://www.w3.org/2000/svg"
-            height="26px"
-            viewBox="0 -960 960 960"
-            width="26px"
-            fill="#e3e3e3"
-          >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            /></svg
-        ></a>
-      </li>
-      <li><a href="/index.html">Beranda</a></li>
-      <li><a href="/about/about.html">Tentang</a></li>
-      <li><a href="/gallery/gallery.html">Galeri</a></li>
-      <li><a class="label-merah" href="/team/team.html">Tim</a></li>
-      <li><a href="/krrun/krrun.html">KR RUN</a></li>
-      <li><a href="/contact/contact.html">Hubungi</a></li>
-    </ul>
+    <nav class="nav-bawah">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              class="x-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/index.html">Beranda</a></li>
+        <li><a href="/about/index.html">Tentang</a></li>
+        <li><a href="/gallery/index.html">Galeri</a></li>
+        <li><a class="label-merah" href="/team/index.html">Tim</a></li>
+        <li><a href="/krrun/index.html">KR RUN</a></li>
+        <li><a href="/contact/index.html">Hubungi</a></li>
+      </ul>
 
-    <!-- -----------Nav scroll bawah -----------  -->
-    <ul class="ul-utama">
-      <li>
-        <a href="#"><img src="/asset/img/1111.png" /></a>
-      </li>
-      <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-      <li class="hideOnMobile"><a class="nav-tentang" href="/about/about.html">Tentang</a></li>
-      <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/gallery.html">Galeri</a></li>
-      <li class="hideOnMobile"><a class="nav-tim label-merah" href="/team/team.html">Tim</a></li>
-      <li class="hideOnMobile"><a class="nav-registrasi" href="/krrun/krrun.html">KR RUN</a></li>
-      <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/contact.html">Hubungi</a></li>
-      <div class="language">
-        <div class="language-selected">ID</div>
-        <ul>
-          <li><a href="#" class="id">ID</a></li>
-          <li><a href="#" class="en">EN</a></li>
-        </ul>
-      </div>
-      <li class="menu-button" onclick="showSidebar()">
-        <a href="#"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="26px"
-            viewBox="0 -960 960 960"
-            width="26px"
-            fill="#e3e3e3"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            /></svg
-        ></a>
-      </li>
-    </ul>
-  </nav>
+      <!-- -----------Nav scroll bawah -----------  -->
+      <ul class="ul-utama">
+        <li>
+          <a href="#"><img src="/asset/img/1111.png" /></a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-beranda" href="/index.html">Beranda</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-tentang" href="/about/index.html">Tentang</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-galeri" href="/gallery/index.html">Galeri</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-tim label-merah" href="/team/index.html">Tim</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-registrasi" href="/krrun/index.html">KR RUN</a>
+        </li>
+        <li class="hideOnMobile">
+          <a class="nav-hubungi" href="/contact/index.html">Hubungi</a>
+        </li>
+        <div class="language">
+          <div class="language-selected">ID</div>
+          <ul>
+            <li><a href="#" class="id">ID</a></li>
+            <li><a href="#" class="en">EN</a></li>
+          </ul>
+        </div>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
 
-  <div class="back-to-home">
-    <a href="/index.html">Kembali</a>
-  </div>
+    <div class="back-to-home">
+      <a href="/index.html">Kembali</a>
+    </div>
 
-  <div class="square">
-    <span></span>
-    <span></span>
-    <span></span>
-    <div class="content">
-      <div class="contentBx active" id="content1">
-        <div class="card">
-          <div class="imgBx other">
-            <img src="img/bapak.jpg" alt="" >
-          </div>
-          <div class="textBx">
-            <h2>Idham Samawi<br><b>Komisaris Utama</b>
-            </h2>
-            <ul class="sci">
-              <li><a href="#" class="facebook-color"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#" class="x-color"><i class="fa-brands fa-x-twitter"></i></a></li>
-              <li><a href="#" class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i></a></li>
-              <li><a href="#" class="instagram-color"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
+    <div class="square">
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="content">
+        <div class="contentBx active" id="content1">
+          <div class="card">
+            <div class="imgBx other">
+              <img src="img/bapak.jpg" alt="" />
+            </div>
+            <div class="textBx">
+              <h2>Idham Samawi<br /><b>Komisaris Utama</b></h2>
+              <ul class="sci">
+                <li>
+                  <a href="#" class="facebook-color"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="x-color"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="whatsapp-color"
+                    ><i class="fa-brands fa-whatsapp"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="instagram-color"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
       <div class="contentBx" id="content2">
         <div class="card">
           <div class="imgBx">
-            <img src="img/432.jpg" alt="">
+            <img src="img/432.jpg" alt="" />
           </div>
           <div class="textBx">
-            <h2>Indra Sandra Saputra<br><b>Direktur Utama</b>
-            </h2>
+            <h2>Indra Sandra Saputra<br /><b>Direktur Utama</b></h2>
             <ul class="sci">
-              <li><a href="https://www.facebook.com/masputro" target="_blank" class="facebook-color"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="https://x.com/masputro" target="_blank" class="x-color"><i class="fa-brands fa-x-twitter"></i></a></li>
-              <li><a href="#" class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i></a></li>
-              <li><a href="https://www.instagram.com/kalem_banget/" target="_blank" class="instagram-color"><i class="fa-brands fa-instagram"></i></a></li>
+              <li>
+                <a
+                  href="https://www.facebook.com/masputro"
+                  target="_blank"
+                  class="facebook-color"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/masputro" target="_blank" class="x-color"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="whatsapp-color"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/kalem_banget/"
+                  target="_blank"
+                  class="instagram-color"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
-
-
       </div>
       <div class="contentBx" id="content3">
         <div class="card">
           <div class="imgBx">
-            <img src="img/321.jpg" alt="">
+            <img src="img/321.jpg" alt="" />
           </div>
           <div class="textBx">
-            <h2>Yohan Prima Mahesa<br>Rangga Jaya<br><b>Direksi</b>
-            </h2>
+            <h2>Yohan Prima Mahesa<br />Rangga Jaya<br /><b>Direksi</b></h2>
             <ul class="sci">
-              <li><a href="#" class="facebook-color"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#" class="x-color"><i class="fa-brands fa-x-twitter"></i></a></li>
-              <li><a href="#" class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i></a></li>
-              <li><a href="https://www.instagram.com/papa_joe_blaque/" target="_blank" class="instagram-color"><i class="fa-brands fa-instagram"></i></a></li>
+              <li>
+                <a href="#" class="facebook-color"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="x-color"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="whatsapp-color"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/papa_joe_blaque/"
+                  target="_blank"
+                  class="instagram-color"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
-
-
       </div>
     </div>
-  <div class="bottom">
-    <div class="waves">
-      <div class="wave" id="wave1"></div>
-      <div class="wave" id="wave2"></div>
-      <div class="wave" id="wave3"></div>
-      <div class="wave" id="wave4"></div>
+    <div class="bottom">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div class="icon">
+        <div class="imgBx active" data-id="content1">
+          <img src="img/bapak.jpg" />
+        </div>
+        <div class="imgBx" data-id="content2">
+          <img src="img/432.jpg" />
+        </div>
+        <div class="imgBx" data-id="content3">
+          <img src="img/321.jpg" />
+        </div>
+      </div>
     </div>
-    <div class="icon">
-      <div class="imgBx active" data-id="content1">
-        <img src="img/bapak.jpg">
-      </div>
-      <div class="imgBx" data-id="content2">
-        <img src="img/432.jpg">
-      </div>
-      <div class="imgBx" data-id="content3">
-        <img src="img/321.jpg">
-      </div>
-    </div>
-  </div>
 
-  
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  
-  <script src="language.js"></script>
-  <script src="script.js?v=1.4"></script>
-</body>
+    <script src="language.js"></script>
+    <script src="script.js?v=1.4"></script>
+  </body>
 </html>
