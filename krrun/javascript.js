@@ -81,12 +81,6 @@ window.addEventListener('load', checkScrollFadeDirection);
 
 
 
-
-
-
-
-
-
 // ----------------- faq---------------
 
 

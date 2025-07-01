@@ -123,11 +123,6 @@ likeBtns.forEach((likeBtn) => {
 
 
 
-
-
-
-
-
 // ----------- test ----------
 function showSidebar(){
   const sidebar = document.querySelector('.sidebar')
@@ -211,6 +206,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+  // ------------- transisi scroll -------
+  function checkScrollFadeDirection() {
+    const triggerBottom = window.innerHeight * 0.85;
+    const elements = document.querySelectorAll(
+      '.scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right'
+    );
+  
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const bottom = el.getBoundingClientRect().bottom;
+      const inView = top < triggerBottom && bottom > 0;
+  
+      el.classList.toggle('show', inView);
+    });
+  }
+  
+  window.addEventListener('scroll', checkScrollFadeDirection);
+  window.addEventListener('load', checkScrollFadeDirection);
 
 
 

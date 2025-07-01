@@ -36,11 +36,14 @@ p {
   line-height: 22px;
   padding: 10px;
 }
+
+
+/* ------- donee ------- */
+
 .row {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
-  animation: fadeInUpCustom 1s both 0.2s;
 }
 
 .layar-dalam {
@@ -330,18 +333,8 @@ a.en:before{
   object-fit: cover;
   opacity: 1;
   background-repeat: no-repeat;
+}
 
-  /* animation: header-image-animation linear forwards;
-  animation-timeline: view();
-  animation-range: exit; */
-}
-/* @keyframes fade-out{
-  top { opactiy: 0;}
-}
-@keyframes header-image-animation{
-  25% { opacity: 1 ; }
-  70%, 100% { opacity: 0; scale: 1.5}
-} */
 .swiper-tampilan-depan .swiper-slide img.khusus-kr {
   object-fit: unset;
 }
@@ -481,7 +474,6 @@ section h3 {
   padding: 60px 20px;
   text-align: center;
   color: white;
-  /* animation: fadeInUp 1s ease; */
   position: relative;
 }
 
@@ -677,9 +669,7 @@ section h3 {
   font-weight: 700;
   color: #333;
 }
-/* .kaerindo .judult{
-  animation: fadeInDown 1s both 0.2s;
-} */
+
 .kaerindo .judult::after {
   content: "";
   border-bottom: 5px solid #c86b85;
@@ -1137,226 +1127,18 @@ section.quote .layar-dalam p::before{
   height: 280px;
   box-shadow: 0px -10px 30px #ccc;
   border-radius: 10px;
-  transition: transform 0.8s;
+  
   cursor: pointer;
   object-fit: cover;
 }
 .tim img:hover {
   transform: scale(1.2);
-}
-
-
-
-/* FOOTER */
-footer {
-  background: #ff0000;
-  border-radius: 90px 0 0 0;
-  position: flex;
-  bottom: 0;
-  width: 100%;
-  border-bottom: solid;
-}
-
-footer * {
-  color: white;
-}
-
-.containerf {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 7%;
-}
-
-.footer-col {
-  width: 25%;
-}
-
-.footer-col h2 {
-  font-size: 1.7em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.footer-col p {
-  padding: 0;
-}
-
-
-
-p.email {
-  margin: 30px 0;
-}
-
-p.phone {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.footer-col .text-office {
-  margin-bottom: 20px;
-}
-/* ANIMASI GARIS GERAK */
-.underline {
-  width: 70px;
-  height: 3px;
-  position: relative;
-  background-color: rgb(255, 0, 0);
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.underline span {
-  width: 7px;
-  height: 100%;
-  position: absolute;
-  left: 10px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 3px;
-  animation: moving 3.3s linear infinite;
-}
-.footer-col i {
-  font-size: 20px;
-  transition: 0.3s;
-  padding: 0px 5px;
-  color: #d5d8db;
-}
-.footer-col i:hover {
-  color: #aadaff;
-  opacity: 1;
-  transform: scale(1.5);
-}
-.col {
-  position: relative;
-}
-.col p {
-  color: white;
-  justify-content: center;
-  text-align: center;
+  transition: 0.4s ease;
 }
 
 
 
 
-.footer-col ul {
-  list-style-type: none;
-  padding-top: 10px;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin: 10px 0;
-}
-.footer-col ul a {
-  text-decoration: none;
-  transition: 0.3s;
-}
-.footer-col ul a:hover {
-  color: red;
-}
-
-.footer-col form {
-  margin-top: 20px;
-  border-bottom: 1px solid white;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-.footer-col form input {
-  width: 70%;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding-left: 10px;
-}
-
-.footer-col form i {
-  font-size: 25px;
-}
-.footer-col form .msg:hover {
-  color: red;
-  transform: none;
-}
-.footer-col form .arrow:hover {
-  color: red;
-  transform: none;
-}
-.footer-col .social-icons {
-  margin-top: 20px;
-}
-
-.footer-col .social-icons i {
-  padding: 10px;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  margin: 5px;
-  transition: 0.3s;
-}
-
-.footer-col .social-icons .fa-facebook:hover {
-  background: #1877f2;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer-col .social-icons .fa-whatsapp:hover {
-  background: #25d366;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer-col .social-icons .fa-instagram:hover {
-  background: #fe107c;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer-col .social-icons .fa-youtube:hover {
-  background: #fff;
-  color: #ff0000;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer-col .social-icons .fa-google:hover {
-  background: #ea4335;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.footer-para {
-  max-width: 250px;
-}
-
-
-
-
-
-.backgroundBack{
-  background-color: #000000b4;
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 60px 0;
-  background: linear-gradient(to right, #3c0000b9, #4e4e4ed7);
-  border-top: solid 1px #000;
-  margin-top: 50px;
-  position: relative;
-  /* border-radius: 90px 0 0 0; */
-}
-
-.footer p {
-  font-size: 15px;
-  color: #fff;
-}
-.ending-page {
-  position: relative;
-  top: 20px;
-  font-size: 12px;
-}
 
 .swiper-slider-content .slider-title.eventAtas{
   font-family: 'Duvall', sans-serif ;
@@ -1380,6 +1162,114 @@ p.phone {
   line-height: 2;
   
 }
+
+
+/* ------footer ------- */
+.footer {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col h5 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.footer-col p,
+.footer-col li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+  transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ff0000;
+}
+
+.logo img {
+  width: 100px;
+  /* margin-bottom: 15px; */
+  height: 100px;
+  object-fit: cover;
+}
+
+.social-icons a,
+.social-icons .fab {
+  color: #ccc;
+  font-size: 30px;
+  margin-right: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons .fa-instagram:hover {
+  color: #e1306c;
+}
+.social-icons .fa-whatsapp:hover {
+  color: #25d366;
+}
+.social-icons .fa-youtube:hover {
+  color: #ff0000;
+}
+
+.store-btn {
+  width: 140px;
+  margin: 10px 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.footer-bottom p{
+  color: #fff;
+}
+
+
+
+
+
 
 /* Media queerry */
 
@@ -1653,19 +1543,11 @@ p.phone {
   #team{
     width: 100%;
   }
-  .footer {
-    padding: 80px;
-  }
-  .footer p{
-    font-size: 12px;
-  }
+
   .valorant-button {
     padding: 8px 25px ;
     font-size: 13px;
     margin-top: 20px;
-  }
-  .footer-col h2 {
-    font-size: 13px;
   }
   .containerf {
     flex-direction: column;
@@ -1749,7 +1631,46 @@ p.phone {
     font-size: 17px;
     margin-top: 0;
   }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    margin-bottom: 20px;
+  }
 }
+
+
+@media (max-width: 500px) {
+  .countdown {
+    /* flex-direction: column; */
+    align-items: center;
+    gap:20px;
+  }
+
+  .time-box {
+    width: 70%;
+    padding: 8px 10px;
+  }
+
+  .time-box h1 {
+    font-size: 30px;
+  }
+
+  .time-box p {
+    font-size: 12px;
+  }
+  .swiper-tampilan-depan {
+    height: 80vh;
+  }
+}
+
 
 @media (max-width: 400px) {
   .sidebar {
@@ -1809,9 +1730,6 @@ p.phone {
     top: 10px;
     right: 10px;
   }
-  .footer p{
-    font-size: 10px;
-  }
   .tim h6{
     font-size: 15px;
   }
@@ -1830,35 +1748,41 @@ p.phone {
   }
 }
 
-@media (max-width: 500px) {
-  .countdown {
-    /* flex-direction: column; */
-    align-items: center;
-    gap:20px;
-  }
 
-  .time-box {
-    width: 70%;
-    padding: 8px 10px;
-  }
 
-  .time-box h1 {
-    font-size: 30px;
-  }
 
-  .time-box p {
-    font-size: 12px;
-  }
-  .swiper-tampilan-depan {
-    height: 80vh;
-  }
+
+/* -------- transisi scroll ------  */
+/* Dasar semua animasi */
+.scroll-fade-up,
+.scroll-fade-down,
+.scroll-fade-left,
+.scroll-fade-right {
+  opacity: 0;
+  transition: all 1s ease;
 }
 
+.scroll-fade-up {
+  transform: translateY(80px);
+}
+.scroll-fade-down {
+  transform: translateY(-80px);
+}
+.scroll-fade-left {
+  transform: translateX(-80px);
+}
+.scroll-fade-right {
+  transform: translateX(80px);
+}
 
-
-
-
-
+/* Saat terlihat */
+.scroll-fade-up.show,
+.scroll-fade-down.show,
+.scroll-fade-left.show,
+.scroll-fade-right.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 
 

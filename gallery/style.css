@@ -88,7 +88,6 @@ nav a {
   color: rgb(255, 255, 255);
   transition: 0.3s ease;
   position: relative;
-  animation: fadeInDown 1s both 0.2s;
 }
 nav a:hover {
   color: #ff0000;
@@ -99,7 +98,7 @@ nav li:first-child {
 .label-merah{
   position: relative;
   color: red;
-  animation: pulseGlow 2.5s ease-in-out infinite;
+  /* animation: pulseGlow 2.5s ease-in-out infinite; */
 }
 
 .sidebar {
@@ -278,13 +277,13 @@ a.en:before{
   margin-bottom: 20px;
   color: #ff0000;
   z-index: 1;
-  animation: fadeInDown 1s both 0.2s;
+  /* animation: fadeInDown 1s both 0.2s; */
 }
 
 .hero p {
   font-size: 20px;
   color: #fff;
-  animation: fadeInUpCustom 1s both 0.6s;
+  /* animation: fadeInUpCustom 1s both 0.6s; */
 }
 
 
@@ -482,7 +481,7 @@ a.en:before{
   justify-content: center;
   text-align: center;
   color: #333;
-  animation: fadeInUpCustom 1s both 0.2s;
+  /* animation: fadeInUpCustom 1s both 0.2s; */
 }
 .myGallery .teratas::after,
 #slider-2 .teratas::after{
@@ -496,7 +495,7 @@ a.en:before{
   background-color: #ff2121;
   transform-origin: center;
   transition: transform 0.4s ease 0.5s;
-  animation: growLine 0.6s ease forwards 1s;
+  /* animation: growLine 0.6s ease forwards 1s; */
 }
 
 .myGallery p,
@@ -510,7 +509,7 @@ a.en:before{
   margin-bottom: 30px;
   font-family: 'Jost', sans-serif;
   font-weight: 700;
-  animation: fadeInUpCustom 1s both 0.2s;
+  /* animation: fadeInUpCustom 1s both 0.2s; */
 }
 
 
@@ -582,9 +581,7 @@ ion-icon.active {
   color: red;
   opacity: 1;
 }
-ion-icon.pulse {
-  animation: pulse 0.8s 1 ease-in-out;
-}
+
 
 @keyframes pulse {
   0%,
@@ -610,7 +607,7 @@ ion-icon.pulse {
   font-size: 24px;
   color: #333;
   margin-bottom: 30px;
-  animation: fadeInUpCustom 1s both 0.5s;
+  /* animation: fadeInUpCustom 1s both 0.5s; */
 }
 
 
@@ -758,79 +755,13 @@ ion-icon.pulse {
   margin-top: 50px;
   position: relative;
 }
-.footer h4 {
-  margin-bottom: 25px;
-  margin-top: 20px;
-  font-weight: 600;
-}
-.icons .fa-brands {
-  color: #ffffff;
-  margin: 0 13px;
-  cursor: pointer;
-  padding: 18px 0;
-}
-.fa-heart {
-  color: #ffffff;
-}
+
 .footer p {
   color: #fff;
   font-size: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer .social-icons {
-  /* margin-top: 20px; */
-  text-align: center;
-  /* position: relative; */
-  top: 30px;
-}
-
-.footer .social-icons i {
-  padding: 8px;
-  font-size: 20px;
-  background-color: #fff;
-  color: black;
-  border-radius: 50%;
-  margin: 3px;
-  transition: 0.3s;
-  /* display: inline-block; */
-}
-
-.footer .social-icons .fa-facebook:hover {
-  background: #1877f2;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-instagram:hover {
-  background: #fe107c;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-whatsapp:hover {
-  background: #25d366;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-youtube:hover {
-  background: #fff;
-  color: #ff0000;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.footer .social-icons .fa-google:hover {
-  background: #ea4335;
-  color: white;
-  transform: scale(1.2);
-  opacity: 1;
-}
-.ending-page {
-  position: relative;
-  top: 10px;
-  font-size: 12px;
-  margin-top: 20px;
-}
 
 
 @media (max-width: 1200px){
@@ -1018,6 +949,37 @@ ion-icon.pulse {
 
 
 
+/* -------- transisi scroll ------  */
+/* Dasar semua animasi */
+.scroll-fade-up,
+.scroll-fade-down,
+.scroll-fade-left,
+.scroll-fade-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.scroll-fade-up {
+  transform: translateY(80px);
+}
+.scroll-fade-down {
+  transform: translateY(-80px);
+}
+.scroll-fade-left {
+  transform: translateX(-80px);
+}
+.scroll-fade-right {
+  transform: translateX(80px);
+}
+
+/* Saat terlihat */
+.scroll-fade-up.show,
+.scroll-fade-down.show,
+.scroll-fade-left.show,
+.scroll-fade-right.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 
 
