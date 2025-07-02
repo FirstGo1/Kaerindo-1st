@@ -144,15 +144,15 @@ setInterval(countdown, 1000);
 
 
 
-  document.querySelector('.team-btn').addEventListener('click', function(e) {
-    e.preventDefault(); // Hindari reload
-    Swal.fire({
-      title: ' Registrasi KR RUN',
-      text: 'Akan dibuka pada hari Sabtu, 5 Juli 2025, pukul 15:00 WIB.',
-      icon: 'warning',
-      confirmButtonText: 'Oke, siap!',
-      confirmButtonColor: '#d00000', // warna tombol merah
-      iconColor: '#d00000', // warna ikon merah juga
-    });
-  });
+  // document.querySelector('.team-btn').addEventListener('click', function(e) {
+  //   e.preventDefault(); // Hindari reload
+  //   Swal.fire({
+  //     title: ' Registrasi KR RUN',
+  //     text: 'Akan dibuka pada hari Sabtu, 5 Juli 2025, pukul 15:00 WIB.',
+  //     icon: 'warning',
+  //     confirmButtonText: 'Oke, siap!',
+  //     confirmButtonColor: '#d00000', // warna tombol merah
+  //     iconColor: '#d00000', // warna ikon merah juga
+  //   });
+  // });
 

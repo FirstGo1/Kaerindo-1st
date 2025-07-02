@@ -805,9 +805,9 @@ a.en:before {
     0% 0%
   );
 }
-.image-section img:hover {
+.image-section img:hover{
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 .image-section img:active {
   cursor: pointer;
