@@ -148,7 +148,7 @@ setInterval(countdown, 1000);
     e.preventDefault(); // Hindari reload
     Swal.fire({
       title: ' Registrasi KR RUN',
-      text: 'Akan dibuka pada hari Sabtu, 5 Juli 2025, pukul 15:30 WIB.',
+      text: 'Akan dibuka pada hari Sabtu, 5 Juli 2025, pukul 15:00 WIB.',
       icon: 'warning',
       confirmButtonText: 'Oke, siap!',
       confirmButtonColor: '#d00000', // warna tombol merah
