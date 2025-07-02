@@ -9,12 +9,9 @@ html, body {
   justify-content: center;
   min-height: 100vh;
   display: flex;
+  overflow-x: hidden;
 }
 
-body {
-    
-
-  }
  
   /* Gambar background full-page */
 .background-overlay {
@@ -24,8 +21,8 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url('1.jpg') center center / cover no-repeat;
-  filter: brightness(0.4); /* menggelapkan gambar */
+  background: url('img/20.JPG') center center / cover no-repeat;
+  filter: brightness(0.4);
 }
 
 
@@ -37,6 +34,19 @@ body {
     /* position: relative;
     overflow: hidden; */
   }
+  .countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+
   
   .countdown-heading {
     font-size: 48px;
@@ -49,9 +59,12 @@ body {
   
   .registration-note {
     font-size: 18px;
-    color: #ccc;
+    color: #fff;
     margin-bottom: 40px;
     animation: fadeInUp 1s ease 0.3s forwards;
+  }
+  .registration-note strong {
+    color: #ff0000;
   }
   
   .countdown {
@@ -59,12 +72,13 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    transition: all 0.3 ease;
   }
-  
+
 
 
   .time-box {
-    background: #1111115d;
+    background: #11111194;
     padding: 25px 20px;
     border-radius: 16px;
     width: 100px;
@@ -72,6 +86,8 @@ body {
     opacity: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+ 
   
   
   /* Tambah delay agar animasinya masuk satu-satu */
@@ -84,10 +100,11 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .time-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(208, 0, 0, 0.4);
+  .time-box:hover .countdown-unit {
+    transform: scale(1.2);
+    transition: 0.3s ease;
   }
+
   
 
   
@@ -182,7 +199,7 @@ body {
 
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 800px) {
     .countdown {
       display: flex;
       flex-direction: column;
@@ -192,20 +209,10 @@ body {
     }
   
     .time-box {
-      width: 80px;
-      padding: 20px 10px;
-      animation-delay: 0s; /* supaya lebih cepat muncul di mobile */
-      /* background-color: transparent; */
+      width: 120px;
+      animation-delay: 0s;
+      padding: 16px;
   
-    }
-   
-  
-    .time-box h1 {
-      font-size: 36px;
-    }
-  
-    .time-box p {
-      font-size: 12px;
     }
   
     .countdown-heading {
@@ -214,7 +221,8 @@ body {
     }
   
     .countdown-wrapper {
-      padding: 40px 15px;
+      /* padding: 40px 15px; */
+      padding: 20px;
     }
     .countdown-wrapper {
       width: 100%;
@@ -229,26 +237,8 @@ body {
       margin-top: 20px;
     }
   }
-  /* @media screen and (max-width: 480px) {
-    .time-box {
-      width: 70px;
-      padding: 16px 8px;
-    }
+
   
-    .time-box h1 {
-      font-size: 28px;
-    }
-  
-    .time-box p {
-      font-size: 10px;
-      letter-spacing: 0.5px;
-    }
-  
-    .countdown-heading {
-      font-size: 16px;
-    }
-  }
-   */
     
   
   @keyframes zoomSlow {

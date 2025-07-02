@@ -1,4 +1,4 @@
-const eventDate = new Date("September 28, 2025 05:30:00").getTime();
+const eventDate = new Date("September 28, 2025 15:00:00").getTime();
 
 const updateTime = (id, value) => {
   const el = document.getElementById(id);
@@ -32,4 +32,4 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
-countdown(); // Call once to initialize
+countdown(); 

@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 36px;
@@ -99,11 +100,10 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* position: relative; */
+ 
 }
 nav li {
   height: 50px;
-  /* position: relative; */
 }
 nav a {
   height: 100%;
@@ -163,9 +163,7 @@ nav li:first-child {
   color: black;
   display: none;
 }
-/* .nav .menu-button svg {
-  fill: #fff;
-} */
+
 .x-menu {
   fill: #000;
 }
@@ -214,7 +212,6 @@ svg:hover {
 
 .language ul {
   border-radius: 5px;
-  /* display: block; */
   padding: 0;
   position: absolute;
   width: 70px;
@@ -230,11 +227,9 @@ svg:hover {
 
 .language ul li {
   list-style: none;
-  /* margin: 0 auto; */
   display: flex;
   justify-content: left;
   align-items: left;
-  /* padding: 10px; */
   transition: 0.3s ease;
   border-radius: 5px;
 }
@@ -259,7 +254,6 @@ svg:hover {
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
-  /* margin-right: 10px; */
 }
 a.id:before {
   background-image: url(https://flagsapi.com/ID/flat/64.png);
@@ -301,19 +295,8 @@ a.en:before {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  /* animation: fade-out linear;
-  animation-timeline: view() */
-}
-.swiper-tampilan-depan .swiper-slide::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  /* background-color: rgba(0, 0, 0, 0.63); */
-  background-image: linear-gradient(to top, black, transparent);
-  /* z-index: 1; */
-}
 
 .swiper-tampilan-depan .swiper-slide img {
   display: block;
@@ -322,6 +305,8 @@ a.en:before {
   object-fit: cover;
   opacity: 1;
   background-repeat: no-repeat;
+  animation: zoomSlow 30s ease-in-out infinite alternate;
+  filter: brightness(60%);
 }
 
 .swiper-tampilan-depan .swiper-slide img.khusus-kr {
@@ -562,8 +547,8 @@ a.en:before {
   transition: transform 0.3s ease;
   animation: pulse 2.5s infinite;
 }
-.time-box:hover {
-  transform: scale(1.1);
+.time-box:hover h1 {
+  transform: scale(1.15);
 }
 .time-box h1 {
   font-size: 48px;
@@ -991,8 +976,8 @@ a.en:before {
 }
 .category:hover h3 {
   color: #fff;
-  transform: translateY(-10px);
-  transition: 0.3s ease;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
 }
 .category:hover p {
   color: #fff;
@@ -1948,5 +1933,15 @@ a.en:before {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 0, 60, 0);
+  }
+}
+
+
+@keyframes zoomSlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
