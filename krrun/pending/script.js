@@ -1,4 +1,4 @@
-const eventDate = new Date("September 28, 2025 15:00:00").getTime();
+const eventDate = new Date("July 05, 2025 15:00:00").getTime();
 
 const updateTime = (id, value) => {
   const el = document.getElementById(id);
