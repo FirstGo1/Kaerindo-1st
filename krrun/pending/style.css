@@ -21,7 +21,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url('img/1.JPG') center center / cover no-repeat;
+  background: url('img/8.jpg') center center / cover no-repeat;
   filter: brightness(0.4);
 }
 
