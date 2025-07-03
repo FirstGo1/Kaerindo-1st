@@ -306,7 +306,7 @@ a.en:before {
   opacity: 1;
   background-repeat: no-repeat;
   animation: zoomSlow 30s ease-in-out infinite alternate;
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 
 .swiper-tampilan-depan .swiper-slide img.khusus-kr {
