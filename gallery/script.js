@@ -152,7 +152,7 @@ const swipers = new Swiper('.logo-swiper', {
   slidesPerView: 'auto',
   spaceBetween: 0,
   loop: true,
-  speed: 20000,
+  speed: 10000,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
