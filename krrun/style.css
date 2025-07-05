@@ -1363,9 +1363,59 @@ a.en:before {
   font-family: 'Poppins', sans-serif;
 }
 
+
+
 /* Media queerry */
 
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1366px) {
+  nav a{
+   font-size: 14px;
+   padding: 0 15px;
+  }
+  .language-selected {
+   font-size: 14px; 
+  }
+  .language-selected:before {
+    width: 25px;
+    height: 25px;
+  }
+  .language-selected ul li {
+    font-size: 14px;
+  }
+  .info-section {
+    width: 90%;
+  }
+  .marathon-categories{
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+  }
+  .const-4 {
+    width: 90%;
+  }
+  .faq-container {
+    width: 90%;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .image-section img{
+    clip-path: none;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  .image-section img:hover {
+    clip-path: none;
+    -webkit-clip-path: none;
+  }
+  
   .rows {
     flex-direction: column;
   }
@@ -1396,12 +1446,19 @@ a.en:before {
     text-align: center;
     width: 100%;
   }
+  .card {
+    /* padding: 0; */
+  }
+
   .card h3 {
-    font-size: 17px;
+    font-size: 24px;
   }
   .card p {
-    font-size: 13px;
+    font-size: 16px;
     text-align: left;
+  }
+  .const-4 {
+    width: 100%;
   }
   .info-section {
     width: 100%;
@@ -1435,6 +1492,22 @@ a.en:before {
   }
   nav .menu ul li a {
     color: #333;
+  }
+  nav {
+    width: 100%;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  nav img {
+    width: 100%;
+    height: 100%;
+  }
+  .countdown-deco {
+    width: 80px;
+  }
+  .faq-container{
+    width: 100%;;
   }
 }
 
@@ -1647,7 +1720,7 @@ a.en:before {
     min-width: 50px;
   }
   .category ul li {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
     text-align: justify;
   }
@@ -1722,6 +1795,7 @@ a.en:before {
   .footer p {
     font-size: 11px;
   }
+
 }
 
 @media (max-width: 400px) {
