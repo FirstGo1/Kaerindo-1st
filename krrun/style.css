@@ -1397,6 +1397,12 @@ a.en:before {
   .faq-container {
     width: 90%;
   }
+  .info-card {
+    /* background: #fafafa; */
+    padding: 20px 15px;
+    width: 220px;
+  }
+  
 }
 
 
