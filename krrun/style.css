@@ -89,6 +89,7 @@ nav {
 nav img {
   width: 150%;
   height: 150%;
+  object-fit: cover;
   margin-right: 10px;
   transition: transform 0.2s ease-in-out;
   z-index: 1;
@@ -100,7 +101,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
- 
+  padding: 0;
 }
 nav li {
   height: 50px;
@@ -138,6 +139,7 @@ nav li:first-child {
   justify-content: flex-start;
   text-align: center;
   transition: 0.75s ease;
+  padding: 0 0 0 20px;
 }
 .sidebar.show {
   display: flex;
@@ -261,7 +263,7 @@ a.id:before {
 a.en:before {
   background-image: url(https://flagsapi.com/US/flat/64.png);
 }
-.label-merah {
+nav a.label-merah, .nav-bawah a.label-merah  {
   color: #ff0000;
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
@@ -701,9 +703,11 @@ a.en:before {
   transition: 0.5s ease;
 }
 
+
 .info-card:hover .info-icon i {
   transform: translateY(-6px);
 }
+
 .info-icon::after {
   content: "";
   position: absolute;
@@ -719,6 +723,9 @@ a.en:before {
   width: 100%;
   left: 50%;
 }
+
+
+
 
 .info-text h3 {
   font-size: 22px;
@@ -1083,6 +1090,7 @@ a.en:before {
   padding: 10px 30px;
 }
 
+
 /* ------------ Peraturan --------- */
 .const-4 {
   width: 70%;
@@ -1103,13 +1111,6 @@ a.en:before {
   padding-bottom: 10px;
   border-bottom: #9999993b solid 1px;
 }
-/* .const-4 h1::after {
-      content: "";
-      border-bottom: 3px solid #ff0048;
-      width: 90px;
-      display: block;
-      margin: 5px auto;
-    } */
 
 .rule {
   margin-top: 10px;
@@ -1331,37 +1332,127 @@ a.en:before {
   text-align: justify;
 }
 
+/* ------footer ------- */
 .footer {
-  width: 100%;
-  text-align: center;
-  padding: 60px 0;
-  background: linear-gradient(to right, #3c0000, #4e4e4e);
-  border-top: solid 1px #000;
-  margin-top: 50px;
-  position: relative;
-  /* border-radius: 90px 0 0 0; */
+  background: #1e1e1e;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: sans-serif;
 }
 
-.footer p {
-  font-size: 15px;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.footer-logo {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.footer-image{
+  display: block;
+  text-align: center;
+}
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col h5 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.footer-col p,
+.footer-col li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+  transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ff0000;
+}
+
+
+.social-icons a {
+  color: #ccc;
+  font-size: 26px;
+  margin-right: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover .fa-instagram { 
+  color: #e1306c; 
+}
+.social-icons a:hover .fa-whatsapp {
+   color: #25d366;
+   }
+.social-icons a:hover .fa-youtube {
+   color: #ff0000; 
+  }
+
+/* Footer bawah */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+.footer-bottom p {
   color: #fff;
 }
 
-.swal2-show, .swal2-popup {
-  animation: none !important;
-  transform: none !important;
-  transition: none !important;
-  opacity: 1 !important;
+.footer-address {
+  margin-bottom: 15px;
 }
 
-/* Gaya dark red */
-.swal2-popup.krrun-style {
-  background-color: #1a1a1a;       /* Background dark */
-  color: #ffffff;                  /* Teks putih */
-  border: 2px solid #d00000;       /* Border merah */
-  border-radius: 1rem;
-  font-family: 'Poppins', sans-serif;
+.footer-address p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 0;
 }
+
+.footer-address i {
+  color: #ff4444;
+  margin-right: 5px;
+}
+
+
+
 
 
 
@@ -1411,16 +1502,17 @@ a.en:before {
   .container {
     width: 100%;
   }
+  
   .image-section img{
     clip-path: none;
     width: 100%;
     height: 100%;
     object-fit:cover;
   }
-  .image-section img:hover {
+  /* .image-section img:hover {
     clip-path: none;
     -webkit-clip-path: none;
-  }
+  } */
   
   .rows {
     flex-direction: column;
@@ -1568,10 +1660,7 @@ a.en:before {
   .swiper-button-next {
     display: none;
   }
-  #contact .containerf .footer-col {
-    width: 100%;
-    font-size: 1px;
-  }
+
   .kaerindo p {
     width: 100%;
     padding: 0;
@@ -1624,6 +1713,9 @@ a.en:before {
     right: 0;
     margin: 0;
   }
+  .sidebar ul li a {
+    font-size: 30px;
+  }
 
   .sidebar.show {
     right: 0;
@@ -1636,8 +1728,8 @@ a.en:before {
     width: 100%;
   }
   nav img {
-    width: 125%;
-    height: 125%;
+    width: 100%;
+    height: 100%;
   }
 
   .language.hide {
@@ -1798,8 +1890,21 @@ a.en:before {
   .faq-question .title-question {
     font-size: 15px;
   }
-  .footer p {
-    font-size: 11px;
+  .card p {
+    text-align: justify;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    margin-bottom: 20px;
   }
 
 }
@@ -1808,6 +1913,7 @@ a.en:before {
   .sidebar {
     width: 100%;
     margin: 0;
+    padding: 0;
   }
   .menu-button {
     display: block;
@@ -1822,6 +1928,7 @@ a.en:before {
   nav {
     width: 100%;
     padding: 0;
+    margin: 0;
   }
   .nav-bawah {
     top: -80px;
@@ -1831,6 +1938,7 @@ a.en:before {
   nav img {
     width: 100%;
     height: 100%;
+    margin: 0;
   }
   .sidebar .language-selected {
     position: relative;
@@ -1932,6 +2040,27 @@ a.en:before {
     border-radius: 24px;
     margin: 0 auto;
   }
+  .image-section img {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    -webkit-clip-path: polygon(
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      0% 100%,
+      25% 50%,
+      0% 0%
+    );
+  }
+  nav a {
+    font-size: 16px;
+  }
+  .language-selected {
+    font-size: 16px; 
+   }
+   .language-selected ul li {
+     font-size: 16px;
+   }
+ 
 }
 
 /* @media (prefers-reduced-motion: no-preference) */

@@ -96,7 +96,7 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
-.label-merah{
+nav a.label-merah, .nav-bawah a.label-merah{
   position: relative;
   color: red;
   /* animation: pulseGlow 2.5s ease-in-out infinite; */

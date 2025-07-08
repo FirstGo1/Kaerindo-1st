@@ -133,7 +133,7 @@ nav a:hover {
 nav li:first-child {
   margin-right: auto;
 }
-.label-merah {
+nav a.label-merah, .nav-bawah a.label-merah {
   color: red;
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
@@ -1145,11 +1145,23 @@ section.quote .layar-dalam p::before {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
-
+.footer-logo {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.footer-image{
+  display: block;
+  text-align: center;
+}
 .footer-col {
   flex: 1;
   min-width: 250px;
@@ -1163,7 +1175,7 @@ section.quote .layar-dalam p::before {
 
 .footer-col h5 {
   margin-top: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
@@ -1177,6 +1189,7 @@ section.quote .layar-dalam p::before {
 .footer-col ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-col ul li a {
@@ -1191,49 +1204,56 @@ section.quote .layar-dalam p::before {
   color: #ff0000;
 }
 
-.logo img {
-  width: 100px;
-  /* margin-bottom: 15px; */
-  height: 100px;
-  object-fit: cover;
-}
 
-.social-icons a,
-.social-icons .fab {
+.social-icons a {
   color: #ccc;
-  font-size: 30px;
-  margin-right: 5px;
+  font-size: 26px;
+  margin-right: 12px;
   transition: color 0.3s ease-in-out;
 }
 
-.social-icons .fa-instagram:hover {
-  color: #e1306c;
+.social-icons a:hover .fa-instagram { 
+  color: #e1306c; 
 }
-.social-icons .fa-whatsapp:hover {
-  color: #25d366;
-}
-.social-icons .fa-youtube:hover {
-  color: #ff0000;
-}
+.social-icons a:hover .fa-whatsapp {
+   color: #25d366;
+   }
+.social-icons a:hover .fa-youtube {
+   color: #ff0000; 
+  }
 
-.store-btn {
-  width: 140px;
-  margin: 10px 0;
-}
-
+/* Footer bawah */
 .footer-bottom {
   border-top: 1px solid #444;
   margin-top: 40px;
   padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  text-align: center;
   font-size: 13px;
+  color: #fff;
 }
 .footer-bottom p {
   color: #fff;
 }
+
+.footer-address {
+  margin-bottom: 15px;
+}
+
+.footer-address p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+.footer-address i {
+  color: #ff4444;
+  margin-right: 5px;
+}
+
+
+
 
 /* Media queerry */
 
