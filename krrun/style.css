@@ -459,11 +459,10 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .countdown-wrapper {
   border-top: #dadada4b 1px solid;
   background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
-  /* background: url(img/krrun.png) center center no-repeat; */
   padding: 60px 20px;
   text-align: center;
   color: white;
-  /* animation: fadeInUp 1s ease; */
+
   position: relative;
 }
 .countdown-deco {
@@ -1288,7 +1287,6 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 .faq-item.open .faq-question {
-  /* animation: fade 1s ease-in-out; */
   color: red;
 }
 
@@ -1361,6 +1359,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   display: block;
   text-align: center;
 }
+
 .footer-col {
   flex: 1;
   min-width: 250px;
@@ -1381,7 +1380,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .footer-col p,
 .footer-col li {
   font-size: 14px;
-  color: #ccc;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -1392,7 +1391,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 .footer-col ul li a {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   display: block;
   margin: 6px 0;
@@ -1402,13 +1401,17 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .footer-col ul li a:hover {
   color: #ff0000;
 }
-
+  h4.color-change {
+    color: red;
+}
 
 .social-icons a {
-  color: #ccc;
+  color: #fff;
   font-size: 26px;
   margin-right: 12px;
-  transition: color 0.3s ease-in-out;
+}
+.social-icons i {
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover .fa-instagram { 
@@ -1416,6 +1419,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 .social-icons a:hover .fa-whatsapp {
    color: #25d366;
+   
    }
 .social-icons a:hover .fa-youtube {
    color: #ff0000; 
@@ -1436,19 +1440,25 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 
 .footer-address {
   margin-bottom: 15px;
+ 
 }
 
 .footer-address p {
   font-size: 14px;
-  color: #ccc;
+  color: #fff;
   line-height: 1.6;
   margin-bottom: 8px;
   padding-left: 0;
 }
 
 .footer-address i {
-  color: #ff4444;
+  font-size: 16px;
+  color: #fff;
   margin-right: 5px;
+  transition: color 0.3s ease;
+}
+.footer-address:hover i{
+  color: 	#4a80f5;
 }
 
 
@@ -2088,26 +2098,6 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   }
 }
 
-@keyframes fadeInUpCustom {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes fade {
   from {
     opacity: 0;
