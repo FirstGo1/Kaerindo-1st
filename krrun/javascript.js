@@ -142,3 +142,35 @@ const countdown = () => {
 setInterval(countdown, 1000);
 
 
+
+
+  // Tambah class 'loading' agar halaman tidak scroll
+  window.addEventListener('load', () => {
+    const leftDoor = document.querySelector('.left-door');
+    const rightDoor = document.querySelector('.right-door');
+    const preloader = document.getElementById('preloader');
+    const logo = document.querySelector('.logo-center');
+  
+    setTimeout(() => {
+      // ✨ Fade out logo dulu
+      logo.classList.add('fade-out');
+  
+      // 🕐 Delay sedikit sebelum buka pintu
+      setTimeout(() => {
+        leftDoor.classList.add('open-left');
+        rightDoor.classList.add('open-right');
+  
+        // ⏳ Hapus preloader setelah pintu buka
+        setTimeout(() => {
+          preloader.style.opacity = '0';
+          preloader.style.transition = 'opacity 0.5s ease';
+          document.body.classList.remove('loading');
+  
+          setTimeout(() => {
+            preloader.remove();
+          }, 500);
+        }, 1000);
+  
+      }, 300); // Waktu logo fade out duluan
+    }, 1800);
+  });
