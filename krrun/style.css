@@ -41,14 +41,6 @@ h1 {
   align-items: center;
 }
 
-#particles-js {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; 
-  pointer-events: none;
-}
 .door {
   position: absolute;
   top: 0;
@@ -1861,9 +1853,6 @@ nav a.label-merah, .nav-bawah a.label-merah  {
     top: 0;
     right: 0;
     margin: 0;
-  }
-  .sidebar ul li a {
-    font-size: 30px;
   }
 
   .sidebar.show {
