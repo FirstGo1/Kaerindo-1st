@@ -174,3 +174,112 @@ setInterval(countdown, 1000);
       }, 300); // Waktu logo fade out duluan
     }, 1800);
   });
+
+
+
+
+
+  function showCommunityTerms() {
+    Swal.fire({
+      title: 'Syarat Pendaftaran Komunitas',
+      html: `
+        <style>
+           .swal2-title {
+           font-size: 20px !important;
+           font-weight: 600;
+           font-family: 'Poppins', sans-serif;
+           } 
+          .swal2-checkbox-group {
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.6;
+            animation: fadeSlide 0.5s ease forwards;
+          }
+
+          .swal2-checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+             font-size: 14px;
+             line-height: 1.4;
+            opacity: 0;
+            animation: fadeSlide 0.4s ease forwards;
+          }
+            .swal2-checkbox-label span {
+            flex: 1;
+            }
+          .swal2-checkbox-label:nth-child(1) { animation-delay: 0.1s; }
+          .swal2-checkbox-label:nth-child(2) { animation-delay: 0.2s; }
+          .swal2-checkbox-label:nth-child(3) { animation-delay: 0.3s; }
+
+          .swal2-checkbox-label input[type="checkbox"] {
+            margin-top: 5px;
+            width: 18px;
+            height: 18px;
+            accent-color: #d00000;
+            cursor: pointer;
+          }
+
+          .swal2-checkbox-label span::after {
+            content: '';
+            margin-left: 8px;
+            color: #d00000;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+          }
+
+          .swal2-checkbox-label input[type="checkbox"]:checked + span::after {
+            content: '🏃‍♂️';
+          }
+
+          @keyframes fadeSlide {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+
+        <div class="swal2-checkbox-group">
+          <label class="swal2-checkbox-label">
+            <input type="checkbox" id="c1">
+            <span>Beli <strong>10</strong> tiket gratis <strong>1</strong> tiket</span>
+          </label>
+          <label class="swal2-checkbox-label">
+            <input type="checkbox" id="c2">
+            <span>10 orang yang di daftarkan wajib memilih <strong>kategori</strong> dan <strong>asuransi</strong> yang sama termasuk tiket gratisnya.</span>
+          </label>
+          <label class="swal2-checkbox-label">
+            <input type="checkbox" id="c3">
+            <span>Harga per tiket menggunakan <strong>harga normal</strong></span>
+          </label>
+        </div>
+      `,
+      icon: 'info',
+      confirmButtonText: 'Setuju',
+      confirmButtonColor: '#d00000',
+      cancelButtonText: 'Tidak Setuju',
+      showCancelButton: true,
+      focusConfirm: true,
+      preConfirm: () => {
+        const c1 = document.getElementById('c1').checked;
+        const c2 = document.getElementById('c2').checked;
+        const c3 = document.getElementById('c3').checked;
+
+        if (!c1 || !c2 || !c3) {
+          Swal.showValidationMessage('Harap centang semua syarat terlebih dahulu.');
+          return false;
+        }
+
+        window.location.href = "https://krrun.titipbayar.id/pendaftaran/komunitas";
+      }
+    });
+  }
+
+  
+

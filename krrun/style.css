@@ -1121,8 +1121,9 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   text-decoration: none;
+  list-style: none;;
 }
-.price-community {
+.price-community, button.price-community {
   /* margin-top: 10px; */
   position: relative;
   padding: 10px 30px;
@@ -1137,6 +1138,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   letter-spacing: 1px;
   transition: all 0.4s ease;
   text-decoration: none;
+  
   display: inline-block;
   z-index: 0;
 }
@@ -1155,6 +1157,10 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   transition: transform 0.4s ease;
   border-radius: 40px;
 }
+.swal2-popup {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 
 .category:hover .price-community::before {
   transform: translateX(-50%) scaleX(1);
