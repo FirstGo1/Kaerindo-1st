@@ -254,10 +254,7 @@ setInterval(countdown, 1000);
             <input type="checkbox" id="c2">
             <span>10 orang yang di daftarkan wajib memilih <strong>kategori</strong> dan <strong>asuransi</strong> yang sama termasuk tiket gratisnya.</span>
           </label>
-          <label class="swal2-checkbox-label">
-            <input type="checkbox" id="c3">
-            <span>Harga per tiket menggunakan <strong>harga normal</strong></span>
-          </label>
+
         </div>
       `,
       icon: 'info',
@@ -269,9 +266,8 @@ setInterval(countdown, 1000);
       preConfirm: () => {
         const c1 = document.getElementById('c1').checked;
         const c2 = document.getElementById('c2').checked;
-        const c3 = document.getElementById('c3').checked;
 
-        if (!c1 || !c2 || !c3) {
+        if (!c1 || !c2) {
           Swal.showValidationMessage('Harap centang semua syarat terlebih dahulu.');
           return false;
         }
