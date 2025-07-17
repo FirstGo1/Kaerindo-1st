@@ -1048,6 +1048,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   /* color: #e91e63; */
   /* color: #e46e63; */
   color: #d00000;
+  transition: 0.3s ease;
 }
 
 .category p {
@@ -1107,7 +1108,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   transition: 0.3s ease-in-out;
 }
 
-.price-tag {
+.price-tag{
   margin-top: 24px;
   padding: 12px 32px;
   font-size: 35px;
@@ -1119,8 +1120,27 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   margin-right: auto;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  text-decoration: none;
+}
+.price-community {
+  color: white;
+  background-color: #d00000;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 
+
+
+
+.category-wrapper-komunitas {
+  max-width: 700px;
+  margin: 40px auto 80px;
+}
 .category:hover {
   background: #d00000;
   transform: translateY(-10px);
@@ -1129,7 +1149,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .category:hover h3 {
   color: #fff;
     transform: translateY(-10px);
-    transition: 0.3s ease;
+    
 }
 .category:hover p {
   color: #fff;
@@ -1155,14 +1175,28 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .category:hover .price-tag {
   color: #fff;
   transform: translateY(-10px);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
+.category:hover .price-community{
+  color: #000;
+  transition: 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(208, 0, 0, 0.3);
+}
+
+
+
 
 .cta-container {
   text-align: center;
   margin-top: 80px;
 }
-
+.subinfo {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 .valorant-button {
   position: relative;
   padding: 16px 40px;
@@ -1963,6 +1997,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   .category-grid {
     grid-template-columns: 1fr;
   }
+
   .faq-left {
     text-align: center;
   }
@@ -2172,11 +2207,15 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   .swiper-tampilan-depan {
     height: 80vh;
   }
-  .price-tag {
+  .price-tag{
     font-size: 26px;
     padding: 0px 20px;
     border-radius: 24px;
     margin: 0 auto;
+  }
+  .price-community{
+    font-size: 14px;
+    padding: 10px 20px;
   }
   .image-section img {
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
