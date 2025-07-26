@@ -1774,6 +1774,12 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   .marathon-categories {
     width: 100%;
   }
+  .category-wrapper-komunitas{
+    max-width: 100%;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
   .category p {
     font-size: 20px;
   }
@@ -1816,6 +1822,19 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   }
   .faq-container{
     width: 100%;;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    margin-bottom: 20px;
   }
 }
 
@@ -2100,6 +2119,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   }
   .card p {
     text-align: justify;
+    font-size: 13px;
   }
   .footer-container {
     flex-direction: column;
