@@ -941,10 +941,10 @@ nav a.label-merah, .nav-bawah a.label-merah  {
     25% 50%,
     0% 0%
   );
-}
+/* }
 .image-section img:hover{
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
 }
 .image-section img:active {
   cursor: pointer;
@@ -1222,19 +1222,39 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 
 
 
-.cta-container {
-  text-align: center;
+
+
+
+/* v2------------- */
+/* Grid wrapper */
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
   margin-top: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.subinfo {
+
+/* Box tiap item */
+.cta-item {
   text-align: center;
+  padding: 20px;
+}
+
+/* Deskripsi kecil */
+.subinfo {
   color: #333;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
 }
+
+/* Tombol */
 .valorant-button {
   position: relative;
-  padding: 16px 40px;
+  padding: 14px 36px;
   background: transparent;
   border: 2px solid #d00000;
   color: #d00000;
@@ -1288,6 +1308,8 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .team-btn {
   padding: 10px 30px;
 }
+
+
 
 
 /* ------------ Peraturan --------- */

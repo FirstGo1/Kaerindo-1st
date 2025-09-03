@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
 //  Swiper for  tampilan depan
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
-  effect: 'fade',
+  // effect: 'fade',
   autoplay: {
     delay: 5000,
   },
