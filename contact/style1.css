@@ -303,6 +303,7 @@ a.en:before {
   margin-bottom: 15px;
 }
 
+
 .contact-left h3 {
   font-size: 1.6rem;
   margin-bottom: 8px;
@@ -342,18 +343,21 @@ a.en:before {
   transition: 0.3s ease;
 }
 .contact-card:hover i.wa {
-  color: #25D366;
+  color: #fff;
 }
 .contact-card:hover i.ig {
-  color: #E4405F;
+  color: #fff;
 }
 .contact-card:hover i.yt {
   color: #fff;
 }
 .contact-card:hover i.web {
-  color: #006eff;
+  color: #fff;
 }
 .contact-card:hover i.run {
+  color: #fff;
+}
+.contact-card:hover i.mail {
   color: #fff;
 }
 .contact-card h3 {
