@@ -31,9 +31,13 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=3.7" />
+    <link rel="stylesheet" href="style.css?v=3.8" />
   </head>
   <body>
+
+    <button id="scrollTopBtn" class="btn-secondary">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- <div id="preloader">
     
 
@@ -68,10 +72,10 @@
           ></a>
         </li>
         <li><a class="nav-beranda" href="/index.html">Beranda</a></li>
-        <li><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
+        <li><a class="nav-tentang" href="#info-krrun">Informasi</a></li>
         <li><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
-        <li><a class="nav-tim" href="/team/index.html">Tim</a></li>
         <li><a class="nav-registrasi label-merah" href="/krrun/index.html">KR RUN</a></li>
+        <li><a class="nav-regis-colom" href="#categories">Registrasi</a></li>
         <li><a class="nav-hubungi" href="/contact/index.html">Hubungi</a></li>
         <div class="language">
           <div class="language-selected">ID</div>
@@ -88,10 +92,10 @@
           <a href="#"><img src="/asset/img/1111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-        <li class="hideOnMobile"><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="#info-krrun">Informasi</a></li>
         <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
-        <li class="hideOnMobile"><a class="nav-tim" href="/team/index.html">Tim</a></li>
         <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/krrun/index.html">KR RUN</a></li>
+        <li class="hideOnMobile"><a class="nav-regis-colom" href="#categories">Registrasi</a></li>
         <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/index.html">Hubungi</a></li>
 
         <div class="language hide">
@@ -136,10 +140,11 @@
           ></a>
         </li>
         <li><a href="/index.html">Beranda</a></li>
-        <li><a href="/about/index.html">Tentang</a></li>
+        <li><a href="#info-krrun">Informasi</a></li>
         <li><a href="/gallery/index.html">Galeri</a></li>
-        <li><a href="/team/index.html">Tim</a></li>
+        
         <li><a class="label-merah" href="/krrun/index.html">KR RUN</a></li>
+        <li><a href="#categories">Registrasi</a></li>
         <li><a href="/contact/index.html">Hubungi</a></li>
       </ul>
 
@@ -149,10 +154,10 @@
           <a href="#"><img src="/asset/img/111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-        <li class="hideOnMobile"><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
+        <li class="hideOnMobile"><a class="nav-tentang" href="#info-krrun">Informasi</a></li>
         <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
-        <li class="hideOnMobile"><a class="nav-tim" href="/team/index.html">Tim</a></li>
         <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/krrun/index.html">KR RUN</a></li>
+        <li class="hideOnMobile"><a class="nav-regis-colom" href="#categories">Registrasi</a></li>
         <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/index.html">Hubungi</a></li>
         <div class="language">
           <div class="language-selected">ID</div>
@@ -388,6 +393,77 @@
     </div>
   </div>
 
+
+  <!-- ------- RACE PACK SECTION -----  -->
+  <section id="racepack">
+    <h2>Race Pack Collection</h2>
+
+    <!-- Swiper khusus Racepack -->
+    <div class="swiper racepackSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/asset/img3/Jersey.png" alt="Jersey"/>
+          <p>Official Jersey</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="/asset/img3/Medal1.png" alt="Medal"/>
+          <p>Finisher Medal 5K</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="/asset/img3/Medal2.png" alt="Medal"/>
+          <p>Finisher Medal 10K</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="/asset/img3/Benefit.png" alt="Benefit"/>
+          <p>Benefit</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="/asset/img3/tas.png" alt="Bag"/>
+          <p>Bag</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="/asset/img3/Sertifikat.png" alt="Certificate"/>
+          <p>Certificate</p>
+        </div>
+      </div>
+
+      <!-- Controls khusus racepack -->
+      <div class="swiper-pagination racepack-pagination"></div>
+      <div class="swiper-button-prev racepack-prev"></div>
+      <div class="swiper-button-next racepack-next"></div>
+    </div>
+
+    <!-- Button -->
+    <button id="openModal">
+      <i class="fa-solid fa-circle-info"></i> Informasi Racepack
+    </button>
+
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="racepackModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Informasi Racepack</h3>
+  
+      <div class="modal-info">
+        <strong>Tanggal</strong>
+        <p>27 September 2025</p>
+  
+        <strong>Waktu</strong>
+        <p>10:00 - 19:00 WIB</p>
+  
+        <strong>Lokasi</strong>
+        <p>Ruangan Aerobic, Loman Hotel</p>
+      </div>
+  
+      <p><strong>Syarat:</strong></p>
+      <ul>
+        <li>Membawa KTP</li>
+        <li>Jika diwakilkan wajib membawa surat kuasa</li>
+      </ul>
+    </div>
+  </div>
 
 
 
@@ -965,7 +1041,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=3.0"></script>
+    <script src="javascript.js?v=3.1"></script>
     <script src="language.js?v=2.0"></script>
   </body>
 </html>

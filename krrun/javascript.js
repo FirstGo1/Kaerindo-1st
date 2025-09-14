@@ -1,3 +1,23 @@
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+
+
+
 function showSidebar() {
   const sidebar = document.querySelector(".sidebar");
   (sidebar.style.display = "flex"), sidebar.classList.add("show");
@@ -17,6 +37,8 @@ window.addEventListener("scroll", function () {
     navBawah.classList.remove("show");
   }
 });
+
+
 
 
 
@@ -80,6 +102,30 @@ window.addEventListener('scroll', checkScrollFadeDirection);
 window.addEventListener('load', checkScrollFadeDirection);
 
 
+// -------racepack ------------ 
+var racepackSwiper = new Swiper(".racepackSwiper", {
+  slidesPerView: 1,
+  loop: true,
+  speed: 800, // lebih lambat biar dramatis
+  effect: "slide",
+  pagination: {
+    el: ".racepack-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".racepack-next",
+    prevEl: ".racepack-prev",
+  },
+});
+
+// Modal setup
+const modal = document.getElementById("racepackModal");
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+
+openModal.onclick = () => modal.style.display = "flex";
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = (e) => { if(e.target === modal){ modal.style.display = "none"; } };
 
 // ----------------- faq---------------
 
@@ -142,38 +188,38 @@ const countdown = () => {
 setInterval(countdown, 1000);
 
 
-
+// --------Loader / preloader Before open the page ----
 
   // Tambah class 'loading' agar halaman tidak scroll
-  window.addEventListener('load', () => {
-    const leftDoor = document.querySelector('.left-door');
-    const rightDoor = document.querySelector('.right-door');
-    const preloader = document.getElementById('preloader');
-    const logo = document.querySelector('.logo-center');
+  // window.addEventListener('load', () => {
+  //   const leftDoor = document.querySelector('.left-door');
+  //   const rightDoor = document.querySelector('.right-door');
+  //   const preloader = document.getElementById('preloader');
+  //   const logo = document.querySelector('.logo-center');
   
-    setTimeout(() => {
-      // ✨ Fade out logo dulu
-      logo.classList.add('fade-out');
+  //   setTimeout(() => {
+  //     // ✨ Fade out logo dulu
+  //     logo.classList.add('fade-out');
   
-      // 🕐 Delay sedikit sebelum buka pintu
-      setTimeout(() => {
-        leftDoor.classList.add('open-left');
-        rightDoor.classList.add('open-right');
+  //     // 🕐 Delay sedikit sebelum buka pintu
+  //     setTimeout(() => {
+  //       leftDoor.classList.add('open-left');
+  //       rightDoor.classList.add('open-right');
   
-        // ⏳ Hapus preloader setelah pintu buka
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          preloader.style.transition = 'opacity 0.5s ease';
-          document.body.classList.remove('loading');
+  //       // ⏳ Hapus preloader setelah pintu buka
+  //       setTimeout(() => {
+  //         preloader.style.opacity = '0';
+  //         preloader.style.transition = 'opacity 0.5s ease';
+  //         document.body.classList.remove('loading');
   
-          setTimeout(() => {
-            preloader.remove();
-          }, 500);
-        }, 1000);
+  //         setTimeout(() => {
+  //           preloader.remove();
+  //         }, 500);
+  //       }, 1000);
   
-      }, 300); // Waktu logo fade out duluan
-    }, 1800);
-  });
+  //     }, 300); // Waktu logo fade out duluan
+  //   }, 1800);
+  // });
 
 
 

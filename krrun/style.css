@@ -24,6 +24,64 @@ h1 {
   font-weight: 600;
   font-family: "normal", sans-serif;
 }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* muncul saat aktif */
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-secondary {
+  position: relative;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  background: transparent; /* beda dengan primary */
+  color: #c00;
+  border: none;
+  cursor: pointer;
+
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 2px #c00; /* outline merah */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Hover efek */
+.btn-secondary:hover {
+  background: rgba(200,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 2px #e22, 0 4px 10px rgba(200,0,0,0.4);
+}
+
+/* Active */
+.btn-secondary:active {
+  transform: translateY(1px) scale(0.98);
+  background: rgba(200,0,0,0.2);
+}
+
+/* Ikon */
+.btn-secondary i {
+  font-size: 18px;
+  color: #c00;
+}
 
 /* --- Preloader Fullscreen --- */
 
@@ -1310,6 +1368,250 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 
+/* -------Race Pack SEction -----  */
+#racepack {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+#racepack h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  margin: 50px auto;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 70%;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: #9999993b solid 1px;
+}
+
+/* === Swiper khusus Racepack === */
+.racepackSwiper {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+.racepackSwiper .swiper-slide {
+  text-align: center;
+}
+.racepackSwiper .swiper-slide img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  object-fit: contain;
+  /* height: 500px; */
+  /* background: #fff;         biar ada background putih kalau pakai contain */
+  /* padding: 10px; */
+}
+.racepackSwiper .swiper-slide p {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Navigasi Swiper Racepack */
+
+.racepack-prev,
+.racepack-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.racepack-prev:hover,
+.racepack-next:hover {
+  background: #c00;
+  color: #fff;
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 0 12px rgba(200,0,0,0.6);
+}
+/* Dekatkan posisi dengan gambar */
+.racepack-prev {
+  left: 80px;   /* default -30px, digeser masuk */
+}
+
+.racepack-next {
+  right: 80px;  /* default -30px, digeser masuk */
+}
+
+/* === Pagination Racepack === */
+.racepack-pagination {
+  margin-top: 15px;
+  position: relative;
+}
+
+.racepack-pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: #ddd;
+  opacity: 1;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.8s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.racepack-pagination .swiper-pagination-bullet:hover {
+  background: #bbb;
+  transform: scale(1.2);
+}
+
+.racepack-pagination .swiper-pagination-bullet-active {
+  background: #c00;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(200,0,0,0.6);
+}
+
+
+/* === Button === */
+#openModal {
+  position: relative;
+  margin-top: 20px;
+  padding: 14px 42px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Orbitron", sans-serif; /* vibe futuristik */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background: #c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  /* potong sisi kiri & kanan diagonal */
+  
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Efek hover */
+#openModal:hover {
+  background: #e22;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(200,0,0,0.6);
+}
+
+/* Efek active (klik) */
+#openModal:active {
+  transform: translateY(1px) scale(0.98);
+  background: #a00;
+}
+
+/* Garis tepi ala valorant */
+#openModal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  clip-path: inherit;
+  transition: opacity 0.3s;
+  opacity: 0.6;
+}
+#openModal:hover::after {
+  opacity: 1;
+}
+
+#openModal i {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* === Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background: linear-gradient(145deg, #fff, #f9f9f9);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center; /* isi rata tengah */
+  position: relative;
+  animation: slideUp 0.4s ease, fadeIn 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #c00;
+  border-bottom: 2px solid #c00;
+  padding-bottom: 8px;
+}
+
+/* Grid sejajar untuk Tanggal, Waktu, Lokasi */
+.modal-info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 8px 20px;
+  justify-content: center;
+  margin: 15px 0;
+  text-align: left;
+  max-width: 360px;
+  margin-inline: auto;
+}
+.modal-info strong {
+  color: #c00;
+  font-weight: 600;
+}
+.modal-info p {
+  margin: 0;
+  color: #333;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  text-align: left;
+}
+.modal-content li::marker {
+  color: #c00;
+}
+
+/* Tombol Close */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #222;
+  transition: transform 0.2s, color 0.2s;
+}
+.close:hover {
+  color: #c00;
+  transform: rotate(90deg);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); }
+  to { transform: translateY(0); }
+}
 
 
 /* ------------ Peraturan --------- */
@@ -2156,10 +2458,30 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   .footer-col {
     margin-bottom: 20px;
   }
+  #racepack h2 {
+    width: 100%;
+    font-size: 24px;
+  }
+  .racepack-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  #scrollTopBtn {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+  #openModal {
+    font-size: 16px;
+  }
 
 }
 
 @media (max-width: 400px) {
+  #openModal {
+    font-size: 13px;
+  }
   .sidebar {
     width: 100%;
     margin: 0;
