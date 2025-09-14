@@ -31,7 +31,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=3.8" />
+    <link rel="stylesheet" href="style.css?v=3.9" />
   </head>
   <body>
 
@@ -92,12 +92,23 @@
           <a href="#"><img src="/asset/img/1111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-        <li class="hideOnMobile"><a class="nav-tentang" href="#info-krrun">Informasi</a></li>
+      
+        <!-- Dropdown Informasi -->
+        <li class="hideOnMobile dropdown">
+          <a class="nav-tentang" href="#">Informasi ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#info-krrun">KR RUN</a></li>
+            <li><a href="#racepack">Race Pack</a></li>
+            <li><a href="#rules-1">Peraturan</a></li>
+            <li><a href="#faq-section">FAQ</a></li>
+          </ul>
+        </li>
+      
         <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
         <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/krrun/index.html">KR RUN</a></li>
         <li class="hideOnMobile"><a class="nav-regis-colom" href="#categories">Registrasi</a></li>
         <li class="hideOnMobile"><a class="nav-hubungi" href="/contact/index.html">Hubungi</a></li>
-
+      
         <div class="language hide">
           <div class="language-selected">ID</div>
           <ul>
@@ -105,19 +116,13 @@
             <li><a href="#" class="en">EN</a></li>
           </ul>
         </div>
+      
         <li class="menu-button" onclick="showSidebar()">
-          <a href="#"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="26px"
-              viewBox="0 -960 960 960"
-              width="26px"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              /></svg
-          ></a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </a>
         </li>
       </ul>
     </nav>
@@ -154,7 +159,15 @@
           <a href="#"><img src="/asset/img/111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda" href="/index.html">Beranda</a></li>
-        <li class="hideOnMobile"><a class="nav-tentang" href="#info-krrun">Informasi</a></li>
+        <li class="hideOnMobile dropdown">
+          <a class="nav-tentang" href="#">Informasi ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#info-krrun">KR RUN</a></li>
+            <li><a href="#racepack">Race Pack</a></li>
+            <li><a href="#rules-1">Peraturan</a></li>
+            <li><a href="#faq-section">FAQ</a></li>
+          </ul>
+        </li>
         <li class="hideOnMobile"><a class="nav-galeri" href="/gallery/index.html">Galeri</a></li>
         <li class="hideOnMobile"><a class="nav-registrasi label-merah" href="/krrun/index.html">KR RUN</a></li>
         <li class="hideOnMobile"><a class="nav-regis-colom" href="#categories">Registrasi</a></li>
@@ -433,6 +446,18 @@
       <div class="swiper-button-next racepack-next scroll-fade-right"></div>
     </div>
 
+    <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-content">
+    <button class="zoom-btn" id="zoomIn">+</button>
+    <button class="zoom-btn" id="zoomOut">-</button>
+    <img id="lightbox-img" src="" alt="Preview" />
+    <button class="nav-btn prev" id="prevImg">&#10094;</button>
+    <button class="nav-btn next" id="nextImg">&#10095;</button>
+  </div>
+</div>
+
     <!-- Button -->
     <button id="openModal" class="scroll-fade-left">
       <i class="fa-solid fa-circle-info"></i> Informasi Racepack
@@ -469,7 +494,7 @@
 
 
 
-  <div class="const-4">
+  <div class="const-4" id="rules-1">
     <h1 class="rules-lang scroll-fade-up">Peraturan</h1>
     <div class="rule scroll-fade-up">
         <h3 class="rule-title" onclick="toggleDescription('desc1')">A. Istilah yang digunakan</h3>
@@ -860,7 +885,7 @@
 
 
 
-  <section class="faq-wrapper">
+  <section class="faq-wrapper" id="faq-section">
   <div class="faq-container">
     <!-- Kiri: Judul -->
     <div class="faq-left">
@@ -1041,7 +1066,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=3.1"></script>
+    <script src="javascript.js?v=3.2"></script>
     <script src="language.js?v=2.0"></script>
   </body>
 </html>

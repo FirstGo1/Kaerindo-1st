@@ -46,7 +46,8 @@ window.addEventListener("scroll", function () {
 //  Swiper for  tampilan depan
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
-  // effect: 'fade',
+  effect: 'slide',
+  speed: 1200,
   autoplay: {
     delay: 5000,
   },
@@ -325,3 +326,61 @@ setInterval(countdown, 1000);
 
   
 
+// -------------- zoom in out racepack swiper  -------
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
+const zoomInBtn = document.getElementById("zoomIn");
+const zoomOutBtn = document.getElementById("zoomOut");
+const prevBtn = document.getElementById("prevImg");
+const nextBtn = document.getElementById("nextImg");
+
+let currentIndex = 0;
+let scale = 1;
+
+// Ambil semua gambar swiper
+const racepackImages = document.querySelectorAll(".racepackSwiper .swiper-slide img");
+
+// Open lightbox
+racepackImages.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    showImage();
+    lightbox.style.display = "flex";
+  });
+});
+
+function showImage() {
+  scale = 1;
+  lightboxImg.style.transform = "scale(1)";
+  lightboxImg.src = racepackImages[currentIndex].src;
+}
+
+// Close lightbox
+closeBtn.addEventListener("click", () => lightbox.style.display = "none");
+lightbox.addEventListener("click", e => {
+  if (e.target === lightbox) lightbox.style.display = "none";
+});
+
+// Zoom
+zoomInBtn.addEventListener("click", () => {
+  scale += 0.2;
+  lightboxImg.style.transform = `scale(${scale})`;
+});
+zoomOutBtn.addEventListener("click", () => {
+  if (scale > 0.4) {
+    scale -= 0.2;
+    lightboxImg.style.transform = `scale(${scale})`;
+  }
+});
+
+// Navigation
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + racepackImages.length) % racepackImages.length;
+  showImage();
+});
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % racepackImages.length;
+  showImage();
+});

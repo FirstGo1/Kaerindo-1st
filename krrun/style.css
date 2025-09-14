@@ -313,6 +313,7 @@ nav li:first-child {
   margin-right: auto;
 }
 
+
 .sidebar {
   position: fixed;
   right: 0;
@@ -331,6 +332,7 @@ nav li:first-child {
   padding: 0 0 0 20px;
 }
 .sidebar.show {
+  position: fixed;
   display: flex;
   right: 0;
 }
@@ -461,6 +463,47 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   color: #000000;
 }
 
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu awalnya hidden */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+/* Muncul saat hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling link dalam dropdown */
+.dropdown-menu li a {
+  padding: 8px 16px;
+  padding-left: 30px;
+  display: block;
+  color: #333;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  /* border-bottom: #9999993b solid 1px; */
+}
+
+.dropdown-menu li a:hover {
+  color: #c00;
+  padding-left: 40px; /* sedikit geser pas hover */
+}
 /* tampilan NAV */
 
 /* TAMPILAN UTAMA SWIPER */
@@ -1611,6 +1654,91 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 @keyframes slideUp {
   from { transform: translateY(40px); }
   to { transform: translateY(0); }
+}
+
+/* Lightbox Base */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  position: relative;
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  transition: transform 0.3s ease;
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Zoom buttons */
+.zoom-btn {
+  position: absolute;
+  top: 20px;
+  background: #c00;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.zoom-btn:hover { background: #a00; }
+
+#zoomIn { left: 20px; }
+#zoomOut { left: 70px; }
+
+/* Navigation */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: #c00;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.nav-btn:hover {
+  background: #c00;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: -60px; }
+.next { right: -60px; }
+
+@media (max-width: 768px) {
+  .prev { left: 10px; }
+  .next { right: 10px; }
 }
 
 
