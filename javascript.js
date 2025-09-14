@@ -140,7 +140,7 @@ var swiper = new Swiper(".rows .swiper", {
 const categories = document.querySelectorAll('.category');
 
 function checkCategories() {
-  const triggerBottom = window.innerHeight * 0.85;
+  const triggerBottom = window.innerHeight * 0.95;
 
   categories.forEach(category => {
     const boxTop = category.getBoundingClientRect().top;

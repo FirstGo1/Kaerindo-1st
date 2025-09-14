@@ -332,7 +332,6 @@ nav li:first-child {
   padding: 0 0 0 20px;
 }
 .sidebar.show {
-  position: fixed;
   display: flex;
   right: 0;
 }
@@ -2382,6 +2381,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 @media (max-width: 800px) {
+ 
   .hideOnMobile {
     display: none;
   }
