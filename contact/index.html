@@ -20,6 +20,11 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+      <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
     <!-- Cloudflare -->
     <link
       rel="stylesheet"
@@ -29,18 +34,8 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="style1.css?v=1.5" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "McH9NmxG3zdc2KN7L",
-        });
-      })();
-    </script>
+    <link rel="stylesheet" href="style1.css?v=1.6" />
+ 
   </head>
   <body>
     <section class="showcase">
@@ -207,8 +202,56 @@
         </ul>
       </nav>
 
-      <div class="container">
+
+      <section id="hubungi-kami">
         <h2>Hubungi Kami</h2>
+        <div class="contact-container">
+      
+          <!-- KIRI -->
+          <div class="contact-left">
+            <img src="/asset/img/logo.png" alt="Customer Service" />
+            <h3>Kaerindo Jaya Komunikasi</h3>
+            <p>Siap membantu Anda</p>
+          </div>
+      
+          <!-- KANAN -->
+          <div class="contact-right">
+            <div class="contact-card">
+              <i class="fab fa-whatsapp wa"></i>
+              <h3>WhatsApp</h3>
+              <p>+62 819-9925-5264</p>
+            </div>
+      
+            <div class="contact-card">
+              <i class="fab fa-instagram ig"></i>
+              <h3>Instagram</h3>
+              <p>kaerindojaya</p>
+            </div>
+      
+            <div class="contact-card">
+              <i class="fab fa-youtube yt"></i>
+              <h3>YouTube</h3>
+              <p>@Kaerindo</p>
+            </div>
+      
+            <div class="contact-card">
+              <i class="fas fa-globe web"></i>
+              <h3>Website</h3>
+              <p>www.kaerindojaya.com</p>
+            </div>
+
+            <div class="contact-card">
+            <i class="fa-solid fa-person-running run"></i>
+              <h3>KR RUN 2025</h3>
+              <p>28 September 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <div class="container">
         <section class="location">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.0244816749138!2d110.36655411082366!3d-7.785487991316547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5830060a803f%3A0x74eb6009532809a!2sHarian%20Kedaulatan%20Rakyat!5e0!3m2!1sid!2sid!4v1737226552862!5m2!1sid!2sid"
@@ -220,87 +263,60 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </section>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input id="name_1" type="text" name="Name" required="required" />
-              <span class="text depan">Nama Depan</span>
-              <span class="line"></span>
+
+        <form id="contactForm">
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input id="name_1" type="text" name="Name" required="required" />
+                <span class="text depan">Nama</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input id="email" type="text" name="Email" required="required" />
+                <span class="text email">Email</span>
+                <span class="line"></span>
+              </div>
             </div>
           </div>
-          <div class="col">
-            <div class="inputBox">
+        
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox textarea">
+                <textarea name="Message" id="message" required="required"></textarea>
+                <span class="text pesan">Tinggalkan Pesanmu disini ...</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Honeypot (anti spam bot) -->
+          <div class="row100" style="display:none;">
+            <input type="text" name="hidden_trap" id="honeypot" />
+          </div>
+        
+          <div class="row100">
+            <div class="col submit">
               <input
-                id="name_2"
-                type="text"
-                name="lastName"
-                required="required"
+                class="kirim valorant-btn-neon"
+                type="submit"
+                value="Send"
               />
-              <span class="text belakang">Nama Belakang</span>
-              <span class="line"></span>
             </div>
           </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input id="email" type="text" name="Email" required="required" />
-              <span class="text email">Email</span>
-              <span class="line"></span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="inputBox">
-              <input
-                id="phone"
-                type="number"
-                name="Phone"
-                required="required"
-              />
-              <span class="text no-hp">Nomor Hp</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox textarea">
-              <textarea
-                name="Message"
-                id="message"
-                required="required"
-              ></textarea>
-              <span class="text pesan">Tinggalkan Pesanmu disini ...</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row100">
-          <input
-            type="text"
-            name="hidden_trap"
-            id="honeypot"
-            style="display: none"
-          />
-        </div>
-        <div class="row100">
-          <div class="col submit">
-            <input
-              class="kirim"
-              type="submit"
-              value="Kirim"
-              name=""
-              id=""
-              onclick="sendMail()"
-            />
-          </div>
-        </div>
+          <p class="muted">* Setelah mengirim, tunggu 1 menit sebelum mengirim lagi.</p>
+        </form>
       </div>
     </section>
 
     <section class="footer">
       <p class="ending-page">&copy; 2025 Kaerindo. All Rights Reserved.</p>
     </section>
+
+
+    
 
     <!-- Feather Icons -->
     <script>
@@ -315,8 +331,8 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="script1.js"></script>
+
+    <script src="script1.js?v=1.1"></script>
     <script src="langscript.js"></script>
   </body>
 </html>

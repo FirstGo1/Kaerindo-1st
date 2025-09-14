@@ -103,7 +103,7 @@ nav a.label-merah, .nav-bawah a.label-merah{
   height: 100vh;
   width: 350px;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.377);
+  background-color: #ffffffd5;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
@@ -254,11 +254,120 @@ a.en:before {
   margin: auto;
   padding: 80px 0;
   z-index: -1; */
+  margin-bottom: 50px;
 }
 .location iframe {
   width: 100%;
   border-radius: 10px;
 }
+
+/* --------contact us v2 ------  */
+#hubungi-kami {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+#hubungi-kami h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+/* BAGIAN KIRI */
+.contact-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.contact-left img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 5px solid #ff0000;
+  box-shadow: 0 8px 20px rgba(255,70,85,0.4);
+  margin-bottom: 15px;
+}
+
+.contact-left h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* BAGIAN KANAN */
+.contact-right {
+  flex: 1;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.contact-card {
+  border-radius: 15px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  /* background: rgba(255, 255, 255, 0.15); */
+}
+
+.contact-card i {
+  font-size: 3.5rem;
+  color: #ff0000;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+.contact-card:hover i.wa {
+  color: #25D366;
+}
+.contact-card:hover i.ig {
+  color: #E4405F;
+}
+.contact-card:hover i.yt {
+  color: #fff;
+}
+.contact-card:hover i.web {
+  color: #006eff;
+}
+.contact-card:hover i.run {
+  color: #fff;
+}
+.contact-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+
 
 /* ---------------- Contact Us -------------  */
 .container {
@@ -363,28 +472,45 @@ a.en:before {
   height: 100%;
   background: #fff;
 }
-input[type="submit"] {
-  border: none;
-  padding: 10px 40px;
+
+
+.valorant-btn-neon {
+  position: relative;
+  padding: 14px 40px;
+  background: #0f1923;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 2px solid #fff;
   cursor: pointer;
-  outline: none;
-  background: #ff3131;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  letter-spacing: 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+.valorant-btn-neon:hover {
+  background: #fff;
   color: #000;
-  font-size: 18px;
-  border-radius: 5px;
-  color: #fcf5e5;
-  transition: 0.3s;
-  
+  text-shadow: 0 0 8px #fff, 0 0 12px #ff4655;
+  box-shadow: 0 0 18px rgba(255,70,85,0.9);
+  transform: translateY(-3px);
 }
-input[type="submit"]:hover {
-  background: #b42711;
-  color: #fcf5e5;
-}
+
+
+
 #honeypot {
   visibility: hidden;
   position: absolute;
   left: -9999px;
 }
+
+
+
+.muted{
+  font-size:13px;
+  color:#bdbdbd;
+  margin-top:6px;}
 
 /* --------------- footer -------  */
 
@@ -475,9 +601,36 @@ input[type="submit"]:hover {
     width: 100%;
     padding: 0;
   }
+  #hubungi-kami {
+    width: 100%;
+  }
+
+  .contact-left img {
+    width: 300px;
+    height: 300px;
+  }
+  .muted {
+    font-size: 11px;
+  }
+  .contact-card {
+    padding: 15px 10px;
+  }
+  .contact-card i {
+    font-size: 3rem;
+  }
+  .valorant-btn-neon {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 400px) {
+  #hubungi-kami h2 {
+    font-size: 2rem;
+  }
+  .contact-left h3 {
+    font-size: 1.4rem;
+  }
   .sidebar {
     width: 100%;
   }
