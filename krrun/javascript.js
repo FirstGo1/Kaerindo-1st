@@ -85,7 +85,7 @@ document.querySelectorAll('.rule-title').forEach(title => {
 
 // ------------- transisi scroll -------
 function checkScrollFadeDirection() {
-  const triggerBottom = window.innerHeight * 0.85;
+  const triggerBottom = window.innerHeight * 0.95;
   const elements = document.querySelectorAll(
     '.scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right'
   );
