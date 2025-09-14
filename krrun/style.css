@@ -1445,9 +1445,10 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   object-fit: contain;
-  /* height: 500px; */
-  /* background: #fff;         biar ada background putih kalau pakai contain */
-  /* padding: 10px; */
+  cursor: pointer;
+}
+.racepackSwiper .swiper-slide:active img {
+  cursor: grabbing;
 }
 .racepackSwiper .swiper-slide p {
   margin-top: 10px;
