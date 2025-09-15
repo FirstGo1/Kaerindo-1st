@@ -556,24 +556,60 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #c7c7c7;
-  transition: 0.3s;
+  /* color: #c7c7c7;
+  transition: 0.3s; */
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
+.swiper-button-prev {
+  left: 20px;
+}
+.swiper-button-next {
+  right: 20px;
+}
+
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #f80000;
-  opacity: 0.8;
+  color: #ff0000;
+  transform: scale(1.2) rotate(5deg);
 }
+
 
 .swiper-tampilan-depan .swiper-pagination {
   padding: 10px 0;
+  /* margin-top: 15px; */
+  position: absolute;
 }
 
-.swiper-tampilan-depan .swiper-pagination * {
-  background: #ffffff;
-  /* padding: 0px 15px; */
+
+.swiper-tampilan-depan .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  opacity: 1;
+  margin: 0 6px !important;
   border-radius: 50%;
-  margin: 0;
+  transition: all 0.8s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.swiper-tampilan-depan .swiper-pagination-bullet:hover {
+  background: #bbb;
+  transform: scale(1.2);
+}
+
+.swiper-tampilan-depan .swiper-pagination-bullet-active {
+  background: #c00;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(200,0,0,0.6);
 }
 
 /* Title halama depan */
@@ -649,7 +685,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   font-size: 1.1rem;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   width: fit-content;
   position: relative;
   isolation: isolate;
@@ -1526,7 +1562,6 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   font-family: "Orbitron", sans-serif; /* vibe futuristik */
   text-transform: uppercase;
   letter-spacing: 2px;
-
   background: #c00;
   color: #fff;
   border: none;
@@ -1622,7 +1657,37 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   margin: 0;
   color: #333;
 }
+.modal-info i {
+  font-size: 25px;
+  color: #ff0000;
+}
 
+.click-here {
+  position: relative;
+  padding: 14px 42px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Orbitron", sans-serif; /* vibe futuristik */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: #c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  /* potong sisi kiri & kanan diagonal */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.click-here:hover {
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+  background: #e22;
+  box-shadow: 0 6px 18px rgba(200,0,0,0.6);
+}
+.click-here:active {
+  background: #a00;
+}
 .modal-content ul {
   padding-left: 20px;
   text-align: left;
@@ -2334,8 +2399,9 @@ nav a.label-merah, .nav-bawah a.label-merah  {
     font-size: 26px;
   }
   div.swiper-slider-content .slider-action {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.4rem 2rem;
+    letter-spacing: 2px;
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -2350,7 +2416,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 
 @media screen and (max-width: 400px) {
   div.swiper-slider-content .slider-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   div.swiper-slider-content .slider-title.kaerindo-judul {
     font-size: 1.5rem;
@@ -2373,7 +2439,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
     font-size: 2rem;
   }
   div.swiper-slider-content .slider-action {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.3rem 2rem;
   }
   .layar-dalam {
@@ -2420,6 +2486,11 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   .sidebar .language {
     margin: 0;
     padding: 0;
+  }
+  .swiper-tampilan-depan .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px !important;
   }
 
   .question h3 {
@@ -2608,9 +2679,6 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 @media (max-width: 400px) {
-  #openModal {
-    font-size: 13px;
-  }
   .sidebar {
     width: 100%;
     margin: 0;
@@ -2714,6 +2782,9 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 }
 
 @media (max-width: 500px) {
+  #openModal {
+    font-size: 12px;
+  }
   .countdown {
     /* flex-direction: column; */
     align-items: center;

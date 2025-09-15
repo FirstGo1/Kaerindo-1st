@@ -272,6 +272,7 @@ a.en:before {
 }
 
 #hubungi-kami h2 {
+  text-shadow: 0 0 8px #fff, 0 0 3px #ff0000;
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: 700;
@@ -481,8 +482,8 @@ a.en:before {
 .valorant-btn-neon {
   position: relative;
   padding: 14px 40px;
-  background: #0f1923;
-  color: #fff;
+  background: #fff;
+  color: #0f1923;
   font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -494,9 +495,9 @@ a.en:before {
 }
 
 .valorant-btn-neon:hover {
-  background: #fff;
-  color: #000;
-  text-shadow: 0 0 8px #fff, 0 0 12px #ff4655;
+  background: #0f1923;
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 12px #047ef8;
   box-shadow: 0 0 18px rgba(255,70,85,0.9);
   transform: translateY(-3px);
 }
@@ -561,6 +562,15 @@ a.en:before {
     margin: 0;
     padding: 0 0 0 10px;
   }
+  .contact-left img {
+    width: 400px;
+    height: 400px;
+  }
+  .contact-container {
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -622,6 +632,10 @@ a.en:before {
   .contact-card i {
     font-size: 3rem;
   }
+  .contact-right {
+    width: 100%;
+    gap: 20px;
+  }
   .valorant-btn-neon {
     font-size: 1rem;
     padding: 10px 30px;
@@ -629,6 +643,9 @@ a.en:before {
 }
 
 @media (max-width: 400px) {
+  #hubungi-kami {
+    width: 100%;
+  }
   #hubungi-kami h2 {
     font-size: 2rem;
   }
@@ -691,6 +708,16 @@ a.en:before {
   }
   .container .row100 .inputBox .line{
     width: 96%;
+  }
+  .contact-right {
+    gap: 15px;
+    min-width: 280px;
+  }
+  .contact-card {
+    padding: 10px 5px;
+  }
+  .contact-card i {
+    font-size: 3rem;
   }
 }
 

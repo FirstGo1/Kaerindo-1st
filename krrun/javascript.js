@@ -59,8 +59,8 @@ let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
 
   pagination: {
     el: ".swiper-pagination",
-    // type: "bullets",
-    dynamicBullets: true,
+    type: "bullets",
+    // dynamicBullets: true,
     clickable: true,
   },
 });
