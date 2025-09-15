@@ -1665,7 +1665,7 @@ nav a.label-merah, .nav-bawah a.label-merah  {
   padding: 14px 42px;
   font-size: 14px;
   font-weight: 800;
-  font-family: "Orbitron", sans-serif; /* vibe futuristik */
+  font-family: "Orbitron", sans-serif; 
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
@@ -1707,6 +1707,76 @@ nav a.label-merah, .nav-bawah a.label-merah  {
 .close:hover {
   color: #c00;
   transform: rotate(90deg);
+}
+
+.swal2-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #222;
+  transition: transform 0.2s, color 0.2s;
+}
+.swal2-close:hover {
+  color: #c00;
+  transform: rotate(90deg);
+}
+
+/* ------swal 2 surat kuasa ------  */
+.swal2-html-container .swal-options {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Style tombol dasar */
+.swal2-html-container .swal-options a {
+  display: inline-block;
+  padding: 14px 42px;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  font-family: "Orbitron", sans-serif; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #ff0000;
+  
+}
+
+/* Tombol khusus */
+.btn-surat {
+  background: #d33; /* merah */
+}
+
+/* .btn-gmaps {
+} */
+
+/* Hover effect */
+.swal2-html-container .swal-options a:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+.swal2-html-container .swal-options a:active {
+  background: #a00;
+}
+
+.swal2-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #c00;
+  border-bottom: 2px solid #c00;
+  padding-bottom: 8px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Animasi */
@@ -2835,7 +2905,12 @@ nav a.label-merah, .nav-bawah a.label-merah  {
    .language-selected ul li {
      font-size: 16px;
    }
- 
+   
+   .swal2-html-container .swal-options a {
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
 }
 
 /* @media (prefers-reduced-motion: no-preference) */

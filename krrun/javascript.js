@@ -128,6 +128,26 @@ openModal.onclick = () => modal.style.display = "flex";
 closeModal.onclick = () => modal.style.display = "none";
 window.onclick = (e) => { if(e.target === modal){ modal.style.display = "none"; } };
 
+function showOptions(e) {
+  e.preventDefault();
+  Swal.fire({
+    title: 'Download',
+    html: `
+      <div class="swal-options">
+        <a href="https://docs.google.com/document/d/1BJoWaM5IwaHOpKiAV5xAXjqaTybOO5YS/edit?tab=t.0" target="_blank" class="btn-surat">Surat Kuasa</a>
+        <a href="https://maps.app.goo.gl/V4Jv5iTBiqr8RALz5" target="_blank" class="btn-gmaps">Google Maps</a>
+      </div>
+    `,
+    showCloseButton: true,
+    showConfirmButton: false,
+    showCancelButton: false,
+  });
+}
+
+
+
+
+
 // ----------------- faq---------------
 
 

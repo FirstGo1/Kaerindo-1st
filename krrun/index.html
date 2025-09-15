@@ -31,7 +31,7 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=4.0" />
+    <link rel="stylesheet" href="style.css?v=4.1" />
   </head>
   <body>
 
@@ -503,7 +503,16 @@
       </ul>
 
       
-      <a href="https://maps.app.goo.gl/V4Jv5iTBiqr8RALz5" class="click-here">Click Here</a>
+      <a href="#" class="click-here" onclick="showOptions(event)">Click Here</a>
+      <div id="optionMenu" style="display:none; margin-top:20px; text-align:center;">
+        <button class="option-btn" onclick="window.open('surat_kuasa.pdf', '_blank')">
+          📄 Download Surat Kuasa
+        </button>
+        <button class="option-btn" onclick="window.open('https://maps.app.goo.gl/V4Jv5iTBiqr8RALz5', '_blank')">
+          📍 Lokasi Gmaps
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -1083,7 +1092,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=3.4"></script>
+    <script src="javascript.js?v=3.5"></script>
     <script src="language.js?v=2.0"></script>
   </body>
 </html>
