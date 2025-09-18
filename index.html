@@ -49,7 +49,7 @@
 
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css?v=2.4" />
+    <link rel="stylesheet" href="style.css?v=2.5" />
   </head>
   <body>
 
@@ -88,7 +88,7 @@
       <!-- ------- NAV Paling atas --------- -->
       <ul class="ul-utama">
         <li>
-          <a href="#"><img src="/asset/img/1111.png" /></a>
+          <a href="index.html"><img src="/asset/img/1111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda label-merah" href="/index.html">Beranda</a></li>
         <li class="hideOnMobile"><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
@@ -149,7 +149,7 @@
       <!-- -----------Nav scroll bawah -----------  -->
       <ul class="ul-utama">
         <li>
-          <a href="#"><img src="/asset/img/111.png" /></a>
+          <a href="index.html"><img src="/asset/img/111.png" /></a>
         </li>
         <li class="hideOnMobile"><a class="nav-beranda label-merah" href="/index.html">Beranda</a></li>
         <li class="hideOnMobile"><a class="nav-tentang" href="/about/index.html">Tentang</a></li>
@@ -262,7 +262,9 @@
           </div>
         </div>
         <div class="cta-container1 team-cta1">
-          <a href="/krrun/index.html" class="valorant-button1 team-btn1">REGISTRASI</a>
+          <button class="click-here scroll-fade-left">
+           REGISTRASI
+          </button>
         </div>
         
       </section>
@@ -559,23 +561,25 @@
               </div>
               <!-- end swiper-wrapper -->
     
-            <!-- end swiper -->
-            <div class="popup-image">
-              <div class="image-wrapper">
-              <span class="close-button">&times;</span>
-              <!-- Entitas tombol tutup X , bukan huruf X -->
-              <img src="/asset/img/bg web.jpg" class="onclick-img-jpg">
-            </div>
-          </div>
+
           </div>
           <!-- end container -->
         </section>
-        
+        <div id="lightbox" class="lightbox">
+          <span class="lightbox-close">&times;</span>
+          <div class="lightbox-content">
+            <button class="zoom-btn" id="zoomIn">+</button>
+            <button class="zoom-btn" id="zoomOut">-</button>
+            <img id="lightbox-img" src="" alt="Preview" />
+            <button class="nav-btn prev" id="prevImg">&#10094;</button>
+            <button class="nav-btn next" id="nextImg">&#10095;</button>
+          </div>
+        </div>
 
         
           
 
-        <section class="quote scroll-fade-up" id="quote">
+        <section class="quote" id="quote">
           <div class="layar-dalam dalam-quote scroll-fade-left">
             <p class="dalam-gambar">Crafting stories that move you.</p>
           </div>
@@ -698,7 +702,7 @@
 <!-- LINKING swiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="javascript.js?v=2.2"></script>
+    <script src="javascript.js?v=2.3"></script>
     <script src="language.js?v=2.1"></script>
   </body>
 </html>

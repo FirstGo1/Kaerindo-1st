@@ -35,10 +35,8 @@ window.addEventListener("scroll", function () {
 //  Swiper for  tampilan depan
 let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   loop: true,
-  // effect: 'fade',
-  // autoplay: {
-  //   delay: 8000,
-  // },
+  effect: 'slide',
+  speed: 1200,
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -48,7 +46,6 @@ let swiperTampilanDepan = new Swiper(".swiper-tampilan-depan", {
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
-    dynamicBullets: true,
     clickable: true,
   },
 });
@@ -90,27 +87,74 @@ var index = new Swiper("#swiper-2", {
 
 
 
-//  ONCLICK zoom
+// -------Lightbox ------------ 
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryImages = document.querySelectorAll("#swiper-2 .swiper-slide img");
 
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+  const zoomInBtn = document.getElementById("zoomIn");
+  const zoomOutBtn = document.getElementById("zoomOut");
+  const prevBtn = document.getElementById("prevImg");
+  const nextBtn = document.getElementById("nextImg");
 
-document.querySelectorAll("#swiper-2 .swiper-slide img").forEach((image) => {
-  image.onclick = () => {
-    document.querySelector(".popup-image").style.display = "block";
-    document.querySelector(".popup-image img").src = image.getAttribute("src");
-  };
-});
+  let currentIndex = 0;
+  let scale = 1;
 
-document.querySelector(".popup-image .close-button").onclick = () => {
-  document.querySelector(".popup-image").style.display = "none";
-};
-
-// ✅ Klik di luar gambar = close popup
-document.querySelector(".popup-image").addEventListener("click", function (e) {
-  // jika yang diklik adalah popup-image langsung (bukan img atau span)
-  if (e.target === this) {
-    this.style.display = "none";
+  function showImage() {
+    scale = 1;
+    lightboxImg.style.transform = "scale(1)";
+    lightboxImg.src = galleryImages[currentIndex].src;
   }
+
+  // Buka lightbox
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // Tutup
+  closeBtn.addEventListener("click", () => (lightbox.style.display = "none"));
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+
+  // Navigasi
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage();
+  });
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage();
+  });
+
+  // Zoom
+  zoomInBtn.addEventListener("click", () => {
+    scale += 0.2;
+    lightboxImg.style.transform = `scale(${scale})`;
+  });
+  zoomOutBtn.addEventListener("click", () => {
+    if (scale > 0.4) {
+      scale -= 0.2;
+      lightboxImg.style.transform = `scale(${scale})`;
+    }
+  });
+
+  // Keyboard support
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display === "flex") {
+      if (e.key === "Escape") lightbox.style.display = "none";
+      if (e.key === "ArrowRight") nextBtn.click();
+      if (e.key === "ArrowLeft") prevBtn.click();
+    }
+  });
 });
+
 
 
 
@@ -195,7 +239,7 @@ setInterval(countdown, 1000);
 
 // ------------- transisi scroll -------
 function checkScrollFadeDirection() {
-  const triggerBottom = window.innerHeight * 0.85;
+  const triggerBottom = window.innerHeight * 0.95;
   const elements = document.querySelectorAll(
     '.scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right'
   );
